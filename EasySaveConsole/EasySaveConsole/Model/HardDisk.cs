@@ -21,7 +21,11 @@ namespace EasySaveConsole.Model
             ListeHardDisk = new string[drives.Length];
             for (int i = 0; i < drives.Length; i++)
             {
+                //
+                // TO DO: Add the space available for each disks
+                //
                 ListeHardDisk[i] = drives[i].Name;
+                //drives[i].
             }
         }
     }

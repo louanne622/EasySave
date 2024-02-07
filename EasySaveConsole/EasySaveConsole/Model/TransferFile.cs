@@ -74,37 +74,34 @@ namespace EasySaveConsole.Model
             for (int i = 0; i < filesTargetWithoutPath.Length; i++)
                 for (int j = 0; j < filesOriginWithoutPath.Length; j++)
                     if ((filesTargetWithoutPath[i] == filesOriginWithoutPath[j]))
-                        if (filesTargetDateModif[i] != filesOriginDateModif[j])
-                        {
-                            //dateList.Add(filesOrigin[j]);
-                            deleteList.Add(filesTarget[i]);
-                        }
+                        if (filesTargetDateModif[i] < filesOriginDateModif[j]) deleteList.Add(filesTarget[i]);
                         else finalList.Add(filesOrigin[j]);
 
             string[] finalArray = finalList.ToArray();
-            //string[] dateArray = dateList.ToArray();
             string[] deleteArray = deleteList.ToArray();
 
             this.filesOrigin = this.filesOrigin.Except(finalArray).ToArray();
-            //this.filesOrigin = this.filesOrigin.Concat(dateArray).ToArray();
 
-            for (int i = 0; i < deleteArray.Length; i++) Console.WriteLine(deleteArray[i]);
+            // Delete files that are already in the final folder with a different ModifDate
+            // and transfer the files that are not in the final folder
             this.deleteFiles(deleteArray);
             MoveFile();
         }
         private void deleteFiles(string[] input)
         {
-            foreach(string filePath in input)
+            // Delete the files in the input list (with Path)
+            foreach (string filePath in input)
                 if (File.Exists(filePath)) File.Delete(filePath);
         }
         private void MoveFile()
         {
+            // Transfer the file from a folder to an other one
             foreach (string file in this.filesOrigin)
             {
                 string relativePath = file.Substring(this.OriginPath.Length + 1);
                 string destinationFilePath = Path.Combine(this.TargetPath, relativePath);
                 Directory.CreateDirectory(Path.GetDirectoryName(destinationFilePath));
-                File.Copy(file, destinationFilePath);
+                File.Copy(file, destinationFilePath, true); // Overwrite true (forcing to replace files)
             }
         }
     }

@@ -39,18 +39,15 @@ namespace EasySaveConsole.Model
         }
         public void Transfer()
         {
-            if (!VerifConditionForTransfer()) { return; }
+            if (!VerifConditionForTransfer()) return; 
             this.filesOrigin = Directory.GetFiles(this.getOriginPath(), "*", SearchOption.AllDirectories);
 
-            if (this.TypeTransfer == "C")
-            {
-                this.TransferFilesComplet();
-            }
+            if (this.TypeTransfer == "C") this.TransferFilesComplet();
             else if (this.TypeTransfer == "D")
             {
                 this.filesTarget = Directory.GetFiles(this.TargetPath, "*", SearchOption.AllDirectories);
                 this.TransferFilesDiff();
-            } 
+            }
         }
         private void TransferFilesComplet()
         {
@@ -59,10 +56,12 @@ namespace EasySaveConsole.Model
         private void TransferFilesDiff()
         {
             List<string> finalList = new List<string>();
+            List<string> dateList = new List<string>();
+            List<string> deleteList = new List<string>();
             string[] filesOriginWithoutPath = (string[])this.filesOrigin.Clone();        //CLONE
             string[] filesTargetWithoutPath = (string[])this.filesTarget.Clone();        //CLONE
             DateTime[] filesOriginDateModif   = new DateTime[filesOriginWithoutPath.Length]; //DateOrigine
-            DateTime[] filesTargetDateModif   = new DateTime[filesOriginWithoutPath.Length]; //DateTarget
+            DateTime[] filesTargetDateModif   = new DateTime[filesTargetWithoutPath.Length]; //DateTarget
 
             for (int i = 0; i < filesOriginDateModif.Length; i++) filesOriginDateModif[i] = File.GetLastWriteTime(filesOriginWithoutPath[i]);
             for (int i = 0; i < filesTargetDateModif.Length; i++) filesTargetDateModif[i] = File.GetLastWriteTime(filesTargetWithoutPath[i]);
@@ -73,31 +72,30 @@ namespace EasySaveConsole.Model
             for (int i = 0; i < this.filesOrigin.Length; i++) filesOriginWithoutPath[i] = filesOriginWithoutPath[i].Replace(this.OriginPath + "\\", "");
 
             for (int i = 0; i < filesTargetWithoutPath.Length; i++)
-            {
-                for (int j = 0; j < filesOriginWithoutPath.Length; j++) 
-                    if ((filesTargetWithoutPath[i] == filesOriginWithoutPath[j])) 
-                        finalList.Add(filesOrigin[j]);
-            }
+                for (int j = 0; j < filesOriginWithoutPath.Length; j++)
+                    if ((filesTargetWithoutPath[i] == filesOriginWithoutPath[j]))
+                        if (filesTargetDateModif[i] != filesOriginDateModif[j])
+                        {
+                            //dateList.Add(filesOrigin[j]);
+                            deleteList.Add(filesTarget[i]);
+                        }
+                        else finalList.Add(filesOrigin[j]);
 
-
-
-            /*
-            // Creation of LIST to sort origin LIST for files to transfer
-            List<string> finalList = new List<string>();
-            string[] filesOriginWithoutPath = (string[])this.filesOrigin.Clone();  //CLONE
-            string[] filesTargetWithoutPath = (string[])this.filesTarget.Clone();  //CLONE
-
-            // Set up lists for having only the file and the extection (ex: filesTest.txt), without the path or Original and Target ones
-            for (int i = 0; i < this.filesTarget.Length; i++) filesTargetWithoutPath[i] = filesTargetWithoutPath[i].Replace(this.TargetPath + "\\", "");
-            for (int i = 0; i < this.filesOrigin.Length; i++) filesOriginWithoutPath[i] = filesOriginWithoutPath[i].Replace(this.OriginPath + "\\", ""); 
-            for (int i = 0; i < filesTargetWithoutPath.Length; i++) {
-                for (int j = 0; j < filesOriginWithoutPath.Length; j++) if ((filesTargetWithoutPath[i] == filesOriginWithoutPath[j])) finalList.Add(filesOrigin[j]);
-            }
             string[] finalArray = finalList.ToArray();
+            //string[] dateArray = dateList.ToArray();
+            string[] deleteArray = deleteList.ToArray();
 
             this.filesOrigin = this.filesOrigin.Except(finalArray).ToArray();
-            //MoveFile();
-            */
+            //this.filesOrigin = this.filesOrigin.Concat(dateArray).ToArray();
+
+            for (int i = 0; i < deleteArray.Length; i++) Console.WriteLine(deleteArray[i]);
+            this.deleteFiles(deleteArray);
+            MoveFile();
+        }
+        private void deleteFiles(string[] input)
+        {
+            foreach(string filePath in input)
+                if (File.Exists(filePath)) File.Delete(filePath);
         }
         private void MoveFile()
         {

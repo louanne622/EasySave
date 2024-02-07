@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Text.Json;
 using EasySaveConsole.Model;
 
 namespace EasySaveConsole.ModelView
@@ -7,7 +9,7 @@ namespace EasySaveConsole.ModelView
     class BaseVM
     {
         public VMWorkshop objWorkshop;
-        private TransferFile objTransfer;
+        private TransferFile objTransfer; 
         public Save[] objsSave;
         public BaseVM()
         {
@@ -49,6 +51,16 @@ namespace EasySaveConsole.ModelView
         public void getInfoLang()
         {
             this.objWorkshop.getInfoLang();
+        }
+        public void UpdateDataJson(int _id, string _name, string _fileSource, string _fileTarget, string _type)
+        {
+            this.objWorkshop.UpdateJsonData(this.objsSave[_id], _name, _fileSource, _fileTarget, _type);
+            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Saves.json", JsonSerializer.Serialize(this.objsSave));
+        }
+        public void DeleteDataJson(int _id)
+        {
+            this.objWorkshop.DeleteJsonData(this.objsSave[_id]);
+            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Saves.json", JsonSerializer.Serialize(this.objsSave));
         }
     }
 }

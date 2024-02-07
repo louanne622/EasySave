@@ -48,5 +48,18 @@ namespace EasySaveConsole.ModelView
             Json objJson = new Json();
             return objJson.getJsonData(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Saves.json");
         }
+        public void UpdateJsonData(Save _save, string _name, string _fileSource, string _fileTarget, string _type)
+        {
+            Json _json = new Json();
+            if (_name != "") _json.UpdateJsonName(_save, _name);
+            if (_fileSource != "") _json.UpdateJsonFileSource(_save, _fileSource);
+            if (_fileTarget != "") _json.UpdateJsonFileTarget(_save, _fileTarget);
+            if (_type != "") _json.UpdateJsonType(_save, _type);
+        }
+        public void DeleteJsonData(Save _save)
+        {
+            Json _json = new Json();
+            _json.DeleteJsonSaveData(_save);
+        }
     }
 }

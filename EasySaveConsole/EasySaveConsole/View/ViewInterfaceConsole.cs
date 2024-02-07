@@ -54,9 +54,5 @@ namespace EasySaveConsole.View
             Console.WriteLine("La langue actuelle est le " + (this.language ? "Français" : "Anglais") + ".");
             Console.WriteLine("Souhaitez-vous la changer en " + (!this.language ? "Français" : "Anglais") + " ? (Y/N)");
         }
-
-
-
     }
-
 }

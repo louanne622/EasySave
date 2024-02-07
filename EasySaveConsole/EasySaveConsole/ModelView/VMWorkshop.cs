@@ -1,7 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Text;
+
 using EasySaveConsole.View;
+using EasySaveConsole.Model;
 
 namespace EasySaveConsole.ModelView
 {
@@ -32,6 +35,18 @@ namespace EasySaveConsole.ModelView
         {
             this.objUIConsole.getInfoLang();
         }
-
+        public void setDataSave(Save _save, int _id, string _Name, string _FilesSource, string _FilesTarget, string _Type)
+        {
+            _save.Id = _id;
+            _save.Name = _Name;
+            _save.FilesSource = _FilesSource;
+            _save.FilesTarget = _FilesTarget;
+            _save.Type = _Type;
+        }
+        public Save[] getAllSaveFromJSON()
+        {
+            Json objJson = new Json();
+            return objJson.getJsonData(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Saves.json");
+        }
     }
 }

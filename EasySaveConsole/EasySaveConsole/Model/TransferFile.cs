@@ -11,49 +11,27 @@ namespace EasySaveConsole.Model
         private string TypeTransfer;
         private string OriginPath;
         private string TargetPath;
-        private string[] filesOrigin;
-        private string[] filesTarget;
-        public void setOriginPath(string input)
-        { this.OriginPath = input; }
-        public void setTargetPath(string input)
-        { this.TargetPath = input; }
-        public void setTypeTransfer(string input)
-        { this.TypeTransfer = input; }
-        public string getOriginPath()
-        { return this.OriginPath; }
-        public string getTargetFile()
-        { return this.TargetPath; }
-        public string getTypeTransfer()
-        { return this.TypeTransfer; }
-        private bool VerifConditionForTransfer()
+        public string[] filesOrigin;
+        public string[] filesTarget;
+        public void setAllData(string originInput, string targetInput, string typeInput)
         {
-            if (Directory.Exists(this.getOriginPath()) &&
-               Directory.Exists(this.getOriginPath()) &&
-               this.getOriginPath() != null &&
-               this.getTargetFile() != null &&
-               this.getTypeTransfer() != null)
-                {
-                return true;
-            }
-            return false;
+            this.OriginPath   = originInput;
+            this.TargetPath   = targetInput;
+            this.TypeTransfer = typeInput;
         }
-        public void Transfer()
+        public bool VerifConditionForTransfer()
         {
-            if (!VerifConditionForTransfer()) return; 
-            this.filesOrigin = Directory.GetFiles(this.getOriginPath(), "*", SearchOption.AllDirectories);
-
-            if (this.TypeTransfer == "C") this.TransferFilesComplet();
-            else if (this.TypeTransfer == "D")
-            {
-                this.filesTarget = Directory.GetFiles(this.TargetPath, "*", SearchOption.AllDirectories);
-                this.TransferFilesDiff();
-            }
+            return Directory.Exists(this.OriginPath) &&
+               Directory.Exists(this.TargetPath) &&
+               this.OriginPath != null &&
+               this.TargetPath != null &&
+               this.TypeTransfer != null;
         }
-        private void TransferFilesComplet()
+        public void TransferFilesComplet()
         {
             MoveFile();
         }
-        private void TransferFilesDiff()
+        public void TransferFilesDiff()
         {
             List<string> finalList = new List<string>();
             List<string> dateList = new List<string>();
@@ -103,6 +81,14 @@ namespace EasySaveConsole.Model
                 Directory.CreateDirectory(Path.GetDirectoryName(destinationFilePath));
                 File.Copy(file, destinationFilePath, true); // Overwrite true (forcing to replace files)
             }
+        }
+        public void setFilesOrigin(string originInput)
+        {
+            this.filesOrigin = Directory.GetFiles(originInput, "*", SearchOption.AllDirectories);
+        }
+        public void setFilesTarget(string targetInput)
+        {
+            this.filesTarget = Directory.GetFiles(targetInput, "*", SearchOption.AllDirectories);
         }
     }
 }

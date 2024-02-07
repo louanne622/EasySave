@@ -1,20 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using EasySaveConsole.Model;
 
 namespace EasySaveConsole.ModelView
 {
     class BaseVM
     {
-        private VMWorkshop objWorkshop;
+        public VMWorkshop objWorkshop;
         private TransferFile objTransfer;
+        public Save[] objsSave;
         public BaseVM()
         {
             this.objWorkshop = new VMWorkshop();
             this.objTransfer = new TransferFile();
+            this.objsSave = objWorkshop.getAllSaveFromJSON();
         }
+        public void Transfer(string originInput, string targetInput, string typeInput)
+        {
+            // On set les data avec nos apramètres
+            objTransfer.setAllData(originInput, targetInput, typeInput);
+            if (!objTransfer.VerifConditionForTransfer()) return;
 
+            // On va chercher les fichiers d'origines
+            objTransfer.setFilesOrigin(originInput);
+
+            if (typeInput == "C") objTransfer.TransferFilesComplet();
+            else if (typeInput == "D")
+            {
+                objTransfer.setFilesTarget(targetInput); objTransfer.TransferFilesDiff();
+            }
+        }
         public void getIntro()
         {
             this.objWorkshop.getInto();
@@ -35,7 +50,5 @@ namespace EasySaveConsole.ModelView
         {
             this.objWorkshop.getInfoLang();
         }
-
-
     }
 }

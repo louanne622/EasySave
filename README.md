@@ -40,9 +40,16 @@ Si EasySave donne satisfaction, la direction nous demandera de développer une v
 
 ## Installation
 
-Pour installer EasySave, veuillez suivre les instructions suivantes...
+Pour installer EasySave, veuillez suivre les instructions suivantes...\
 
-Copier le répository github dans visual studio 2019\
+#Prérequis d'intallation
+- Avoir Visual Studio 2019 installé sur le poste
+- Avoir git bash installé sur le poste
+
+Pour les personnes débutantes, suivez cette procédure d'installation :
+[Procédure d'installation du projet](https://link-url-here.org)
+
+Sinon :\
 Pour installer depuis l'invite de commande :\
 ```git clone https://github.com/louanne622/EasySave.git```  
 
@@ -52,7 +59,7 @@ Pour utiliser EasySave, suivez ces étapes...
 
 Ouvrez une ligne de commmande, placez vous dans le fichier "EasySaveConsole"\
 ```cd EasySave/EasySaveConsole/EasySaveConsole```\
-Lorsque vous vous situez bien dans le fichier du projet, lancez la commande :\
+Lorsque vous vous situez bien dans le fichier du projet, lancez la commande pour lancer l'application:\
 ```dotnet run```
 
 ----------------------------------------------------------------------------------------------

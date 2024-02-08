@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Files;
 using Logger;
 using CPfile;
+using RFile;
+using GETsizefile;
 
 namespace ConsoleAppLog
 {
@@ -13,10 +15,11 @@ namespace ConsoleAppLog
     {
         static void Main()
         {
-           logger.Log();
-           Cpfile.cpfile();
-
-
+            Console.WriteLine("Welcome to our console App, what do you want to do? ");
+            logger.Log();
+            Cpfile.cpfile();
+            Rfile.rffile();
+            Getsizefile.getsizefile();
 
         }
     }

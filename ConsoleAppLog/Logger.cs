@@ -15,7 +15,10 @@ namespace Logger
        public  static void Log()
         {
             bool x = true;
-            
+            string SourceFilePath = "FilePath1";
+            string DestinationFilePath = "FilePath2";
+            string SourceFileName = " ";
+            string DestinationFileName = "FileName2";
             double Time = 12.3 ; //ms 
             int taille = 949;
             string NewFilePath = "";
@@ -23,35 +26,29 @@ namespace Logger
             NewFilePath = Console.ReadLine();
             SearchFilePath s = new SearchFilePath();
             s.searchFiler(NewFilePath);
-            String SourceFilePath = "FilePath1";
-            String DestinationFilePath = "FilePath2";
-            String SourceFileName = " ";
-            String DestinationFileName = "FileName2";
-
-
-
             if (x == true)
             {
-                Logger2.Writelog("Fichier " + NewFilePath  + " dispo sur " + SourceFilePath + " enrisgistré avec succée sous le nom " + DestinationFileName + "sur"+DestinationFilePath+ ",  il fait " + taille + " Ko, le transfert a mis " +Time+"ms");
+                Writelog("Fichier " + NewFilePath  + " dispo sur " + SourceFilePath + " enrisgistré avec succée sous le nom " + DestinationFileName + "sur"+DestinationFilePath+ ",  il fait " + taille + " Ko, le transfert a mis " +Time+"ms");
                 Console.WriteLine("Commande réalisé");
             }
             else
             {
-                Logger2.Writelog("Erreur, fichier"+ SourceFileName +" non trouvé ");
+                Writelog("Erreur, fichier"+ SourceFileName +" non trouvé ");
                 Console.WriteLine("Commande avorté");
             }
 
-        }
-    }
-    public static class Logger2
-    {
-        public static void Writelog(string message)
-        {
-            string logpath = ConfigurationManager.AppSettings["logPath"];
-            using (StreamWriter writer = new StreamWriter(logpath, true))
+            static void Writelog(string message)
             {
-                writer.WriteLine($"{DateTime.Now} : {message} ");
+                string logpath = ConfigurationManager.AppSettings["logPath"];
+                using (StreamWriter writer = new StreamWriter(logpath, true))
+                {
+                    writer.WriteLine($"{DateTime.Now} : {message} ");
+                }
             }
         }
     }
+    
+    
+        
+    
 }

@@ -8,11 +8,14 @@ namespace EasySaveConsole.Model
 {
     class TransferFile
     {
+        //Creation of all the attributes
         private string TypeTransfer;
         private string OriginPath;
         private string TargetPath;
         public string[] filesOrigin;
         public string[] filesTarget;
+
+        //initialisation of our methods enabling attributes to be used
         public void setAllData(string originInput, string targetInput, string typeInput)
         {
             this.OriginPath = originInput;
@@ -25,7 +28,8 @@ namespace EasySaveConsole.Model
                Directory.Exists(this.TargetPath) &&
                this.OriginPath != null &&
                this.TargetPath != null &&
-               this.TypeTransfer != null;
+               this.TypeTransfer != null &&
+               this.OriginPath != this.TargetPath;
         }
         public void TransferFilesComplet()
         {
@@ -33,6 +37,7 @@ namespace EasySaveConsole.Model
         }
         public void TransferFilesDiff()
         {
+
             List<string> finalList = new List<string>();
             List<string> dateList = new List<string>();
             List<string> deleteList = new List<string>();

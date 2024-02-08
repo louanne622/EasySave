@@ -9,6 +9,7 @@ namespace EasySaveConsole.Model
 {
     class Json
     {
+        //initialisation of our methods enabling attributes to be used
         public Save[] getJsonData(string _path)
         {
             string json = File.ReadAllText(_path);

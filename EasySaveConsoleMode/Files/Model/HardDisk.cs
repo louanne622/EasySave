@@ -7,7 +7,10 @@ namespace EasySaveConsole.Model
 {
     class HardDisk
     {
+        //Creation of all the attributes 
         private string[] ListeHardDisk;
+
+        //initialisation of our methods enabling attributes to be used
         public HardDisk()
         {
             setListeHardDisk();

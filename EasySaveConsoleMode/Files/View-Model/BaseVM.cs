@@ -8,9 +8,12 @@ namespace EasySaveConsole.ModelView
 {
     class BaseVM
     {
+        //Creation of all the attributes 
         public VMWorkspace objWorkshop;
         private TransferFile objTransfer;
         public Save[] objsSave;
+
+        //initialisation of our methods enabling attributes to be used
         public BaseVM()
         {
             this.objWorkshop = new VMWorkspace();
@@ -19,11 +22,11 @@ namespace EasySaveConsole.ModelView
         }
         public void Transfer(string originInput, string targetInput, string typeInput)
         {
-            // On set les data avec nos apramètres
+            //Setting the data to our variables
             objTransfer.setAllData(originInput, targetInput, typeInput);
             if (!objTransfer.VerifConditionForTransfer()) return;
 
-            // On va chercher les fichiers d'origines
+            //Setting the source path of the files
             objTransfer.setFilesOrigin(originInput);
 
             if (typeInput == "C") objTransfer.TransferFilesComplet();

@@ -10,7 +10,10 @@ namespace EasySaveConsole.ModelView
 {
     class VMWorkspace
     {
+        //Creation of all the attributes 
         private ViewInterfaceConsole objUIConsole;
+
+        //initialisation of our methods enabling attributes to be used
         public VMWorkspace()
         {
             this.objUIConsole = new ViewInterfaceConsole();

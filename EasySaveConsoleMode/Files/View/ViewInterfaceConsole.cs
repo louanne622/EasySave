@@ -7,6 +7,7 @@ namespace EasySaveConsole.View
 {
     class ViewInterfaceConsole
     {
+        //Creation of all the attributes
         private string[] ListeEN =
         {
 
@@ -16,9 +17,13 @@ namespace EasySaveConsole.View
 
         };
         private HardDisk disks = new HardDisk();
-        // If true : Fr, else En
+        //Using of a number to distinhuish between the different languages of the application
+        // French & English for the first version
         private string language = "1";
 
+        //initialisation of our methods enabling attributes to be used
+
+        ////////////////////////AJOUTER LE CONSTRUCTEUR PAR DEFAUT///////////////////////////////////
         public void setLang(string input)
         {
             this.language = input;

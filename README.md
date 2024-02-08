@@ -1,7 +1,7 @@
 # EasySave - Application de Sauvegarde Console .NET Core 3.0
 
 ## Description
-EasySave est une application de sauvegarde conçue pour offrir une solution simple et efficace pour sauvegarder des données depuis un répertoire source vers un répertoire de destination spécifié. Elle est développée en C# sur la plateforme .NET Core 3.0, offrant ainsi une portabilité et une compatibilité accrues.
+EasySave est une application de sauvegarde conçue pour offrir une solution simple et efficace pour sauvegarder des données depuis un répertoire source vers un répertoire de destination spécifié. Elle est développée en C# sur la plateforme .NET Core 3.0.
 
 ### Fonctionnalités de la Version 1.0
 
@@ -42,17 +42,17 @@ Si EasySave donne satisfaction, la direction nous demandera de développer une v
 
 Pour installer EasySave, veuillez suivre les instructions suivantes...
 
-Copier le répository github dans visual studio 2019
-Pour installer depuis la Github CLI :
-```git clone https://github.com/louanne622/EasySave.git```
+Copier le répository github dans visual studio 2019  
+Pour installer depuis l'invite de commande :  
+```git clone https://github.com/louanne622/EasySave.git```  
 
 ## Utilisation
 
 Pour utiliser EasySave, suivez ces étapes...
 
-Ouvrez une ligne de commmande, placez vous dans le fichier "EasySaveConsole"
-```cd EasySave/EasySaveConsole/EasySaveConsole```
-Lorsque vous vous situez bien dans le fichier du projet, lancez la commande :
+Ouvrez une ligne de commmande, placez vous dans le fichier "EasySaveConsole"  
+```cd EasySave/EasySaveConsole/EasySaveConsole```  
+Lorsque vous vous situez bien dans le fichier du projet, lancez la commande :  
 ```dotnet run```
 
 ----------------------------------------------------------------------------------------------
@@ -101,17 +101,17 @@ If EasySave proves satisfactory, management will ask us to develop a version 2.0
 
 To install EasySave, please follow the instructions below...
 
-Copy the github repository into visual studio 2019
-To install from Github CLI:
+Copy the github repository into visual studio 2019    
+To install from command prompt:  
 ```git clone https://github.com/louanne622/EasySave.git```
 
 ## Usage
 
 To use EasySave, follow these steps...
 
-Open a command line, navigate to the "EasySaveConsole" file
-```cd EasySave/EasySaveConsole/EasySaveConsole```
-Once you're in the project file, run the command:
+Open a command line, navigate to the "EasySaveConsole" file  
+```cd EasySave/EasySaveConsole/EasySaveConsole```  
+Once you're in the project file, run the command:  
 ```dotnet run```
 
 

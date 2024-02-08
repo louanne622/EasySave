@@ -42,19 +42,77 @@ Si EasySave donne satisfaction, la direction nous demandera de développer une v
 
 Pour installer EasySave, veuillez suivre les instructions suivantes...
 
+Copier le répository github dans visual studio 2019
+Pour installer depuis la Github CLI :
+```git clone https://github.com/louanne622/EasySave.git```
+
 ## Utilisation
 
 Pour utiliser EasySave, suivez ces étapes...
 
-## Contribution
+Ouvrez une ligne de commmande, placez vous dans le fichier "EasySaveConsole"
+```cd EasySave/EasySaveConsole/EasySaveConsole```
+Lorsque vous vous situez bien dans le fichier du projet, lancez la commande :
+```dotnet run```
 
-Les contributions à EasySave sont les bienvenues. Veuillez consulter le fichier CONTRIBUTING.md pour plus de détails.
+----------------------------------------------------------------------------------------------
 
-## Auteur
+# EasySave - .NET Core 3.0 Console Backup Application
 
-[Your Name] - [Your Contact Information]
+## Description
+EasySave is a backup application designed to provide a simple and effective solution for backing up data from a specified source directory to a destination directory. It is developed in C# on the .NET Core 3.0 platform, thus offering increased portability and compatibility.
 
-## Licence
+### Version 1.0 Features
 
-Ce projet est sous licence [License Name]. Consultez le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
+- Creation of up to 5 backup jobs.
+- Definition of a backup job with a name, a source directory, a target directory, and a type (full, differential).
+- Usable by both English and French-speaking users.
+- Sequential execution of all jobs or a specific job via command line.
+- Backup from local, external disks, or network drives.
+- Backup of all items within the source directory (files and subdirectories).
+- Daily Log file and real-time State file in JSON format.
+- Adaptation of file locations to work on client servers.
+
+### Prosoft Presentation
+
+EasySave is developed as part of our integration at ProSoft. We must comply with the following constraints:
+
+- Tools and methods:
+  - Visual Studio 2019 16.3 or higher
+  - GIT Azure DevOps
+  - UML Editor: ArgoUML recommended
+- Language, Framework:
+  - C# Language
+  - .NET Core 5.X Library
+- Code readability and maintainability:
+  - Usable by English-speaking subsidiaries
+  - Minimize duplicated lines of code
+  - Adherence to naming conventions
+- Others:
+  - Single-page user documentation
+  - Mandatory release notes
+  - Polish UI for distribution to clients.
+
+### Next Step: Version 2.0
+
+If EasySave proves satisfactory, management will ask us to develop a version 2.0 using a WPF graphical interface based on the MVVM architecture.
+
+## Installation
+
+To install EasySave, please follow the instructions below...
+
+Copy the github repository into visual studio 2019
+To install from Github CLI:
+```git clone https://github.com/louanne622/EasySave.git```
+
+## Usage
+
+To use EasySave, follow these steps...
+
+Open a command line, navigate to the "EasySaveConsole" file
+```cd EasySave/EasySaveConsole/EasySaveConsole```
+Once you're in the project file, run the command:
+```dotnet run```
+
+
 

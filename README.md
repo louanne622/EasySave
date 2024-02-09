@@ -64,7 +64,7 @@ Pour installer depuis l'invite de commande :\
 Pour utiliser EasySave, suivez ces étapes...
 
 Ouvrez une ligne de commmande, placez vous dans le fichier "EasySaveConsole"\
-```cd EasySave/EasySaveConsole/EasySaveConsole```\
+```cd EasySaveConsoleMode```\
 Lorsque vous vous situez bien dans le fichier du projet, lancez la commande pour lancer l'application:\
 ```dotnet run```
 

@@ -53,7 +53,8 @@ Pour installer EasySave, veuillez suivre les instructions suivantes...\
 - Avoir git bash installé sur le poste
 
 Pour les personnes débutantes, suivez cette procédure d'installation :
-[installation de EasySave v1.pdf](https://github.com/louanne622/EasySave/files/14218504/installation.de.EasySave.v1.pdf)
+[installation de EasySave v1.pdf](https://github.com/louanne622/EasySave/files/14223357/installation.de.EasySave.v1.pdf)
+
 
 Sinon :\
 Pour installer depuis l'invite de commande :\
@@ -73,22 +74,22 @@ Lorsque vous vous situez bien dans le fichier du projet, lancez la commande pour
 # EasySave - .NET Core 3.0 Console Backup Application
 
 ## Description
-EasySave is a backup application designed to provide a simple and effective solution for backing up data from a specified source directory to a destination directory. It is developed in C# on the .NET Core 3.0 platform, thus offering increased portability and compatibility.
+EasySave is a backup application designed to provide a simple and effective solution for backing up data from a specified source directory to a destination directory. It is developed in C# on the .NET Core 3.0 platform.
 
 ### Version 1.0 Features
 
 - Creation of up to 5 backup jobs.
 - Definition of a backup job with a name, a source directory, a target directory, and a type (full, differential).
-- Usable by both English and French-speaking users.
+- Usable by English and French-speaking users.
 - Sequential execution of all jobs or a specific job via command line.
 - Backup from local, external disks, or network drives.
-- Backup of all items within the source directory (files and subdirectories).
+- Backup of all items in the source directory (files and subdirectories).
 - Daily Log file and real-time State file in JSON format.
 - Adaptation of file locations to work on client servers.
 
 ### Prosoft Presentation
 
-EasySave is developed as part of our integration at ProSoft. We must comply with the following constraints:
+EasySave is developed as part of our integration at ProSoft. We must adhere to the following constraints:
 
 - Tools and methods:
   - Visual Studio 2019 16.3 or higher
@@ -104,27 +105,41 @@ EasySave is developed as part of our integration at ProSoft. We must comply with
 - Others:
   - Single-page user documentation
   - Mandatory release notes
-  - Polish UI for distribution to clients.
+  - Careful design of user interfaces for distribution to clients.
 
 ### Next Step: Version 2.0
 
-If EasySave proves satisfactory, management will ask us to develop a version 2.0 using a WPF graphical interface based on the MVVM architecture.
+If EasySave proves satisfactory, management will request the development of a version 2.0 using a WPF graphical interface.
+
+## Areas for Improvement
+
+- Implementation of input conditions (path, etc...)
+- Modification of log file and real-time state file path from the application
+- Adding languages to the application
 
 ## Installation
 
-To install EasySave, please follow the instructions below...
+To install EasySave, please follow these instructions...
 
-Copy the github repository into visual studio 2019\
-To install from command prompt:\
-```git clone https://github.com/louanne622/EasySave.git```
+### Installation Prerequisites
+- Have Visual Studio 2019 installed on the workstation
+- Have git bash installed on the workstation
+
+For beginners, follow this installation procedure:
+[EasySave v1 installation.pdf](https://github.com/louanne622/EasySave/files/14223357/installation.de.EasySave.v1.pdf)
+
+To install from the command prompt:\
+```git clone https://github.com/louanne622/EasySave.git```  
 
 ## Usage
 
-To use EasySave, follow these steps...
+To use EasySave, follow these steps:
 
-Open a command line, navigate to the "EasySaveConsole" file\
-```cd EasySave/EasySaveConsole/EasySaveConsole```\
-Once you're in the project file, run the command:\
+1. Open a command line.
+2. Then copy and paste this line to place you inside the EasySave project folder\
+
+```cd EasySaveConsoleMode```\
+Once you're in the project file, run the command to launch the application:\
 ```dotnet run```
 
 

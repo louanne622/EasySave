@@ -36,7 +36,7 @@ EasySave est développé dans le cadre de notre intégration chez ProSoft. Nous 
 
 ### Prochaine étape : Version 2.0
 
-Si EasySave donne satisfaction, la direction nous demandera de développer une version 2.0 utilisant une interface graphique WPF basée sur l'architecture MVVM.
+Si EasySave donne satisfaction, la direction nous demandera de développer une version 2.0 utilisant une interface graphique WPF.
 
 ## Axes d'amélioration
 

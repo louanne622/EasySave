@@ -88,7 +88,7 @@ namespace EasySaveConsole.View
 
         //initialisation of our methods enabling attributes to be used
 
-        ////////////////////////AJOUTER LE CONSTRUCTEUR PAR DEFAUT///////////////////////////////////
+        
         public void setLang(string input)
         {
             this.language = input;
@@ -128,15 +128,15 @@ namespace EasySaveConsole.View
             string[] parts = input.Split(';');
             foreach (string part in parts)
             {
-                // Si la sous-chaîne contient un '-', cela signifie que c'est une plage de numéros
+                // If the substring contains a '-', it means it is a number range
                 if (part.Contains("-"))
                 {
-                    // Séparation de la sous-chaîne en début et fin de plage
+                    // Separating the substring at the start and end of the range
                     string[] rangeParts = part.Split('-');
 
                     if (rangeParts.Length == 2 && int.TryParse(rangeParts[0], out int start) && int.TryParse(rangeParts[1], out int end))
                     {
-                        // Ajout de tous les numéros dans la plage à la liste
+                        // Adding all numbers in the range to the list
                         backupNumbers.AddRange(Enumerable.Range(start, end - start + 1));
                     }
                     else
@@ -146,10 +146,10 @@ namespace EasySaveConsole.View
                 }
                 else
                 {
-                    // Si la sous-chaîne ne contient pas de '-', cela signifie qu'il s'agit d'un numéro unique
+                    // If the substring does not contain '-', it means it is a unique number
                     if (int.TryParse(part, out int number))
                     {
-                        // Ajout du numéro unique à la liste
+                        // Adding the unique number to the list
                         backupNumbers.Add(number);
                     }
                     else

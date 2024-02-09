@@ -47,7 +47,7 @@ Pour installer EasySave, veuillez suivre les instructions suivantes...\
 - Avoir git bash installé sur le poste
 
 Pour les personnes débutantes, suivez cette procédure d'installation :
-[Procédure d'installation du projet](https://link-url-here.org)
+[installation de EasySave v1.pdf](https://github.com/louanne622/EasySave/files/14218504/installation.de.EasySave.v1.pdf)
 
 Sinon :\
 Pour installer depuis l'invite de commande :\

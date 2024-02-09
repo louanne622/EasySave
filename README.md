@@ -38,6 +38,12 @@ EasySave est développé dans le cadre de notre intégration chez ProSoft. Nous 
 
 Si EasySave donne satisfaction, la direction nous demandera de développer une version 2.0 utilisant une interface graphique WPF basée sur l'architecture MVVM.
 
+## Axes d'amélioration
+
+- Mise en place de condition d'entrée (path, etc...)
+- Modification du chemin du fichier log et état en temps réel depuis l'application
+- Ajouter des langues à l'application
+
 ## Installation
 
 Pour installer EasySave, veuillez suivre les instructions suivantes...\

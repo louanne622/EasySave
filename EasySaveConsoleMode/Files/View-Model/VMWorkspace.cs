@@ -39,6 +39,11 @@ namespace EasySaveConsole.ModelView
             Json objJson = new Json();
             return objJson.getJsonData(AppDomain.CurrentDomain.BaseDirectory + "\\Saves\\Saves.json");
         }
+        public StateSave[] getAllStateSaveFromJSON()
+        {
+            Json objJson = new Json();
+            return objJson.getJsonDataState(AppDomain.CurrentDomain.BaseDirectory + "\\Log\\StateLog\\State.json");
+        }
         public void UpdateJsonData(Save _save, string _name, string _fileSource, string _fileTarget, string _type)
         {
             Json _json = new Json();
@@ -47,10 +52,49 @@ namespace EasySaveConsole.ModelView
             if (_fileTarget != "") _json.UpdateJsonFileTarget(_save, _fileTarget);
             if (_type != "") _json.UpdateJsonType(_save, _type);
         }
+        public void UpdateStateJsonData(StateSave _save, string _name, string _SourceFilePath, string _TargetFilePath, 
+            string _State, long _TotalFilesToCopy, long _TotalFilesSize, long NbFilesLeftToDo, int Progression)
+        {
+            Json _json = new Json();
+            if (_name != "") _json.UpdateStateName(_save, _name);
+            if (_SourceFilePath != "") _json.UpdateStateSource(_save, _SourceFilePath);
+            if (_TargetFilePath != "") _json.UpdateStateTarget(_save, _TargetFilePath);
+            if (_State != "") _json.UpdateStateTarget(_save, _State);
+            if (_TotalFilesToCopy != 0) _json.UpdateStateTotalFilesToCopy(_save, _TotalFilesToCopy);
+            if (_TargetFilePath != "") _json.UpdateStateTarget(_save, _TargetFilePath);
+            if (_TargetFilePath != "") _json.UpdateStateTarget(_save, _TargetFilePath);
+            if (_TargetFilePath != "") _json.UpdateStateTarget(_save, _TargetFilePath);
+
+            if (_TargetFilePath != "") _json.UpdateStateTarget(_save, _TargetFilePath);        }
         public void DeleteJsonData(Save _save)
         {
             Json _json = new Json();
             _json.DeleteJsonSaveData(_save);
+        }
+        public string getSizeFile(string _path)
+        {
+            string[] files = Directory.GetFiles(_path);
+            long totalSizeInBytes = 0;
+            foreach (string filePath in files)
+            {
+                FileInfo fileInfo = new FileInfo(filePath);
+                totalSizeInBytes += fileInfo.Length;
+            }
+            return (totalSizeInBytes / 1024.0).ToString();
+        }
+        public string getAllSizeFiles(string[] _paths)
+        {
+            long totalSizeInBytes = 0;
+            foreach (string filePath in _paths)
+            {
+                FileInfo fileInfo = new FileInfo(filePath);
+                totalSizeInBytes += fileInfo.Length;
+            }
+            return (totalSizeInBytes / 1024.0).ToString();
+        }
+        public void ConsoleWriteDataString(string input)
+        {
+            this.objUIConsole.getDataString(input);
         }
     }
 }

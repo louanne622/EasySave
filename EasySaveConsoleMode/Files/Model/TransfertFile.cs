@@ -10,7 +10,7 @@ namespace EasySaveConsole.Model
     {
         //Creation of all the attributes
         private string TypeTransfer;
-        private string OriginPath;
+        public string OriginPath;
         private string TargetPath;
         public string[] filesOrigin;
         public string[] filesTarget;

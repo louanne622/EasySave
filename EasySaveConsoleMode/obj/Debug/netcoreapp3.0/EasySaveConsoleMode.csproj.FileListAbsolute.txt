@@ -1,0 +1,14 @@
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.exe
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.deps.json
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.runtimeconfig.json
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.runtimeconfig.dev.json
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.dll
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.pdb
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.csproj.AssemblyReference.cache
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.AssemblyInfoInputs.cache
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.AssemblyInfo.cs
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.csproj.CoreCompileInputs.cache
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.dll
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.pdb
+C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.genruntimeconfig.cache

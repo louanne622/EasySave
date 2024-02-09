@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Diagnostics;
+
 using EasySaveConsole.Model;
 using EasySaveConsole.View;
 using EasySaveConsole.ModelView;
@@ -51,60 +53,91 @@ namespace EasySaveConsole
         static void Main(string[] args)
         {
             BaseVM a = new BaseVM();
-            a.getIntro(); a.getInterface_HomeMenu();
-            string choiceInterface_HomePage = Console.ReadLine();
-            string dataUI;
-            switch (choiceInterface_HomePage)
+            while (true)
             {
-                case "1": // Switch Language
-                    a.getInfoLang();
-                    dataUI = Console.ReadLine(); Console.WriteLine();
-                    if (dataUI == "Y") a.setLang(!a.getLang());
-                    break;
-                case "2": // Show SaveTransfer
-                    foreach (var save in a.objsSave)
-                    {
-                        Console.WriteLine("Id: " + save.Id);
-                        Console.WriteLine("Name: " + save.Name);
-                        Console.WriteLine("FileSource: " + save.FilesSource);
-                        Console.WriteLine("FileTarget: " + save.FilesTarget);
-                        Console.WriteLine("Type: " + save.Type);
-                        Console.WriteLine();
-                    }
-                    break;
-                case "3": // Exec SaveTransfer
-                    Console.WriteLine("Quelle sauvegarde sont à effectuer ? (ex synthaxe: 1-3 ou 1 ;3)");
-                    string Rep7 = Console.ReadLine();
-                    int[] numList = ParseBackupNumbers(Rep7).ToArray();
-                    for (int i = 0; i < numList.Length; i++) a.Transfer(a.objsSave[numList[i] - 1].FilesSource,
-                                                                        a.objsSave[numList[i] - 1].FilesTarget,
-                                                                        a.objsSave[numList[i] - 1].Type);
-                    break;
-                case "4": // Update SaveTRansfer
-                    Console.WriteLine("Quelle sauvegarde est à modifier ? (1 à 5)");
-                    string Rep1 = Console.ReadLine();
-                    while (int.Parse(Rep1) > 5 || int.Parse(Rep1) < 1)
-                    {
-                        Console.WriteLine("Quelle sauvegarde est à modifier ? (1 à 5)"); Rep1 = Console.ReadLine();
-                    }
-                    Console.WriteLine("Le nom ?"); string Rep2 = Console.ReadLine();
-                    Console.WriteLine("Le fichier source ?"); string Rep3 = Console.ReadLine();
-                    Console.WriteLine("Le fichier target ?"); string Rep4 = Console.ReadLine();
-                    Console.WriteLine("Le type de sauvegarde ?"); string Rep5 = Console.ReadLine();
-                    a.UpdateDataJson(int.Parse(Rep1) - 1, Rep2, Rep3, Rep4, Rep5);
-                    break;
-                case "5": // Delete SaveTransfer
-                    Console.WriteLine("Quelle sauvegarde est à supprimer ? (1 à 5)");
-                    string Rep6 = Console.ReadLine();
-                    while (int.Parse(Rep6) > 5 || int.Parse(Rep6) < 1)
-                    {
-                        Console.WriteLine("Quelle sauvegarde est à modifier ? (1 à 5)"); Rep6 = Console.ReadLine();
-                    }
-                    a.DeleteDataJson(int.Parse(Rep6) - 1);
-                    break;
-                default:
-                    Console.WriteLine("Chiffre invalide...");
-                    break;
+                Console.Clear();
+                a.ConsoleWriteDataString("0; 1; 2; 1; 0; 3; 4; 5; 6; 7; 8; 9; 3");
+                string choiceInterface_HomePage = Console.ReadLine();
+                string dataUI;
+                switch (choiceInterface_HomePage)
+                {
+                    case "5": // Switch Language
+                        a.ConsoleWriteDataString("3; 14; 19; 3");
+                        dataUI = Console.ReadLine();
+                        if (dataUI == "Y")
+                        {
+                            a.ConsoleWriteDataString("3; 20; 21; 3");
+                            dataUI = Console.ReadLine();
+                            if (int.Parse(dataUI) < 1 || int.Parse(dataUI) > 2) a.ConsoleWriteDataString("22");
+                            else
+                            {
+                                a.objWorkshop.setLang(dataUI);
+                                a.ConsoleWriteDataString("1; 18; 3");
+                            }
+                        }
+                        break;
+                    case "1": // Show SaveTransfer
+                        a.ConsoleWriteDataString("3; 10");
+                        foreach (var save in a.objsSave)
+                        {
+                            a.ConsoleWriteDataString("3");
+                            Console.WriteLine("Id: " + save.Id);
+                            Console.WriteLine("Name: " + save.Name);
+                            Console.WriteLine("FileSource: " + save.FilesSource);
+                            Console.WriteLine("FileTarget: " + save.FilesTarget);
+                            Console.WriteLine("Type: " + save.Type);
+                            Console.ReadLine();
+                        }
+                        break;
+                    case "3": // Exec SaveTransfer
+                        a.ConsoleWriteDataString("3; 12; 30; 31; 3");
+                        string Rep7 = Console.ReadLine();
+                        int[] numList = ParseBackupNumbers(Rep7).ToArray();
+                        for (int i = 0; i < numList.Length; i++)
+                        {
+                            Stopwatch stopwatch = new Stopwatch();
+                            stopwatch.Start();
+                            a.Transfer(a.objsSave[numList[i] - 1].FilesSource,
+                                                                            a.objsSave[numList[i] - 1].FilesTarget,
+                                                                            a.objsSave[numList[i] - 1].Type);
+                            stopwatch.Stop();
+                            a.ConsoleWriteDataString("1; 17; 3");
+                            TimeSpan elapsedTime = stopwatch.Elapsed;
+                            string formattedTime = $"{(int)elapsedTime.TotalMinutes}min {elapsedTime.Seconds}sec";
+                            if (a.objsSave[numList[i] - 1].Type == "C") a.setDailyLogAndWrite(a.objsSave[numList[i] - 1], a.objWorkshop.getSizeFile(a.objsSave[numList[i] - 1].FilesSource), formattedTime);
+                            else if (a.objsSave[numList[i] - 1].Type == "D") a.setDailyLogAndWrite(a.objsSave[numList[i] - 1], a.objWorkshop.getAllSizeFiles(a.objTransfer.filesOrigin), formattedTime);
+                        }
+                        break;
+                    case "2": // Update SaveTRansfer
+                        a.ConsoleWriteDataString("3; 11; 23; 29; 3");
+                        string Rep1 = Console.ReadLine();
+                        if (int.Parse(Rep1) > 5 || int.Parse(Rep1) < 1)
+                        {
+                            a.ConsoleWriteDataString("22; 3"); Console.ReadLine();
+                            break;
+                        }
+                        a.ConsoleWriteDataString("3; 24"); string Rep2 = Console.ReadLine();
+                        a.ConsoleWriteDataString("3; 25"); string Rep3 = Console.ReadLine();
+                        a.ConsoleWriteDataString("3; 26"); string Rep4 = Console.ReadLine();
+                        a.ConsoleWriteDataString("3; 27"); ; string Rep5 = Console.ReadLine();
+                        a.UpdateDataJson(int.Parse(Rep1) - 1, Rep2, Rep3, Rep4, Rep5);
+                        a.ConsoleWriteDataString("1; 15; 3"); Console.ReadLine();
+                        break;
+                    case "4": // Delete SaveTransfer
+                        a.ConsoleWriteDataString("3; 13; 28; 29; 3");
+                        string Rep6 = Console.ReadLine();
+                        if (int.Parse(Rep6) > 5 || int.Parse(Rep6) < 1)
+                        {
+                            a.ConsoleWriteDataString("22; 3"); Console.ReadLine();
+                            break;
+                        }
+                        a.DeleteDataJson(int.Parse(Rep6) - 1);
+                        a.ConsoleWriteDataString("1; 16; 3"); Console.ReadLine();
+                        break;
+                    default:
+                        a.ConsoleWriteDataString("1; 22; 3"); Console.ReadLine();
+                        break;
+                }
             }
         }
     }

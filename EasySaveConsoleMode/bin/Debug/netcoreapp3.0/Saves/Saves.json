@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Name": "LLLLLLL",
+    "FilesSource": "C:\\Users\\MB311L\\Desktop\\Syst\\Or",
+    "FilesTarget": "C:\\Users\\MB311L\\Desktop\\Syst\\Target",
+    "Type": "C"
+  },
+  {
+    "Id": 2,
+    "Name": "",
+    "FilesSource": "",
+    "FilesTarget": "",
+    "Type": ""
+  },
+  {
+    "Id": 3,
+    "Name": "L",
+    "FilesSource": "M",
+    "FilesTarget": "JK",
+    "Type": "C"
+  },
+  {
+    "Id": 4,
+    "Name": "",
+    "FilesSource": "",
+    "FilesTarget": "",
+    "Type": ""
+  },
+  {
+    "Id": 5,
+    "Name": "",
+    "FilesSource": "",
+    "FilesTarget": "",
+    "Type": ""
+  }
+]

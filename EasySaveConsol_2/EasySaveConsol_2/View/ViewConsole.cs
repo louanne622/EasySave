@@ -44,7 +44,8 @@ namespace EasySaveConsol_2
             "# Quelle est la sauvegarde à supprimer ? -- #",
             "# (1 à 5) ----------------------------------#",
             "# Quelle sauvegarde sont à effectuer ? -----#", // 30
-            "# (ex synthaxe: 1-3 ou 1 ;3) ---------------#"
+            "# (ex synthaxe: 1-3 ou 1 ;3) ---------------#",
+            "# 6/ Modifier l'extension des logs ---------#" 
 
         };
         private string[] ListeEN =
@@ -80,7 +81,8 @@ namespace EasySaveConsol_2
             "# Which backup to delete? ----------------- #",
             "# (1 to 5) ---------------------------------#",
             "# Which backups are to be executed? --------#", // 30
-            "# (syntax: 1-3 or 1;3) ---------------------#"
+            "# (syntax: 1-3 or 1;3) ---------------------#",
+            "# 6/ Modify the log extension --------------#"
         };
         public ViewConsole()
         {
@@ -116,6 +118,15 @@ namespace EasySaveConsol_2
             int[] numList = ClassUtility.ParseBackupNumbers(data).ToArray();
             string[] dataLang = this.getListLang(getLang());
             for (int i = 0; i < numList.Length; i++) Console.WriteLine(dataLang[numList[i]]);
+        }
+        public void getSaveData(Save _save)
+        {
+            this.getDataString("0");
+            Console.WriteLine("Id:         " + _save.Id);
+            Console.WriteLine("Name:       " + _save.Name);
+            Console.WriteLine("FileSource: " + _save.FilesSource);
+            Console.WriteLine("FileTarget: " + _save.FilesTarget);
+            Console.WriteLine("Type:       " + _save.Type);
         }
     }
 }

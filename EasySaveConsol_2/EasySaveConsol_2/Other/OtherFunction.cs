@@ -17,11 +17,9 @@ namespace EasySaveConsol_2
     public static class ClassUtility
     {
         /*
-         * 
          * This method return a list of <int> that will be in the input method 
          * with this syntax: "3; 5; 3; 9; 3" will return [3, 5, 3, 9, 3]
          * or =>             "1-5"                       [1, 2, 3, 4, 5]
-         * 
          */
         public static List<int> ParseBackupNumbers(string input)
         {
@@ -67,21 +65,24 @@ namespace EasySaveConsol_2
          */
         public static string GetConfigData(string configVariable)
         {
-            string pathFileConfig = AppDomain.CurrentDomain.BaseDirectory + @"\Config\config.txt";
+            string pathFileConfig = AppDomain.CurrentDomain.BaseDirectory + @"\Config\config.cfg";
             if (!File.Exists(pathFileConfig)) return "1";
 
             string[] lines = File.ReadAllLines(pathFileConfig);
             Regex regex = new Regex(@$"{configVariable}\s*=\s*(\d+);");
             foreach (string line in lines)
             {
-                Match match = regex.Match(line);
-                if (match.Success) return match.Groups[1].Value;
+                if (!line.TrimStart().StartsWith("#"))
+                {
+                    Match match = regex.Match(line);
+                    if (match.Success) return match.Groups[1].Value;
+                }
             }
             return "1";
         }
         public static void SetConfigData(string configVariable, string newData)
         {
-            string pathFileConfig = AppDomain.CurrentDomain.BaseDirectory + @"\Config\config.txt";
+            string pathFileConfig = AppDomain.CurrentDomain.BaseDirectory + @"\Config\config.cfg";
             if (!File.Exists(pathFileConfig)) return;
 
             string[] lines = File.ReadAllLines(pathFileConfig);

@@ -13,5 +13,9 @@ namespace EasySaveConsol_2.Model
         public string size { get; set; }
         public string fileTransferTime { get; set; }
         public string time { get; set; }
+        public DailyLog(Save save)
+        {
+            this._save = save;
+        }
     }
 }

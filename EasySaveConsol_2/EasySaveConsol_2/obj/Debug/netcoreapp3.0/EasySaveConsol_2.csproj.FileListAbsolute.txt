@@ -26,3 +26,17 @@ C:\Users\valen\OneDrive\Bureau\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netco
 C:\Users\valen\OneDrive\Bureau\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.dll
 C:\Users\valen\OneDrive\Bureau\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.pdb
 C:\Users\valen\OneDrive\Bureau\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.genruntimeconfig.cache
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.exe
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.deps.json
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.runtimeconfig.json
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.runtimeconfig.dev.json
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.dll
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\bin\Debug\netcoreapp3.0\EasySaveConsol_2.pdb
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.csproj.AssemblyReference.cache
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.AssemblyInfoInputs.cache
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.AssemblyInfo.cs
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.csproj.CoreCompileInputs.cache
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.dll
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.pdb
+C:\Users\MB311L\Desktop\EasySave-Valentin (1)\EasySave-Valentin\EasySaveConsol_2\EasySaveConsol_2\obj\Debug\netcoreapp3.0\EasySaveConsol_2.genruntimeconfig.cache

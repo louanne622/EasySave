@@ -13,6 +13,11 @@ namespace EasySaveConsol_2
             return JsonSerializer.Deserialize<Save[]>
                 (File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\Saves\Saves.json"));
         }
+        static public StateSave[] getStateSavesFromJson()
+        {
+            return JsonSerializer.Deserialize<StateSave[]>
+                (File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\Log\StateLog\StateLog.json"));
+        }
 
     }
 }

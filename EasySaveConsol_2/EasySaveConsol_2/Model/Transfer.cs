@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
 
 
 namespace EasySaveConsol_2
@@ -17,22 +18,30 @@ namespace EasySaveConsol_2
             this.filesOrigin = Directory.GetFiles(_save.FilesSource, "*", SearchOption.AllDirectories);
             this.filesTarget = Directory.GetFiles(_save.FilesTarget, "*", SearchOption.AllDirectories);
         }
-        private void MoveFile(Save _save)
+        private void MoveFile(Save _save, StateSave _stateSave, StateSave[] _objsState)
         {
-            // Transfer the file from a folder to an other one
             foreach (string file in this.filesOrigin)
             {
                 string relativePath = file.Substring(_save.FilesSource.Length + 1);
                 string destinationFilePath = Path.Combine(_save.FilesTarget, relativePath);
                 Directory.CreateDirectory(Path.GetDirectoryName(destinationFilePath));
                 File.Copy(file, destinationFilePath, true); // Overwrite true (forcing to replace files)
+                try
+                {
+                    _stateSave.NbFilesLeftToDo = (int.Parse(_stateSave.NbFilesLeftToDo) - 1).ToString();
+                    _stateSave.Progression = (100 * (int.Parse(_stateSave.TotalFilesToCopy) - int.Parse(_stateSave.NbFilesLeftToDo)) / (int.Parse(_stateSave.TotalFilesToCopy))).ToString();
+                    if (int.Parse(_stateSave.Progression) == 100) _stateSave.State = "END";
+                    File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"Log\StateLog\StateLog.json", JsonSerializer.Serialize(_objsState, new JsonSerializerOptions { WriteIndented = true }));
+                }
+                catch (Exception ex) { }
+                
             }
         }
-        public void TransferCom(Save _save)
+        public void TransferCom(Save _save, StateSave _stateSave, StateSave[] _objsState)
         {
-            this.MoveFile(_save);
+            this.MoveFile(_save, _stateSave, _objsState);
         }
-        public void TransferSeq(Save _save)
+        public void TransferSeq(Save _save, StateSave _stateSave, StateSave[] _objsState)
         {
             List<string> finalList = new List<string>();
             List<string> dateList = new List<string>();
@@ -63,7 +72,7 @@ namespace EasySaveConsol_2
             // Delete files that are already in the final folder with a different ModifDate
             // and transfer the files that are not in the final folder
             this.deleteFiles(deleteArray);
-            this.MoveFile(_save);
+            this.MoveFile(_save, _stateSave, _objsState);
         }
         private void deleteFiles(string[] input)
         {

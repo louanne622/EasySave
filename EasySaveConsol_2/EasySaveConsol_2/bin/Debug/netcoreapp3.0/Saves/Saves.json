@@ -8,10 +8,10 @@
     },
     {
         "Id":2,
-        "Name":"",
-        "FilesSource":"",
-        "FilesTarget":"",
-        "Type":""
+        "Name":"Test PC GROS",
+        "FilesSource":"C:\\Users\\MB311L\\Desktop\\Test\\Or",
+        "FilesTarget":"C:\\Users\\MB311L\\Desktop\\Test\\Target",
+        "Type":"C"
     },
     {
         "Id":3,

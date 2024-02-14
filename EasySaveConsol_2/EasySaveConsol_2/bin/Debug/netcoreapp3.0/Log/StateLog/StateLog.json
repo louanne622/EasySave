@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "1",
+    "Name": "",
+    "SourceFilePath": "",
+    "TargetFilePath": "",
+    "State": "",
+    "TotalFilesToCopy": "",
+    "TotalFilesSize": "",
+    "NbFilesLeftToDo": "",
+    "Progression": ""
+  },
+  {
+    "Id": "2",
+    "Name": "Test PC GROS",
+    "SourceFilePath": "C:\\Users\\MB311L\\Desktop\\Test\\Or",
+    "TargetFilePath": "C:\\Users\\MB311L\\Desktop\\Test\\Target",
+    "State": "END",
+    "TotalFilesToCopy": "3",
+    "TotalFilesSize": "0",
+    "NbFilesLeftToDo": "0",
+    "Progression": "100"
+  },
+  {
+    "Id": "3",
+    "Name": "",
+    "SourceFilePath": "",
+    "TargetFilePath": "",
+    "State": "",
+    "TotalFilesToCopy": "",
+    "TotalFilesSize": "",
+    "NbFilesLeftToDo": "",
+    "Progression": ""
+  },
+  {
+    "Id": "4",
+    "Name": "",
+    "SourceFilePath": "",
+    "TargetFilePath": "",
+    "State": "",
+    "TotalFilesToCopy": "",
+    "TotalFilesSize": "",
+    "NbFilesLeftToDo": "",
+    "Progression": ""
+  },
+  {
+    "Id": "5",
+    "Name": "",
+    "SourceFilePath": "",
+    "TargetFilePath": "",
+    "State": "",
+    "TotalFilesToCopy": "",
+    "TotalFilesSize": "",
+    "NbFilesLeftToDo": "",
+    "Progression": ""
+  }
+]

@@ -53,6 +53,7 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "2":
+                        A.objWorkspace.TransferSave(A.objWorkspace.listSaves[1], A.objTransfer, A.objWorkspace.listeStatesSave[1]);
                         Console.ReadLine();
                         break;
                     /* Execute Saves */

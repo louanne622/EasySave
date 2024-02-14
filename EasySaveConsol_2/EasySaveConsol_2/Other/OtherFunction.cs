@@ -91,5 +91,18 @@ namespace EasySaveConsol_2
                 if (regex.IsMatch(lines[i]))lines[i] = "language = " + newData + ";";
             File.WriteAllLines(pathFileConfig, lines);
         }
+        public static string GetSizeFiles(string[] paths)
+        {
+            long totalSize = 0;
+            foreach (string filePath in paths)
+            {
+                FileInfo fileInfo = new FileInfo(filePath);
+                if (fileInfo.Exists)
+                {
+                    totalSize += fileInfo.Length;
+                }
+            }
+            return (totalSize / 1024).ToString();
+        }
     }
 }

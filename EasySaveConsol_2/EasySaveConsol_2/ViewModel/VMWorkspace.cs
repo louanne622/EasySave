@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
 
 namespace EasySaveConsol_2
 {
@@ -9,14 +10,20 @@ namespace EasySaveConsol_2
     {
         private ViewConsole objUIConsole;
         public Save[] listSaves;
+        public StateSave[] listeStatesSave;
         public VMWorkspace()
         {
             this.objUIConsole = new ViewConsole();
             this.setListSave();
+            this.setListStateSave();
         }
         public void setListSave()
         {
             this.listSaves = Json.getSavesFromJson();
+        }
+        public void setListStateSave()
+        {
+            this.listeStatesSave = Json.getStateSavesFromJson();
         }
         public void setLang(string input)
         {
@@ -30,7 +37,7 @@ namespace EasySaveConsol_2
         {
             return (Directory.Exists(_save.FilesSource) && Directory.Exists(_save.FilesTarget));
         }
-        public void TransferSave(Save _save, Transfer _transfer)
+        public void TransferSave(Save _save, Transfer _transfer, StateSave _stateSave)
         {
             /*
              * After verification of the Paths of the save if they exists
@@ -38,13 +45,15 @@ namespace EasySaveConsol_2
              */
             if (!VerifFilesExiste(_save)) return;
             _transfer.setFilesFilesList(_save);
+            _stateSave.SetStateSave(_save);
+            File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + @"Log\StateLog\StateLog.json", JsonSerializer.Serialize(this.listeStatesSave, new JsonSerializerOptions { WriteIndented = true }));
             switch (_save.Type)
             {
                 case "C":
-                    _transfer.TransferCom(_save);
+                    _transfer.TransferCom(_save, _stateSave, this.listeStatesSave);
                     break;
                 case "S":
-                    _transfer.TransferSeq(_save);
+                    _transfer.TransferSeq(_save, _stateSave, this.listeStatesSave);
                     break;
             }
 

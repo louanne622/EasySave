@@ -1,0 +1,16 @@
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.exe
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.deps.json
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.runtimeconfig.json
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.runtimeconfig.dev.json
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.dll
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\ref\workshop_process.dll
+C:\Users\romai\source\repos\workshop_process\workshop_process\bin\Debug\net5.0\workshop_process.pdb
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.csproj.AssemblyReference.cache
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.AssemblyInfo.cs
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.dll
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\ref\workshop_process.dll
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.pdb
+C:\Users\romai\source\repos\workshop_process\workshop_process\obj\Debug\net5.0\workshop_process.genruntimeconfig.cache

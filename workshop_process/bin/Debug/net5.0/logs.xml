@@ -1,0 +1,5 @@
+<Logs>
+  <Log Type="Erreur" Message="Erreur critique - Echec de connexion au serveur." />
+  <Log Type="Avertissement" Message="Fichier non trouvé - fichier.txt" />
+  <Log Type="Information" Message="Nouvelle session utilisateur démarrée." />
+</Logs>

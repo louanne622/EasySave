@@ -88,7 +88,7 @@ namespace EasySaveConsol_2
             string[] lines = File.ReadAllLines(pathFileConfig);
             Regex regex = new Regex(@$"{configVariable}\s*=\s*\d+;$");
             for (int i = 0; i < lines.Length; i++)
-                if (regex.IsMatch(lines[i]))lines[i] = "language = " + newData + ";";
+                if (regex.IsMatch(lines[i]))lines[i] = configVariable + " = " + newData + ";";
             File.WriteAllLines(pathFileConfig, lines);
         }
         public static string GetSizeFiles(string[] paths)
@@ -104,5 +104,6 @@ namespace EasySaveConsol_2
             }
             return (totalSize / 1024).ToString();
         }
+        
     }
 }

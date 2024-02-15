@@ -10,6 +10,7 @@ namespace EasySaveConsol_2
          * Attribut that will be used for the language for the application
          */
         private string language;
+        private string extension;
         //Creation of all the attributes
         private string[] ListeFR =
         {
@@ -45,8 +46,12 @@ namespace EasySaveConsol_2
             "# (1 à 5) ----------------------------------#",
             "# Quelle sauvegarde sont à effectuer ? -----#", // 30
             "# (ex synthaxe: 1-3 ou 1 ;3) ---------------#",
-            "# 6/ Modifier l'extension des logs ---------#" 
-
+            "# 6/ Modifier l'extension des logs ---------#",
+            "#----------CHANGEMENT D EXTENSION-----------#",
+            "#------------------- Extension modifiée: ok #",
+            "#-Souhaitez-vous changer d'extension ?(Y/N)-#", // 35
+            "# 1/ .JSON ---------------------------------#", 
+            "# 2/ .XML ----------------------------------#"
         };
         private string[] ListeEN =
         {
@@ -91,15 +96,25 @@ namespace EasySaveConsol_2
              * config file
              */
             this.language = ClassUtility.GetConfigData("language");
+            this.extension = ClassUtility.GetConfigData("extension");
         }
         public void setLang(string input)
         {
             this.language = input;
             ClassUtility.SetConfigData("language", input);
         }
+        public void setExtension(string input)
+        {
+            this.extension = input;
+            ClassUtility.SetConfigData("extension", input);
+        }
         public string getLang()
         {
             return this.language;
+        }
+        public string getExtension()
+        {
+            return this.extension;
         }
         private string[] getListLang(string lang)
         {
@@ -128,5 +143,6 @@ namespace EasySaveConsol_2
             Console.WriteLine("FileTarget: " + _save.FilesTarget);
             Console.WriteLine("Type:       " + _save.Type);
         }
+
     }
 }

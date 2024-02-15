@@ -40,7 +40,7 @@ namespace EasySaveConsol_2
             this.NbFilesLeftToDo = this.TotalFilesToCopy;
             this.Progression = "0";
         }
-        private string[] GetFilesToCopy(Save _save)
+        public string[] GetFilesToCopy(Save _save)
         {
             List<string> deleteList = new List<string>();
             List<string> finalList = new List<string>();

@@ -11,11 +11,13 @@ namespace EasySaveConsol_2
         private ViewConsole objUIConsole;
         public Save[] listSaves;
         public StateSave[] listeStatesSave;
+        public DailyLog objDailyLog;
         public VMWorkspace()
         {
             this.objUIConsole = new ViewConsole();
             this.setListSave();
             this.setListStateSave();
+            this.objDailyLog = new DailyLog();
         }
         public void setListSave()
         {
@@ -28,6 +30,14 @@ namespace EasySaveConsol_2
         public void setLang(string input)
         {
             this.objUIConsole.setLang(input);
+        }
+        public void setExtension(string input)
+        {
+            this.objUIConsole.setExtension(input);
+        }
+        public string getExtension()
+        {
+            return this.objUIConsole.getExtension();
         }
         public void ConsoleWriteDataString(string input)
         {

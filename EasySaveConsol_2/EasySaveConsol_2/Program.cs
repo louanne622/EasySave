@@ -18,6 +18,7 @@
  */
 
 using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace EasySaveConsol_2
@@ -51,7 +52,7 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "2":
-                        A.objWorkspace.ConsoleWriteDataString("3; 11; 3; 23");
+                        A.objWorkspace.ConsoleWriteDataString("3; 11; 3; 23; 29");
                         Console.Write("#       "); string id_save = Console.ReadLine();
                         int id_save2;
                         try
@@ -96,7 +97,36 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "3":
-                        A.objWorkspace.TransferSave(A.objWorkspace.listSaves[0], A.objTransfer, A.objWorkspace.listeStatesSave[0]);
+                        A.objWorkspace.setListSave();
+                        A.objWorkspace.setListStateSave();
+                        A.objWorkspace.ConsoleWriteDataString("3; 12; 3; 30; 31");
+                        Console.Write("#       "); string id_save9 = Console.ReadLine();
+                        try
+                        {
+                            int[] listSaveId = ClassUtility.ParseBackupNumbers(id_save9).ToArray();
+                            for (int i = 0; i < listSaveId.Length; i++)
+                            {
+                                Stopwatch stopwatch = new Stopwatch();
+                                stopwatch.Start();
+                                A.objWorkspace.TransferSave(A.objWorkspace.listSaves[listSaveId[i] - 1], 
+                                                            A.objTransfer, 
+                                                            A.objWorkspace.listeStatesSave[listSaveId[i] - 1]);
+                                stopwatch.Stop();
+                                TimeSpan elapsedTime = stopwatch.Elapsed;
+                                string formattedTime = $"{(int)elapsedTime.TotalMinutes}min {elapsedTime.Seconds}sec";
+                                A.objWorkspace.objDailyLog.SetDailyLogDataInJson(A.objWorkspace.listSaves[0],
+                                                                                 formattedTime,
+                                                                                 A.objWorkspace.getExtension());
+                            }
+                            A.objWorkspace.ConsoleWriteDataString("1; 17; 3");
+                        }
+                        catch
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        // A.objWorkspace.TransferSave(A.objWorkspace.listSaves[0], A.objTransfer, A.objWorkspace.listeStatesSave[0]);
                         Console.ReadLine();
                         break;
                     /* Delete Saves */
@@ -104,7 +134,7 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "4":
-                        A.objWorkspace.ConsoleWriteDataString("3; 13; 3; 28");
+                        A.objWorkspace.ConsoleWriteDataString("3; 13; 3; 28; 29");
                         Console.Write("#       "); string id_save4 = Console.ReadLine();
                         int id_save4_2;
                         try
@@ -154,6 +184,19 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "6":
+                        A.objWorkspace.ConsoleWriteDataString("3; 14; 3; 35; 3");
+                        Console.Write("#       "); string dataLog = Console.ReadLine();
+                        if (dataLog.ToLower() == "y" || dataLog.ToLower() == "yes")
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("3; 36; 37; 3");
+                            Console.Write("#       "); dataLog = Console.ReadLine();
+                            if (int.Parse(dataLog) < 1 || int.Parse(dataLog) > 2) A.objWorkspace.ConsoleWriteDataString("22");
+                            else
+                            {
+                                A.objWorkspace.setExtension(dataLog);
+                                A.objWorkspace.ConsoleWriteDataString("1; 34; 3");
+                            }
+                        }
                         Console.ReadLine();
                         break;
                     default:

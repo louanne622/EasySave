@@ -69,12 +69,5 @@ namespace EasySaveConsol_2
             string[] finalArray = finalList.ToArray();
             return filesOrigin.Except(finalArray).ToArray();
         }
-        private void deleteFiles(string[] input)
-        {
-            // Delete the files in the input list (with Path)
-            foreach (string filePath in input)
-                if (File.Exists(filePath)) File.Delete(filePath);
-        }
-        
     }
 }

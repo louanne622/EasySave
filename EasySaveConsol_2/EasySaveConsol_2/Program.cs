@@ -42,9 +42,7 @@ namespace EasySaveConsol_2
                         A.objWorkspace.ConsoleWriteDataString("3; 10; 3");
                         A.objWorkspace.setListSave();
                         foreach (Save save in A.objWorkspace.listSaves)
-                        {
                             A.objWorkspace.getSaveData(save);
-                        }
                         A.objWorkspace.ConsoleWriteDataString("1; 3");
                         Console.ReadLine();
                         break;
@@ -53,7 +51,44 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "2":
-                        A.objWorkspace.TransferSave(A.objWorkspace.listSaves[1], A.objTransfer, A.objWorkspace.listeStatesSave[1]);
+                        A.objWorkspace.ConsoleWriteDataString("3; 11; 3; 23");
+                        Console.Write("#       "); string id_save = Console.ReadLine();
+                        int id_save2;
+                        try
+                        {
+                             id_save2 = int.Parse(id_save);
+                        } catch
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        if (id_save2 > 6 || id_save2 < 1)
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        A.objWorkspace.ConsoleWriteDataString("24");
+                        Console.Write("#       "); string nom_save = Console.ReadLine();
+                        A.objWorkspace.ConsoleWriteDataString("25");
+                        Console.Write("#       "); string source_save = Console.ReadLine();
+                        A.objWorkspace.ConsoleWriteDataString("26");
+                        Console.Write("#       "); string target_save = Console.ReadLine();
+                        A.objWorkspace.ConsoleWriteDataString("27");
+                        Console.Write("#       "); string type_save = Console.ReadLine();
+                        if (type_save != "C" && type_save != "S")
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        if (nom_save != "") Json.EditSaveName(A.objWorkspace.listSaves[id_save2 - 1], nom_save);
+                        if (source_save != "") Json.EditSaveSource(A.objWorkspace.listSaves[id_save2 - 1], source_save);
+                        if (target_save != "") Json.EditSaveTarget(A.objWorkspace.listSaves[id_save2 - 1], target_save);
+                        if (type_save != "") Json.EditSaveType(A.objWorkspace.listSaves[id_save2 - 1], type_save);
+                        Json.EditSavesInJson(A.objWorkspace.listSaves);
+                        A.objWorkspace.ConsoleWriteDataString("1; 15; 3");
                         Console.ReadLine();
                         break;
                     /* Execute Saves */
@@ -61,6 +96,7 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "3":
+                        A.objWorkspace.TransferSave(A.objWorkspace.listSaves[0], A.objTransfer, A.objWorkspace.listeStatesSave[0]);
                         Console.ReadLine();
                         break;
                     /* Delete Saves */
@@ -68,6 +104,28 @@ namespace EasySaveConsol_2
                      * 
                      */
                     case "4":
+                        A.objWorkspace.ConsoleWriteDataString("3; 13; 3; 28");
+                        Console.Write("#       "); string id_save4 = Console.ReadLine();
+                        int id_save4_2;
+                        try
+                        {
+                            id_save4_2 = int.Parse(id_save4);
+                        }
+                        catch
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        if (id_save4_2 > 6 || id_save4_2 < 1)
+                        {
+                            A.objWorkspace.ConsoleWriteDataString("1; 22; 3");
+                            Console.ReadLine();
+                            break;
+                        }
+                        Json.ResetSave(A.objWorkspace.listSaves[id_save4_2 - 1]);
+                        Json.EditSavesInJson(A.objWorkspace.listSaves);
+                        A.objWorkspace.ConsoleWriteDataString("1; 16; 3");
                         Console.ReadLine();
                         break;
                     /* Change the language (it will be stocked in Config.cfg) */

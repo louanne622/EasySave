@@ -26,7 +26,8 @@ namespace EasySaveConsol_2
                 string destinationFilePath = Path.Combine(_save.FilesTarget, relativePath);
                 Directory.CreateDirectory(Path.GetDirectoryName(destinationFilePath));
                 File.Copy(file, destinationFilePath, true); // Overwrite true (forcing to replace files)
-                try
+                try // The TRY is here to be sure that if the file is already open by an other process
+                    // that won't crash the application
                 {
                     _stateSave.NbFilesLeftToDo = (int.Parse(_stateSave.NbFilesLeftToDo) - 1).ToString();
                     _stateSave.Progression = (100 * (int.Parse(_stateSave.TotalFilesToCopy) - int.Parse(_stateSave.NbFilesLeftToDo)) / (int.Parse(_stateSave.TotalFilesToCopy))).ToString();

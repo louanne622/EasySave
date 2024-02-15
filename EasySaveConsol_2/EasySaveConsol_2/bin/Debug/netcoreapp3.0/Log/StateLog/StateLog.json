@@ -1,14 +1,14 @@
 [
   {
     "Id": "1",
-    "Name": "",
-    "SourceFilePath": "",
-    "TargetFilePath": "",
-    "State": "",
-    "TotalFilesToCopy": "",
-    "TotalFilesSize": "",
-    "NbFilesLeftToDo": "",
-    "Progression": ""
+    "Name": "Test 08/02",
+    "SourceFilePath": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Or",
+    "TargetFilePath": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Target",
+    "State": "ACTIVE",
+    "TotalFilesToCopy": "0",
+    "TotalFilesSize": "0",
+    "NbFilesLeftToDo": "0",
+    "Progression": "0"
   },
   {
     "Id": "2",

@@ -23,6 +23,7 @@ namespace EasySaveV2._0
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new VMWorkspace();
         }
     }
 }

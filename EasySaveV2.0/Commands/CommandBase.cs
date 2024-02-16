@@ -16,7 +16,7 @@ namespace EasySaveV2._0
 
         public bool CanExecute(object parameter)
         {
-            return true; // Toujours autoriser l'exécution de la commande
+            return true; 
         }
 
         public void Execute(object parameter)

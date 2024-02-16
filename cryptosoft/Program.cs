@@ -1,13 +1,14 @@
 ﻿using System;
 using System.IO;
-
+using System.Diagnostics;
 class Program
 {
     static void Main(string inputFile, string outputFile)
     {
         string args = "255";
         byte key = Convert.ToByte(args); // La clé est un octet
-     
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
 
         try
         {
@@ -32,5 +33,7 @@ class Program
         {
             Console.WriteLine("Une erreur s'est produite : " + ex.Message);
         }
+        stopwatch.Stop(); 
+        Console.Write(stopwatch); // affiche le temps mis pour effectuer l'action
     }
 }

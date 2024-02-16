@@ -1,0 +1,16 @@
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.csproj.AssemblyReference.cache
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.AssemblyInfo.cs
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.exe
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.deps.json
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.runtimeconfig.json
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.runtimeconfig.dev.json
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.dll
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\ref\cryptosoft.dll
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\bin\Debug\net5.0\cryptosoft.pdb
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.dll
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\ref\cryptosoft.dll
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.pdb
+C:\Users\romai\source\repos\cryptosoft\cryptosoft\obj\Debug\net5.0\cryptosoft.genruntimeconfig.cache

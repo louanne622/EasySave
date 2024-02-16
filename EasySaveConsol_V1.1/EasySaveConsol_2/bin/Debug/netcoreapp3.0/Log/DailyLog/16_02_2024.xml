@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<logs>
+  <log>
+    <Name>Test 15/02 17:35</Name>
+    <FileSource>C:\Users\MB311L\Desktop\Test\Or</FileSource>
+    <FileTarget>C:\Users\MB311L\Desktop\Test\Target</FileTarget>
+    <FileSize>0</FileSize>
+    <FileTransferTime>0min 0sec</FileTransferTime>
+    <Time>16/02/2024 8:40:31</Time>
+  </log>
+  <log>
+    <Name>Test 15/02 17:35</Name>
+    <FileSource>C:\Users\MB311L\Desktop\Test\Or</FileSource>
+    <FileTarget>C:\Users\MB311L\Desktop\Test\Target</FileTarget>
+    <FileSize>0</FileSize>
+    <FileTransferTime>0min 0sec</FileTransferTime>
+    <Time>16/02/2024 8:40:40</Time>
+  </log>
+</logs>

@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Name": "Test 08/02",
+    "FilesSource": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Or",
+    "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Target",
+    "Type": "S"
+  },
+  {
+    "Id": 2,
+    "Name": "Test 15/02 17:35",
+    "FilesSource": "C:\\Users\\MB311L\\Desktop\\Test\\Or",
+    "FilesTarget": "C:\\Users\\MB311L\\Desktop\\Test\\Target",
+    "Type": "S"
+  },
+  {
+    "Id": 3,
+    "Name": "",
+    "FilesSource": "",
+    "FilesTarget": "",
+    "Type": ""
+  },
+  {
+    "Id": 4,
+    "Name": "",
+    "FilesSource": "",
+    "FilesTarget": "",
+    "Type": ""
+  },
+  {
+    "Id": 5,
+    "Name": "2",
+    "FilesSource": "2",
+    "FilesTarget": "2",
+    "Type": "2"
+  }
+]

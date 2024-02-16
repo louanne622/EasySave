@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0"
+        xmlns:local="clr-namespace:EasySaveV2._0" d:DataContext="{d:DesignInstance Type=local:VMWorkspace}"
         mc:Ignorable="d"
         Title="EasySave V2.0" Height="450" Width="800"
         MinHeight="450" MinWidth="800"
@@ -35,24 +35,38 @@
         <TabControl>
             <TabItem Header="Sauvegarde" FontSize="14" Width="110" Margin="-2,-2,2,0" Style="{StaticResource TabItemBackgroundStyle}">
                 <Grid Background="{StaticResource PrimaryBackground}">
-                    <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Name}" Width="150"/>
-                                <GridViewColumn Header="Source" DisplayMemberBinding="{Binding Source}" Width="200"/>
-                                <GridViewColumn Header="Cible" DisplayMemberBinding="{Binding Target}" Width="200"/>
-                                <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="100"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding Saves}" 
+              MaxHeight="300">
+                            <!-- Définir la hauteur maximale -->
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Height" Value="30"/>
+                                    <!-- Ajuster la hauteur des éléments -->
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding SaveName}" Width="150"/>
+                                    <GridViewColumn Header="Source" DisplayMemberBinding="{Binding SourcePath}" Width="200"/>
+                                    <GridViewColumn Header="Cible" DisplayMemberBinding="{Binding TargetPath}" Width="200"/>
+                                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding FileType}" Width="100"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ScrollViewer>
+
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
-                        <Button Content="Ajouter une sauvegarde" Command="{Binding EditCommand}" Style="{StaticResource ActionButtonStyle}" />
+                        <Button Content="Ajouter" Command="{Binding EditCommand}" Style="{StaticResource ActionButtonStyle}" />
                         <Button Content="Modifier" Style="{StaticResource ActionButtonStyle}"/>
                         <Button Content="Exécuter" Style="{StaticResource ActionButtonStyle}"/>
                         <Button Content="Supprimer" Style="{StaticResource ActionButtonStyle}"/>
                     </StackPanel>
+                    
                 </Grid>
             </TabItem>
+            
             <TabItem Header="Historique" FontSize="14" Width="110" Margin="-3,-2,3,0" Style="{StaticResource TabItemBackgroundStyle}">
                 <Grid Background="{StaticResource PrimaryBackground}">
                     <ListBox Margin="10,10,10,45" Background="#E4E4E4"/>

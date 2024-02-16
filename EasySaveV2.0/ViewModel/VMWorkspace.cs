@@ -1,28 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Text.Json;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace EasySaveV2._0
 {
-    class VMWorkspace
+    class VMWorkspace : INotifyPropertyChanged
     {
-        public List<Save> listSaves;
+        private ObservableCollection<Save> _saves;
+
+        public ObservableCollection<Save> Saves
+        {
+            get { return _saves; }
+            set
+            {
+                _saves = value;
+                OnPropertyChanged("Saves");
+            }
+        }
 
         public VMWorkspace()
         {
-            this.listSaves = new List<Save>();
-            EditCommand = new RelayCommand();
+            Saves = new ObservableCollection<Save>();
+
+            for (int i = 1; i <= 25; i++)
+            {
+                Saves.Add(new Save($"Sauvegarde {i}", $"Source {i}", $"Cible {i}", $"Type {i}"));
+            }
+
         }
 
-        public ICommand EditCommand { get; }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        
-
-        public void AddSave(Save save)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            this.listSaves.Add(save);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

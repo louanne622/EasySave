@@ -23,7 +23,14 @@ namespace EasySaveV2._0
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new VMWorkspace();
+            VMWorkspace viewModel = new VMWorkspace();
+            DataContext = viewModel;
+
+        }
+
+        private void SaveList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

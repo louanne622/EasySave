@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace EasySaveV2._0.View
+namespace EasySaveV2._0
 {
     
     public partial class AddSaveView : Window

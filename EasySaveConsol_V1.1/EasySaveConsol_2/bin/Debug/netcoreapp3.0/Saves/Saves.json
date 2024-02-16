@@ -29,9 +29,9 @@
   },
   {
     "Id": 5,
-    "Name": "2",
-    "FilesSource": "2",
-    "FilesTarget": "2",
-    "Type": "2"
+    "Name": "Save 5",
+    "FilesSource": "Source\\Save5",
+    "FilesTarget": "Target\\Save5",
+    "Type": "C"
   }
 ]

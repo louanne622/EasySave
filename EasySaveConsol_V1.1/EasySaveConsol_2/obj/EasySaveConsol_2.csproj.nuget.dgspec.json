@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_2\\EasySaveConsol_2\\EasySaveConsol_2.csproj": {}
+    "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_V1.1\\EasySaveConsol_2\\EasySaveConsol_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_2\\EasySaveConsol_2\\EasySaveConsol_2.csproj": {
+    "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_V1.1\\EasySaveConsol_2\\EasySaveConsol_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_2\\EasySaveConsol_2\\EasySaveConsol_2.csproj",
+        "projectUniqueName": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_V1.1\\EasySaveConsol_2\\EasySaveConsol_2.csproj",
         "projectName": "EasySaveConsol_2",
-        "projectPath": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_2\\EasySaveConsol_2\\EasySaveConsol_2.csproj",
+        "projectPath": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_V1.1\\EasySaveConsol_2\\EasySaveConsol_2.csproj",
         "packagesPath": "C:\\Users\\MB311L\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_2\\EasySaveConsol_2\\obj\\",
+        "outputPath": "C:\\Users\\MB311L\\Desktop\\EasySaveConsol_V1.1\\EasySaveConsol_2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

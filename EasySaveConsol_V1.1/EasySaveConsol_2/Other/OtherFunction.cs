@@ -7,7 +7,6 @@
 
 using System;
 using System.IO;
-using System.Text;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -104,6 +103,5 @@ namespace EasySaveConsol_2
             }
             return (totalSize / 1024).ToString();
         }
-        
     }
 }

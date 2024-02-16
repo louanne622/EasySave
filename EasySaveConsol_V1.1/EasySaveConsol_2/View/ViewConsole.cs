@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EasySaveConsol_2
 {
@@ -51,7 +49,8 @@ namespace EasySaveConsol_2
             "#------------------- Extension modifiée: ok #",
             "#-Souhaitez-vous changer d'extension ?(Y/N)-#", // 35
             "# 1/ .JSON ---------------------------------#", 
-            "# 2/ .XML ----------------------------------#"
+            "# 2/ .XML ----------------------------------#",
+            "# C => Complète / S => Séquentielle --------#"
         };
         private string[] ListeEN =
         {
@@ -92,7 +91,8 @@ namespace EasySaveConsol_2
             "#------------------- Modified extension: ok #",
             "#-Do you want to change the extension?(Y/N)-#", // 35
             "# 1/ .JSON ---------------------------------#",
-            "# 2/ .XML ----------------------------------#"
+            "# 2/ .XML ----------------------------------#",
+            "# C => Complete / S => Sequential ----------#"
         };
         public ViewConsole()
         {

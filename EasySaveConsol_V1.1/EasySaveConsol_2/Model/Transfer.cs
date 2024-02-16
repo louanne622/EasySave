@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using System.Text;
 using System.Text.Json;
 
 
@@ -12,7 +11,6 @@ namespace EasySaveConsol_2
     {
         public string[] filesOrigin;
         public string[] filesTarget;
-
         public void setFilesFilesList(Save _save)
         {
             this.filesOrigin = Directory.GetFiles(_save.FilesSource, "*", SearchOption.AllDirectories);
@@ -81,6 +79,5 @@ namespace EasySaveConsol_2
             foreach (string filePath in input)
                 if (File.Exists(filePath)) File.Delete(filePath);
         }
-        
     }
 }

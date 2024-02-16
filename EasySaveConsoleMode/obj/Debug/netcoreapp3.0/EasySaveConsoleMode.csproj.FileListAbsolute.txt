@@ -12,3 +12,17 @@ C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netc
 C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.dll
 C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.pdb
 C:\Users\MB311L\Desktop\Syst\EasySave-develop\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.genruntimeconfig.cache
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.exe
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.deps.json
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.runtimeconfig.json
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.runtimeconfig.dev.json
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.dll
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\bin\Debug\netcoreapp3.0\EasySaveConsoleMode.pdb
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.csproj.AssemblyReference.cache
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.AssemblyInfoInputs.cache
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.AssemblyInfo.cs
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.csproj.CoreCompileInputs.cache
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.dll
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.pdb
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveConsoleMode\obj\Debug\netcoreapp3.0\EasySaveConsoleMode.genruntimeconfig.cache

@@ -56,7 +56,7 @@
                     </ScrollViewer>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
-                        <Button Content="Ajouter" Command="{Binding AddSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
+                        <Button Content="Ajouter" Command="{Binding MakeSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
                         <Button Content="Modifier" Style="{StaticResource ActionButtonStyle}"/>
                         <Button Content="Exécuter" Style="{StaticResource ActionButtonStyle}"/>
                         <Button Content="Supprimer" Style="{StaticResource ActionButtonStyle}"/>

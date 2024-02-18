@@ -2,10 +2,10 @@
 {
     public class Save
     {
-        public string saveName { get; }
-        public string sourcePath { get; }
-        public string targetPath { get; }
-        public string fileType { get; }
+        public string saveName { get; set; }
+        public string sourcePath { get; set; }
+        public string targetPath { get; set; }
+        public string fileType { get; set; }
 
 
         public Save(string saveName, string sourcePath, string targetPath, string fileType)

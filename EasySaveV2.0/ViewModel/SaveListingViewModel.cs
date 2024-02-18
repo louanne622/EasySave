@@ -8,21 +8,28 @@ namespace EasySaveV2._0
 {
     public class SaveListingViewModel : VMWorkspace
     {
-        private readonly ObservableCollection<SaveViewModel> _saves;
+        public ObservableCollection<Save> Saves { get; set; }
 
-        public ObservableCollection<SaveViewModel> Saves => _saves;
-        public ICommand MakeSaveCommand { get; }
+        public ICommand ShowSaveCommand { get; set; }
 
         public SaveListingViewModel()
         {
-            _saves = new ObservableCollection<SaveViewModel>();
+            Saves = SaveList.GetSave();
 
-            MakeSaveCommand = new NavigateCommand();
+            Saves.Add(new Save("test", "test", "test", "test"));
 
-            _saves.Add(new SaveViewModel(new Save("test", "test", "test", "test")));
-            _saves.Add(new SaveViewModel(new Save("test", "test", "test", "test")));
-            _saves.Add(new SaveViewModel(new Save("test", "test", "test", "test")));
-            _saves.Add(new SaveViewModel(new Save("test", "test", "test", "test")));
+        }
+
+        private void ShowWindow(object obj)
+        {
+            AddSaveView addSaveWin = new AddSaveView();
+            addSaveWin.Show();
+        }
+
+        private bool CanShowWindow(object obj)
+        {
+            
+            return true;
         }
     }
 }

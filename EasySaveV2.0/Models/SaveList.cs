@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace EasySaveV2._0
 {
     class SaveList
     {
-        private readonly List<Save> _saves;
+        public static ObservableCollection<Save> _savesList;
 
         public SaveList()
         {
-            _saves = new List<Save>();
+            _savesList = new ObservableCollection<Save>();
         }
 
-        public IEnumerable<Save> GetSave()
+        public static ObservableCollection<Save> GetSave()
         {
-            return _saves;
+            return _savesList;
         }
 
-        public void AddSave(Save save)
+        public static void AddSave(Save save)
         {
-
-            _saves.Add(save);
+            _savesList.Add(save);
         }
     }
 }

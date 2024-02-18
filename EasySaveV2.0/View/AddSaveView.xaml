@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySaveV2._0"
         mc:Ignorable="d"
-        Title="AddReservationView" Height="450" Width="800">
+        Title="AddSaveView" Height="450" Width="800">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
     <SolidColorBrush x:Key="ButtonBackground" Color="#FF007ACC"/>

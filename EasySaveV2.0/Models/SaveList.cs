@@ -8,40 +8,23 @@ namespace EasySaveV2._0
 {
     class SaveList
     {
-        private readonly string _filePath;
-        public static ObservableCollection<Save> _savesList;
+        private readonly ObservableCollection<Save> _saves;
 
-        public SaveList(string filePath)
+        public SaveList()
         {
-            _filePath = filePath;
-            _savesList = new ObservableCollection<Save>();
-            LoadSaves();
+            _saves = new ObservableCollection<Save>();
         }
 
-        public static ObservableCollection<Save> GetSave()
+        public IEnumerable<Save> GetSave()
         {
-            return _savesList;
+            return _saves;
         }
 
-        public static void AddSave(Save save)
+        public void AddSave(Save save)
         {
-            _savesList.Add(save);
-            SaveSaves(_filePath);
-        }
 
-        private void LoadSaves()
-        {
-            if (File.Exists(_filePath))
-            {
-                string json = File.ReadAllText(_filePath);
-                _savesList = JsonSerializer.Deserialize<ObservableCollection<Save>>(json);
-            }
-        }
-
-        private static void SaveSaves()
-        {
-            string json = JsonSerializer.Serialize(_savesList, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(filePath, json);
+            _saves.Add(save);
         }
     }
 }
+

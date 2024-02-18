@@ -52,7 +52,10 @@
         <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5" Text="{Binding NewTargetPath}"/>
 
         <Label Grid.Row="7" Content="Type de sauvegarde:"/>
-        <TextBox Grid.Row="8" Name="txtTypeFile" Margin="5" Text="{Binding NewTypeFile}"/>
+        <ComboBox Grid.Row="8" Name="cmbTypeFile" Margin="5" SelectedItem="{Binding NewTypeFile}">
+            <ComboBoxItem Content="Complet"/>
+            <ComboBoxItem Content="Différentiel"/>
+        </ComboBox>
 
         <Button Grid.Row="9" Content="Créer la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding AddSaveCommand}"/>
     </Grid>

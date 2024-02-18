@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Input;
@@ -9,10 +10,61 @@ namespace EasySaveV2._0
 {
     class SaveViewModel : VMWorkspace
     {
-        public string NewNameSave { get; set; }
-        public string NewSourcePath { get; set; }
-        public string NewTargetPath { get; set; }
-        public string NewTypeFile { get; set; }
+        private string _newNameSave;
+        public string NewNameSave
+        {
+            get => _newNameSave;
+            set
+            {
+                if (_newNameSave != value)
+                {
+                    _newNameSave = value;
+                    OnPropertyChanged(nameof(NewNameSave));
+                }
+            }
+        }
+        private string _newSourcePath;
+        public string NewSourcePath
+        {
+            get => _newSourcePath;
+            set
+            {
+                if (_newSourcePath != value)
+                {
+                    _newSourcePath = value;
+                    OnPropertyChanged(nameof(NewSourcePath));
+                }
+            }
+        }
+        private string _newTargetPath;
+        public string NewTargetPath
+        {
+            get => _newTargetPath;
+            set
+            {
+                if (_newTargetPath != value)
+                {
+                    _newTargetPath = value;
+                    OnPropertyChanged(nameof(NewTargetPath));
+                }
+            }
+        }
+
+        private FileType _newTypeFile;
+        public FileType NewTypeFile
+        {
+            get => _newTypeFile;
+            set
+            {
+                if (_newTypeFile != value)
+                {
+                    _newTypeFile = value;
+                    OnPropertyChanged(nameof(NewTypeFile));
+                }
+            }
+        }
+
+
 
         public ObservableCollection<Save> Saves { get; set; }
 
@@ -28,8 +80,8 @@ namespace EasySaveV2._0
             ShowSaveCommand = new RelayCommand(ShowWindow, CanShowWindow);
             AddSaveCommand = new RelayCommand(AddSave, CanAddSave);
 
-            Saves.Add(new Save("test", "test", "tfsdfezft", "test"));
-            Saves.Add(new Save("test", "salut", "test", "test"));
+            Saves.Add(new Save("test", "test", "tfsdfezft", FileType.Complet));
+            Saves.Add(new Save("test", "salut", "test", FileType.Differentiel));
         }
 
         private Save _selectedItem;
@@ -67,14 +119,18 @@ namespace EasySaveV2._0
 
         private void AddSave(object obj)
         {
-            if (!string.IsNullOrEmpty(NewNameSave) && !string.IsNullOrEmpty(NewSourcePath) && !string.IsNullOrEmpty(NewTargetPath) && !string.IsNullOrEmpty(NewTypeFile))
+            if (string.IsNullOrEmpty(NewNameSave) || string.IsNullOrEmpty(NewSourcePath) || string.IsNullOrEmpty(NewTargetPath) || NewTypeFile == FileType.None)
             {
-                Saves.Add(new Save(NewNameSave, NewSourcePath, NewTargetPath, NewTypeFile));
-                
+                MessageBox.Show("Veuillez remplir tous les champs pour ajouter une sauvegarde.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
-                MessageBox.Show("Veuillez remplir tous les champs pour ajouter une sauvegarde.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                Saves.Add(new Save(NewNameSave, NewSourcePath, NewTargetPath, NewTypeFile));
+
+                NewNameSave = string.Empty;
+                NewSourcePath = string.Empty;
+                NewTargetPath = string.Empty;
+                NewTypeFile = FileType.None;
             }
 
 
@@ -84,5 +140,10 @@ namespace EasySaveV2._0
         {
             return true;
         }
+
+
+
+
+
     }
 }

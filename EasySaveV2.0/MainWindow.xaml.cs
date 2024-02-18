@@ -23,7 +23,7 @@ namespace EasySaveV2._0
         public MainWindow()
         {
             InitializeComponent();
-            VMWorkspace viewModel = new VMWorkspace();
+            SaveListingViewModel viewModel = new SaveListingViewModel();
             DataContext = viewModel;
 
         }

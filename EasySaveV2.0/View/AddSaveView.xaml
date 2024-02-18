@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0.View"
+        xmlns:local="clr-namespace:EasySaveV2._0"
         mc:Ignorable="d"
         Title="AddReservationView" Height="450" Width="800">
     <Window.Resources>
@@ -43,20 +43,17 @@
         
         <TextBlock Grid.Row="0" FontSize="24" Text="Créer une sauvegarde"/>
         <Label Grid.Row="1" Content="Nom de la sauvegarde:"/>
-        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5"/>
+        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding SaveName}"/>
 
         <Label Grid.Row="3" Content="Fichier source:"/>
-        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5"/>
+        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5" Text="{Binding SourcePath}"/>
 
         <Label Grid.Row="5" Content="Fichier destinataire:"/>
-        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5"/>
+        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5" Text="{Binding Targetpath}"/>
 
         <Label Grid.Row="7" Content="Type de sauvegarde:"/>
-        <ComboBox Grid.Row="8" Name="cmbBackupType" Margin="5">
-            <ComboBoxItem Content="Complet"/>
-            <ComboBoxItem Content="Incrémentiel"/>
-        </ComboBox>
+        <TextBox Grid.Row="8" Name="txtTypeFile" Margin="5" Text="{Binding FileType}"/>
 
-        <Button Grid.Row="9" Content="Créer la sauvegarde" Click="CreateBackup_Click" Margin="5" Style="{StaticResource ActionButtonStyle}"/>
+        <Button Grid.Row="9" Content="Créer la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding SubmitCommand}"/>
     </Grid>
 </Window>

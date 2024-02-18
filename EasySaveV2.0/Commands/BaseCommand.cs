@@ -6,31 +6,20 @@ using System.Windows.Input;
 namespace EasySaveV2._0
 {
 
-    public class BaseCommand : ICommand
+    public abstract class BaseCommand : ICommand
     {
-        private readonly Action<object> _execute;
-        private readonly Func<object, bool> _canExecute;
+        public event EventHandler CanExecuteChanged;
 
-        public BaseCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        public virtual bool CanExecute(object parameter)
         {
-            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute;
+            return true;
         }
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public abstract void Execute(object parameter);
 
-        public bool CanExecute(object parameter)
+        protected void OnCanExecutedChanged()
         {
-            return _canExecute == null || _canExecute(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            _execute(parameter);
+            CanExecuteChanged?.Invoke(this, new EventArgs());
         }
     }
 

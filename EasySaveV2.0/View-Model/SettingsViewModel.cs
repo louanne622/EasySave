@@ -8,15 +8,18 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO; 
 using System.Windows.Input;
+using EasySaveV2._0.Model;
 
 namespace EasySaveV2._0.ViewModel
 {
     public class SettingsViewModel : INotifyPropertyChanged
     {
         public IUIBase UI { get; private set; }
-        public ObservableCollection<string> FileNames { get; private set; } // Pour contenir les noms de fichiers
-        public ICommand OpenFileCommand { get; private set; } // Commande pour ouvrir le fichier sélectionné
+        public ObservableCollection<string> FileNames { get; private set; }
+        public ICommand OpenFileCommand { get; private set; }
+        public event PropertyChangedEventHandler PropertyChanged;
         private string _selectedFile;
+        private SettingsModel _settings;
         public string SelectedFile
         {
             get => _selectedFile;
@@ -33,12 +36,19 @@ namespace EasySaveV2._0.ViewModel
         public SettingsViewModel()
         {
             UI = new IUIBase();
+            _settings = new SettingsModel
+            {
+                Language = UserProperties.Default.Language,
+                LogFilePath = UserProperties.Default.LogFilePath,
+                EncryptedExtensions = UserProperties.Default.EncryptedExtensions,
+                LogExtension = UserProperties.Default.LogExtension
+            };
+            UI = new IUIBase();
             FileNames = new ObservableCollection<string>();
             OpenFileCommand = new RelayCommand(ExecuteOpenFile, CanExecuteOpenFile);
             ChangeLanguage(UserProperties.Default.Language);
             LoadFiles();
         }
-
         public string Language
         {
             get => UserProperties.Default.Language;
@@ -50,10 +60,10 @@ namespace EasySaveV2._0.ViewModel
                     OnPropertyChanged(nameof(Language));
                     SaveSettings();
                     ChangeLanguage(value);
+                    LogExtension = UserProperties.Default.LogExtension;
                 }
             }
         }
-
         public string LogFilePath
         {
             get => UserProperties.Default.LogFilePath;
@@ -68,7 +78,6 @@ namespace EasySaveV2._0.ViewModel
                 }
             }
         }
-
         public string EncryptedExtensions
         {
             get => UserProperties.Default.EncryptedExtensions;
@@ -82,12 +91,23 @@ namespace EasySaveV2._0.ViewModel
                 }
             }
         }
-
+        public string LogExtension
+        {
+            get => _settings.LogExtension;
+            set
+            {
+                if (_settings.LogExtension != value)
+                {
+                    _settings.LogExtension = value;
+                    OnPropertyChanged();
+                    SaveSettings();
+                }
+            }
+        }
         private void SaveSettings()
         {
             UserProperties.Default.Save();
         }
-
         private void ChangeLanguage(string languageFriendlyName)
         {
             string cultureCode = languageFriendlyName switch
@@ -101,9 +121,6 @@ namespace EasySaveV2._0.ViewModel
             Thread.CurrentThread.CurrentUICulture = culture;
             UI.UpdateLocalizedProperties(cultureCode);
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -121,17 +138,14 @@ namespace EasySaveV2._0.ViewModel
                 }
             }
         }
-
         private bool CanExecuteOpenFile(object parameter)
         {
             return !string.IsNullOrEmpty(SelectedFile);
         }
-
         private void ExecuteOpenFile(object parameter)
         {
             var fullPath = Path.Combine(UserProperties.Default.LogFilePath, SelectedFile);
             Process.Start(new ProcessStartInfo(fullPath) { UseShellExecute = true });
         }
-
     }
 }

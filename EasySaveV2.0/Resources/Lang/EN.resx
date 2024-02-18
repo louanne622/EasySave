@@ -156,13 +156,13 @@
   <data name="LabelCryptExten" xml:space="preserve">
     <value>Choose file to encrypt</value>
   </data>
+  <data name="LabelFileFormat" xml:space="preserve">
+    <value>Choose file format for the log</value>
+  </data>
   <data name="LabelLogPath" xml:space="preserve">
     <value>Change log path</value>
   </data>
   <data name="OpenButton" xml:space="preserve">
     <value>Open file</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
   </data>
 </root>

@@ -178,6 +178,15 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choisir le format du fichier log.
+        /// </summary>
+        public static string LabelFileFormat {
+            get {
+                return ResourceManager.GetString("LabelFileFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Choisir le chemin des fichiers log.
         /// </summary>
         public static string LabelLogPath {

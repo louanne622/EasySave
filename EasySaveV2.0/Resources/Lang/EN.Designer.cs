@@ -178,6 +178,15 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choose file format for the log.
+        /// </summary>
+        internal static string LabelFileFormat {
+            get {
+                return ResourceManager.GetString("LabelFileFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Change log path.
         /// </summary>
         internal static string LabelLogPath {
@@ -192,15 +201,6 @@ namespace EasySaveV2._0.Resources.Lang {
         internal static string OpenButton {
             get {
                 return ResourceManager.GetString("OpenButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une chaîne localisée semblable à .
-        /// </summary>
-        internal static string String1 {
-            get {
-                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

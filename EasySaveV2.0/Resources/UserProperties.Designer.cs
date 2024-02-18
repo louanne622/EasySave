@@ -59,5 +59,17 @@ namespace EasySaveV2._0.Resources {
                 this["EncryptedExtensions"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".Json")]
+        public string LogExtension {
+            get {
+                return ((string)(this["LogExtension"]));
+            }
+            set {
+                this["LogExtension"] = value;
+            }
+        }
     }
 }

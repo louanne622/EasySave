@@ -156,6 +156,9 @@
   <data name="LabelCryptExten" xml:space="preserve">
     <value>Choisir les fichiers à chiffrer</value>
   </data>
+  <data name="LabelFileFormat" xml:space="preserve">
+    <value>Choisir le format du fichier log</value>
+  </data>
   <data name="LabelLogPath" xml:space="preserve">
     <value>Choisir le chemin des fichiers log</value>
   </data>

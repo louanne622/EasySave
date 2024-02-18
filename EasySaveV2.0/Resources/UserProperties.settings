@@ -11,5 +11,8 @@
     <Setting Name="EncryptedExtensions" Type="System.String" Scope="User">
       <Value Profile="(Default)">.txt</Value>
     </Setting>
+    <Setting Name="LogExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.Json</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

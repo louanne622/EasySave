@@ -81,6 +81,12 @@
                         <TextBox x:Name="EncryptedExtensions" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10"
                      Text="{Binding EncryptedExtensions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     </GroupBox>
+                    <GroupBox Header="{Binding UI.LabelFileFormat}" Margin="10,220,10,10">
+                        <ComboBox x:Name="FileFormatChoice" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10" SelectedValue="{Binding LogExtension, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
+                            <ComboBoxItem Content=".Json"/>
+                            <ComboBoxItem Content=".Xml"/>
+                        </ComboBox>
+                    </GroupBox>
                 </Grid>
             </TabItem>
         </TabControl>

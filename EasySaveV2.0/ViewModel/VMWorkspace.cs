@@ -27,8 +27,11 @@ namespace EasySaveV2._0
         public VMWorkspace()
         {
             Saves = new ObservableCollection<Save>();
+            int Nombre_ActionSave = 5;
+           
+        
 
-            for (int i = 1; i <= 25; i++)
+            for (int i = 1; i <= Nombre_ActionSave; i++)
             {
                 Saves.Add(new Save($"Sauvegarde {i}", $"Source {i}", $"Cible {i}", $"Type {i}"));
             }

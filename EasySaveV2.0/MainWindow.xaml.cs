@@ -12,17 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using EasySaveV2._0.ViewModel;
 
 namespace EasySaveV2._0
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private SettingsViewModel viewModel; 
         public MainWindow()
         {
             InitializeComponent();
+            viewModel = new SettingsViewModel();
+            this.DataContext = viewModel;
         }
     }
 }

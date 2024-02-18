@@ -20,8 +20,7 @@ namespace EasySaveV2._0
         public AddSaveView()
         {
             InitializeComponent();
-            SaveViewModel viewmodel = new SaveViewModel();
-            DataContext = viewmodel;
+            DataContext = Application.Current.MainWindow.DataContext;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows;
 using System.Windows.Input;
 
 namespace EasySaveV2._0
@@ -66,14 +67,17 @@ namespace EasySaveV2._0
 
         private void AddSave(object obj)
         {
-            NewNameSave = string.Empty;
-            NewSourcePath = string.Empty;
-            NewTargetPath = string.Empty;
-            NewTypeFile = string.Empty;
+            if (!string.IsNullOrEmpty(NewNameSave) && !string.IsNullOrEmpty(NewSourcePath) && !string.IsNullOrEmpty(NewTargetPath) && !string.IsNullOrEmpty(NewTypeFile))
+            {
+                Saves.Add(new Save(NewNameSave, NewSourcePath, NewTargetPath, NewTypeFile));
+                
+            }
+            else
+            {
+                MessageBox.Show("Veuillez remplir tous les champs pour ajouter une sauvegarde.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
-            Saves.Add(new Save(NewNameSave, NewSourcePath, NewTargetPath, NewTypeFile));
 
-            
         }
 
         private bool CanAddSave(object obj)

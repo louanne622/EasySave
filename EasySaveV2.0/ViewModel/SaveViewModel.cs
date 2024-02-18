@@ -68,20 +68,61 @@ namespace EasySaveV2._0
 
         public ObservableCollection<Save> Saves { get; set; }
 
-        public ICommand ShowSaveCommand { get; set; }
+        public ICommand ShowAddSaveCommand { get; set; }
+
         public ICommand DeleteSaveCommand { get; }
         public ICommand AddSaveCommand { get; }
+
+        public ICommand UpdateSaveCommand { get; }
+        public ICommand ShowEditSaveCommand { get; }
 
         public SaveViewModel()
         {
             Saves = new ObservableCollection<Save>();
 
             DeleteSaveCommand = new RelayCommand(DeleteSave, CanDeleteSave);
-            ShowSaveCommand = new RelayCommand(ShowWindow, CanShowWindow);
+
+            ShowAddSaveCommand = new RelayCommand(ShowWindow, CanShowWindow);
+
             AddSaveCommand = new RelayCommand(AddSave, CanAddSave);
+
+            ShowEditSaveCommand = new RelayCommand(ShowEditsave, CanShowEditsave);
+            UpdateSaveCommand = new RelayCommand(UpdateSave, CanUpdateSave);
+
 
             Saves.Add(new Save("test", "test", "tfsdfezft", FileType.Complet));
             Saves.Add(new Save("test", "salut", "test", FileType.Differentiel));
+        }
+
+        private bool CanShowEditsave(object obj)
+        {
+            return true;
+        }
+
+        private void ShowEditsave(object obj)
+        {
+            EditSaveView editSaveWin = new EditSaveView();
+            editSaveWin.Show();
+        }
+
+        private bool CanUpdateSave(object parameter)
+        {
+            // Mettez ici la logique pour vérifier si la mise à jour est possible
+            return SelectedItem != null;
+        }
+
+        private void UpdateSave(object parameter)
+        {
+            // Mettez ici la logique pour récupérer les nouvelles valeurs depuis les champs du formulaire
+            // et mettre à jour la sauvegarde sélectionnée
+
+            // Par exemple :
+            SelectedItem.saveName = NewNameSave;
+            SelectedItem.sourcePath = NewSourcePath;
+            SelectedItem.targetPath = NewTargetPath;
+            SelectedItem.FileType = NewTypeFile;
+
+            // Assurez-vous que votre ObservableCollection se met à jour automatiquement dans l'interface utilisateur
         }
 
         private Save _selectedItem;

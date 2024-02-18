@@ -3,10 +3,60 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0"
+        xmlns:local="clr-namespace:EasySaveV2._0.View"
         mc:Ignorable="d"
-        Title="EasySave V2.0" Height="450" Width="800"
-        MinHeight="450" MinWidth="800"
-        SizeToContent="WidthAndHeight">
+        Title="AddReservationView" Height="450" Width="800">
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
+    <SolidColorBrush x:Key="ButtonBackground" Color="#FF007ACC"/>
+    <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+    <Style x:Key="TabItemBackgroundStyle" TargetType="TabItem">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ActionButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource ButtonBackground}"/>
+        <Setter Property="Foreground" Value="{StaticResource ButtonForeground}"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+    </Window.Resources>
+    <Grid Margin="20 10" MaxWidth="600">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" FontSize="24" Text="Créer une sauvegarde"/>
+        <Label Grid.Row="1" Content="Nom de la sauvegarde:"/>
+        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5"/>
 
+        <Label Grid.Row="3" Content="Fichier source:"/>
+        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5"/>
+
+        <Label Grid.Row="5" Content="Fichier destinataire:"/>
+        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5"/>
+
+        <Label Grid.Row="7" Content="Type de sauvegarde:"/>
+        <ComboBox Grid.Row="8" Name="cmbBackupType" Margin="5">
+            <ComboBoxItem Content="Complet"/>
+            <ComboBoxItem Content="Incrémentiel"/>
+        </ComboBox>
+
+        <Button Grid.Row="9" Content="Créer la sauvegarde" Click="CreateBackup_Click" Margin="5" Style="{StaticResource ActionButtonStyle}"/>
+    </Grid>
 </Window>

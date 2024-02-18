@@ -7,14 +7,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Page Remove="View\AddSaveView.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="View\AddSaveView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
 </Project>

@@ -12,6 +12,7 @@ namespace EasySaveV2._0
     class VMWorkspace : INotifyPropertyChanged
     {
         private ObservableCollection<Save> _saves;
+        public ICommand AddSave { get; private set; }
 
         public ObservableCollection<Save> Saves
         {
@@ -31,7 +32,13 @@ namespace EasySaveV2._0
             {
                 Saves.Add(new Save($"Sauvegarde {i}", $"Source {i}", $"Cible {i}", $"Type {i}"));
             }
+            AddSave = new BaseCommand(AddExecute);
 
+        }
+        private void AddExecute(object parameter)
+        {
+            AddSaveView addWindow = new AddSaveView();
+            addWindow.ShowDialog(); 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

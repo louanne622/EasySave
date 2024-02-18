@@ -27,10 +27,5 @@ namespace EasySaveV2._0
             DataContext = viewModel;
 
         }
-
-        private void SaveList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

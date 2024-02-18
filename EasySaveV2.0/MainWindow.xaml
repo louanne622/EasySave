@@ -38,7 +38,7 @@
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
                         <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding Saves}" 
-              MaxHeight="300">
+              MaxHeight="300" SelectedItem="{Binding SelectedItem}">
                             <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
                                     <Setter Property="Height" Value="30"/>
@@ -59,7 +59,7 @@
                         <Button Content="Ajouter" Command="{Binding MakeSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
                         <Button Content="Modifier" Style="{StaticResource ActionButtonStyle}"/>
                         <Button Content="Exécuter" Style="{StaticResource ActionButtonStyle}"/>
-                        <Button Content="Supprimer" Style="{StaticResource ActionButtonStyle}"/>
+                        <Button Content="Supprimer" Style="{StaticResource ActionButtonStyle}" Command="{Binding DeleteSaveCommand}"/>
                     </StackPanel>
                     
                 </Grid>

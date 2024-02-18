@@ -20,8 +20,8 @@ namespace EasySaveV2._0
         public AddSaveView()
         {
             InitializeComponent();
-            MakeSaveViewModel viewModel = new MakeSaveViewModel();
-            DataContext = viewModel;
+            /*MakeSaveViewModel viewModel = new MakeSaveViewModel();
+            DataContext = viewModel;*/
         }
     }
 }

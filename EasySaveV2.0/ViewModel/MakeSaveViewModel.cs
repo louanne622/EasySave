@@ -7,7 +7,7 @@ namespace EasySaveV2._0
 {
     public class MakeSaveViewModel : VMWorkspace
     {
-        public ICommand AddSaveCommand { get; set; }
+       /* public ICommand AddSaveCommand { get; set; }
 
 
         public string _saveName { get; set; }
@@ -31,6 +31,6 @@ namespace EasySaveV2._0
         private void AddSave(object obj)
         {
             SaveList.AddSave(new Save() { saveName = _saveName, sourcePath = _sourcePath, targetPath = _targetPath, fileType = _fileType } );
-        }
+        }*/
     }
 }

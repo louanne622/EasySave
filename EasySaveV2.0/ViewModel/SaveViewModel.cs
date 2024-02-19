@@ -91,7 +91,7 @@ namespace EasySaveV2._0
 
 
             Saves.Add(new Save("test", "test", "tfsdfezft", FileType.Complet));
-            Saves.Add(new Save("test", "salut", "test", FileType.Differentiel));
+            Saves.Add(new Save("test", "salut", "test", FileType.Sequential));
         }
 
         private bool CanShowEditsave(object obj)
@@ -107,22 +107,16 @@ namespace EasySaveV2._0
 
         private bool CanUpdateSave(object parameter)
         {
-            // Mettez ici la logique pour vérifier si la mise à jour est possible
             return SelectedItem != null;
         }
 
         private void UpdateSave(object parameter)
         {
-            // Mettez ici la logique pour récupérer les nouvelles valeurs depuis les champs du formulaire
-            // et mettre à jour la sauvegarde sélectionnée
-
-            // Par exemple :
             SelectedItem.saveName = NewNameSave;
             SelectedItem.sourcePath = NewSourcePath;
             SelectedItem.targetPath = NewTargetPath;
             SelectedItem.FileType = NewTypeFile;
 
-            // Assurez-vous que votre ObservableCollection se met à jour automatiquement dans l'interface utilisateur
         }
 
         private Save _selectedItem;

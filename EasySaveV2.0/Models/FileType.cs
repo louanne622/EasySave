@@ -7,7 +7,7 @@ namespace EasySaveV2._0
     public enum FileType
     {
         Complet,
-        Differentiel,
+        Sequential,
         None
     }
 }

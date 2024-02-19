@@ -7,13 +7,20 @@
         public string targetPath { get; set; }
         public FileType FileType { get; set; }
 
+        public string FileTypeAsString
+        {
+            get
+            {
+                return FileType.ToString();
+            }
+        }
 
         public Save(string saveName, string sourcePath, string targetPath, FileType fileType)
         {
             this.saveName = saveName;
             this.sourcePath = sourcePath;
             this.targetPath = targetPath;
-            FileType = fileType;
+            this.FileType = fileType;
         }
     }
 }

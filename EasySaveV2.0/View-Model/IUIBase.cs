@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System;
 using System.Windows.Input;
 
-namespace EasySaveV2._0.ViewModel
+namespace EasySaveV2._0.View_Model
 {
     public class IUIBase : INotifyPropertyChanged
     {
@@ -16,6 +16,9 @@ namespace EasySaveV2._0.ViewModel
         public string DeleteButtonText { get; private set; }
         public string ExecuteButtonText { get; private set; }
         public string OpenFileButtonText { get; private set; }
+        public string CreateSaveButtonText { get; private set; }
+        public string EditSaveButtonText { get; private set; }
+        public string CancelButtonText { get; private set; }
         public string HeaderGridViewName { get; private set; }
         public string HeaderGridViewSource { get; private set; }
         public string HeaderGridViewTarget { get; private set; }
@@ -28,6 +31,12 @@ namespace EasySaveV2._0.ViewModel
         public string LabelLogPath { get; private set; }
         public string LabelCryptExten { get; private set; }
         public string LabelFileFormat { get; private set; }
+        public string TextBoxEditSave { get; private set; }
+        public string TextBoxCreateSave { get; private set; }
+        public string LabelNameSave { get; private set; }
+        public string LabelSourceSave { get; private set; }
+        public string LabelSaveTarget { get; private set; }
+        public string LabelType { get; private set; }
 
         public IUIBase()
         {
@@ -45,6 +54,9 @@ namespace EasySaveV2._0.ViewModel
             DeleteButtonText = _resManager.GetString("DeleteButton", culture);
             ExecuteButtonText = _resManager.GetString("ExecuteButton", culture);
             OpenFileButtonText = _resManager.GetString("OpenButton", culture);
+            CreateSaveButtonText = _resManager.GetString("CreateSaveButton", culture);
+            EditSaveButtonText = _resManager.GetString("EditSaveButton", culture);
+            CancelButtonText = _resManager.GetString("CancelButton", culture);
             HeaderGridViewName = _resManager.GetString("HeaderGridViewName", culture);
             HeaderGridViewSource = _resManager.GetString("HeaderGridViewSource", culture);
             HeaderGridViewTarget = _resManager.GetString("HeaderGridViewTarget", culture);
@@ -56,10 +68,16 @@ namespace EasySaveV2._0.ViewModel
             LabelChangeLang = _resManager.GetString("LabelChangeLang", culture);
             LabelLogPath = _resManager.GetString("LabelLogPath", culture);
             LabelCryptExten = _resManager.GetString("LabelCryptExten", culture);
-            LabelFileFormat = _resManager.GetString("LabelCryptExten", culture);
+            LabelFileFormat = _resManager.GetString("LabelTypeExt", culture);
+            LabelNameSave = _resManager.GetString("LabelNameSave", culture);
+            LabelSourceSave = _resManager.GetString("LabelSource", culture);
+            LabelSaveTarget = _resManager.GetString("LabelTarget", culture);
+            LabelType = _resManager.GetString("LabelSaveType", culture);
+            TextBoxCreateSave = _resManager.GetString("TextBoxCreateSave", culture);
+            TextBoxEditSave = _resManager.GetString("TextBoxEditSave", culture);
 
 
-            OnPropertyChanged(string.Empty); // Une chaîne vide notifie tous les abonnés.
+            OnPropertyChanged(string.Empty);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

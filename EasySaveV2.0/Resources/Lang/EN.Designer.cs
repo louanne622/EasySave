@@ -61,11 +61,29 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Cancel.
+        /// </summary>
+        internal static string CancelButton {
+            get {
+                return ResourceManager.GetString("CancelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Add.
         /// </summary>
         internal static string CreateButton {
             get {
                 return ResourceManager.GetString("CreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Create save.
+        /// </summary>
+        internal static string CreateSaveButton {
+            get {
+                return ResourceManager.GetString("CreateSaveButton", resourceCulture);
             }
         }
         
@@ -84,6 +102,15 @@ namespace EasySaveV2._0.Resources.Lang {
         internal static string EditButton {
             get {
                 return ResourceManager.GetString("EditButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Save the edit.
+        /// </summary>
+        internal static string EditSaveButton {
+            get {
+                return ResourceManager.GetString("EditSaveButton", resourceCulture);
             }
         }
         
@@ -196,11 +223,74 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Name of the save.
+        /// </summary>
+        internal static string LabelNameSave {
+            get {
+                return ResourceManager.GetString("LabelNameSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type of the save.
+        /// </summary>
+        internal static string LabelSaveType {
+            get {
+                return ResourceManager.GetString("LabelSaveType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Source file path.
+        /// </summary>
+        internal static string LabelSource {
+            get {
+                return ResourceManager.GetString("LabelSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Target file path.
+        /// </summary>
+        internal static string LabelTarget {
+            get {
+                return ResourceManager.GetString("LabelTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choose file extension to log.
+        /// </summary>
+        internal static string LabelTypeExt {
+            get {
+                return ResourceManager.GetString("LabelTypeExt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Open file.
         /// </summary>
         internal static string OpenButton {
             get {
                 return ResourceManager.GetString("OpenButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Create a new save.
+        /// </summary>
+        internal static string TextBoxCreateSave {
+            get {
+                return ResourceManager.GetString("TextBoxCreateSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Edit the save.
+        /// </summary>
+        internal static string TextBoxEditSave {
+            get {
+                return ResourceManager.GetString("TextBoxEditSave", resourceCulture);
             }
         }
     }

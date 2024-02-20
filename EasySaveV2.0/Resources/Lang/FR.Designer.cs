@@ -61,11 +61,29 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Annuler.
+        /// </summary>
+        public static string CancelButton {
+            get {
+                return ResourceManager.GetString("CancelButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Ajouter.
         /// </summary>
         public static string CreateButton {
             get {
                 return ResourceManager.GetString("CreateButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Créer la sauvegarde.
+        /// </summary>
+        public static string CreateSaveButton {
+            get {
+                return ResourceManager.GetString("CreateSaveButton", resourceCulture);
             }
         }
         
@@ -84,6 +102,15 @@ namespace EasySaveV2._0.Resources.Lang {
         public static string EditButton {
             get {
                 return ResourceManager.GetString("EditButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Modifier.
+        /// </summary>
+        public static string EditSaveButton {
+            get {
+                return ResourceManager.GetString("EditSaveButton", resourceCulture);
             }
         }
         
@@ -196,11 +223,74 @@ namespace EasySaveV2._0.Resources.Lang {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nom de la sauvegarde.
+        /// </summary>
+        public static string LabelNameSave {
+            get {
+                return ResourceManager.GetString("LabelNameSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type de sauvegarde.
+        /// </summary>
+        public static string LabelSaveType {
+            get {
+                return ResourceManager.GetString("LabelSaveType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Chemin source du fichier.
+        /// </summary>
+        public static string LabelSource {
+            get {
+                return ResourceManager.GetString("LabelSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Chemin cible du fichier.
+        /// </summary>
+        public static string LabelTarget {
+            get {
+                return ResourceManager.GetString("LabelTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choisir l&apos;extension du fichier log.
+        /// </summary>
+        public static string LabelTypeExt {
+            get {
+                return ResourceManager.GetString("LabelTypeExt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Ouvrir le fichier.
         /// </summary>
         public static string OpenButton {
             get {
                 return ResourceManager.GetString("OpenButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Créer une nouvelle sauvegarde.
+        /// </summary>
+        public static string TextBoxCreateSave {
+            get {
+                return ResourceManager.GetString("TextBoxCreateSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Modifier la sauvegarde.
+        /// </summary>
+        public static string TextBoxEditSave {
+            get {
+                return ResourceManager.GetString("TextBoxEditSave", resourceCulture);
             }
         }
     }

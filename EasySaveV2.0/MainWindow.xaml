@@ -3,17 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0"
-        xmlns:lang="clr-namespace:EasySaveV2._0.Resources.Lang"
+        xmlns:local="clr-namespace:EasySaveV2._0.View_Model" d:DataContext="{d:DesignInstance Type=local:SaveViewModel}"
         mc:Ignorable="d"
         Title="EasySave V2.0" Height="450" Width="800"
         MinHeight="450" MinWidth="800"
         SizeToContent="WidthAndHeight">
-<!--
-    <Window.DataContext>
-        <local:SettingsViewModel/>
-    </Window.DataContext>
--->
 
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
@@ -39,50 +33,60 @@
 
     <Grid>
         <TabControl>
-            <TabItem Header="{Binding UI.HeaderItemSave}" FontSize="14" Width="110" Margin="-2,-2,2,0" Style="{StaticResource TabItemBackgroundStyle}">
+            <TabItem Header="{Binding viewModel.UI.HeaderItemSave}" FontSize="14" Width="110" Margin="-2,-2,2,0" Style="{StaticResource TabItemBackgroundStyle}">
                 <Grid Background="{StaticResource PrimaryBackground}">
-                    <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="{Binding UI.HeaderGridViewName}" DisplayMemberBinding="{Binding Name}" Width="150"/>
-                                <GridViewColumn Header="{Binding UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding Source}" Width="200"/>
-                                <GridViewColumn Header="{Binding UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding Target}" Width="200"/>
-                                <GridViewColumn Header="{Binding UI.HeaderGridViewType}" DisplayMemberBinding="{Binding Type}" Width="100"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding viewModel2.Saves}" MaxHeight="300" SelectedItem="{Binding viewModel2.SelectedItem}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Height" Value="30"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="{Binding viewModel.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding saveName}" Width="150"/>
+                                    <GridViewColumn Header="{Binding viewModel.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding sourcePath}" Width="200"/>
+                                    <GridViewColumn Header="{Binding viewModel.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding targetPath}" Width="200"/>
+                                    <GridViewColumn Header="{Binding viewModel.UI.HeaderGridViewType}" DisplayMemberBinding="{Binding fileType}" Width="100"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ScrollViewer>
+
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
-                        <Button Content="{Binding UI.CreateButtonText}" Command="{Binding CreateCommand}" Style="{StaticResource ActionButtonStyle}" />
-                        <Button Content="{Binding UI.EditButtonText}" Command="{Binding EditCommand}" Style="{StaticResource ActionButtonStyle}" />
-                        <Button Content="{Binding UI.ExecuteButtonText}" Command="{Binding EditCommand}" Style="{StaticResource ActionButtonStyle}"/>
-                        <Button Content="{Binding UI.DeleteButtonText}" Command="{Binding DeleteCommand}" Style="{StaticResource ActionButtonStyle}" />
+                        <Button Content="{Binding viewModel.UI.CreateButtonText}" Command="{Binding viewModel2.ShowAddSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
+                        <Button Content="{Binding viewModel.UI.EditButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding viewModel2.ShowEditSaveCommand}"/>
+                        <Button Content="{Binding viewModel.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}"/>
+                        <Button Content="{Binding viewModel.UI.DeleteButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding viewModel2.DeleteSaveCommand}"/>
                     </StackPanel>
+
                 </Grid>
             </TabItem>
-            <TabItem Header="{Binding UI.HeaderItemLog}" FontSize="14" Width="110" Margin="-3,-2,3,0" Style="{StaticResource TabItemBackgroundStyle}">
+            <TabItem Header="{Binding viewModel.UI.HeaderItemLog}" FontSize="14" Width="110" Margin="-3,-2,3,0" Style="{StaticResource TabItemBackgroundStyle}">
                 <Grid Background="{StaticResource PrimaryBackground}">
-                    <ListBox x:Name="LogFilesList" ItemsSource="{Binding FileNames}" SelectedItem="{Binding SelectedFile}" Margin="10,10,10,45" Background="#E4E4E4"/>
-                    <Button Content="{Binding UI.OpenFileButtonText}" Command="{Binding OpenFileCommand}" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom" Height="30" Width="110" Style="{StaticResource ActionButtonStyle}"/>
+                    <ListBox x:Name="LogFilesList" ItemsSource="{Binding viewModel.FileNames}" SelectedItem="{Binding viewModel.SelectedFile}" Margin="10,10,10,45" Background="#E4E4E4"/>
+                    <Button Content="{Binding viewModel.UI.OpenFileButtonText}" Command="{Binding viewModel.OpenFileCommand}" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom" Height="30" Width="110" Style="{StaticResource ActionButtonStyle}"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="{Binding UI.HeaderItemParam}" FontSize="14" Width="110" Margin="-4,-2,4,0" Style="{StaticResource TabItemBackgroundStyle}">
+            <TabItem Header="{Binding viewModel.UI.HeaderItemParam}" FontSize="14" Width="110" Margin="-4,-2,4,0" Style="{StaticResource TabItemBackgroundStyle}">
                 <Grid Background="{StaticResource PrimaryBackground}">
-                    <GroupBox Header="{Binding UI.LabelChangeLang}" Margin="10,10,10,10">
-                        <ComboBox x:Name="LangChoice" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10" SelectedValue="{Binding Language, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
+                    <GroupBox Header="{Binding viewModel.UI.LabelChangeLang}" Margin="10,10,10,10">
+                        <ComboBox x:Name="LangChoice" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10" SelectedValue="{Binding viewModel.Language, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
                             <ComboBoxItem Content="Français"/>
-                            <ComboBoxItem Content="Anglais"/>
+                            <ComboBoxItem Content="English"/>
                         </ComboBox>
                     </GroupBox>
-                    <GroupBox Header="{Binding UI.LabelLogPath}" Margin="10,80,10,10">
+                    <GroupBox Header="{Binding viewModel.UI.LabelLogPath}" Margin="10,80,10,10">
                         <TextBox x:Name="LogFilePath" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10"
-                     Text="{Binding LogFilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                     Text="{Binding viewModel.LogFilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     </GroupBox>
-                    <GroupBox Header="{Binding UI.LabelCryptExten}" Margin="10,150,10,10">
+                    <GroupBox Header="{Binding viewModel.UI.LabelCryptExten}" Margin="10,150,10,10">
                         <TextBox x:Name="EncryptedExtensions" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10"
-                     Text="{Binding EncryptedExtensions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                     Text="{Binding viewModel.EncryptedExtensions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                     </GroupBox>
-                    <GroupBox Header="{Binding UI.LabelFileFormat}" Margin="10,220,10,10">
-                        <ComboBox x:Name="FileFormatChoice" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10" SelectedValue="{Binding LogExtension, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
+                    <GroupBox Header="{Binding viewModel.UI.LabelFileFormat}" Margin="10,220,10,10">
+                        <ComboBox x:Name="FileFormatChoice" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10" SelectedValue="{Binding viewModel.LogExtension, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
                             <ComboBoxItem Content=".Json"/>
                             <ComboBoxItem Content=".Xml"/>
                         </ComboBox>

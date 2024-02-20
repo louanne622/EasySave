@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 
-namespace EasySaveV2._0.ViewModel
+namespace EasySaveV2._0.Commands
 {
     public class RelayCommand : ICommand
     {
@@ -15,11 +15,13 @@ namespace EasySaveV2._0.ViewModel
             add { CommandManager.RequerySuggested += value; }
             remove { CommandManager.RequerySuggested -= value; }
         }
+
         public RelayCommand(Action<object> execute, Predicate<object> canExecute = null)
         {
             this.execute = execute ?? throw new ArgumentNullException(nameof(execute));
             this.canExecute = canExecute;
         }
+
         public bool CanExecute(object parameter)
         {
             return canExecute?.Invoke(parameter) ?? true;

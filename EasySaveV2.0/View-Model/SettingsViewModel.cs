@@ -9,8 +9,9 @@ using System.Diagnostics;
 using System.IO; 
 using System.Windows.Input;
 using EasySaveV2._0.Model;
+using EasySaveV2._0.Commands;
 
-namespace EasySaveV2._0.ViewModel
+namespace EasySaveV2._0.View_Model
 {
     public class SettingsViewModel : INotifyPropertyChanged
     {

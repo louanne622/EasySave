@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -176,6 +177,35 @@ namespace EasySaveV2._0
             return true;
         }
 
+
+
+        public void OnBrowseButtonClick(object sender, RoutedEventArgs e)
+        {
+            // Utilisation d'OpenFileDialog à la place de FolderBrowserDialog
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ValidateNames = false;
+            openFileDialog.CheckFileExists = false;
+            openFileDialog.CheckPathExists = true;
+            // Permettre à l'utilisateur de sélectionner un dossier en définissant le nom de fichier sur un libellé spécifique
+            openFileDialog.FileName = "Sélectionner ce dossier";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                // Extraire le chemin du dossier à partir du chemin du fichier sélectionné
+                string folderPath = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
+
+                // Vérifie si le sender est le bouton de sélection du chemin source ou du chemin cible
+                if (sender == browseButtonSource)
+                {
+                    NewSourcePath = folderPath;
+                    selectedPathSource.Content = $"Chemin sélectionné : {folderPath}";
+                }
+                else if (sender == browseButtonTarget)
+                {
+                    NewTargetPath = folderPath;
+                    selectedPathTarget.Content = $"Chemin sélectionné : {folderPath}";
+                }
+            }
+        }
 
 
 

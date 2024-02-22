@@ -5,22 +5,23 @@
         public string saveName { get; set; }
         public string sourcePath { get; set; }
         public string targetPath { get; set; }
-        public FileType FileType { get; set; }
 
-        public string FileTypeAsString
+        private FileType fileType;
+
+        public string FileTypeAsString => FileType.ToString();
+
+        public FileType FileType
         {
-            get
-            {
-                return FileType.ToString();
-            }
+            get { return fileType; }
+            set { fileType = value; }
         }
 
-        public Save(string saveName, string sourcePath, string targetPath, FileType fileType)
+        public Save(string saveName, string sourcePath, string targetPath, FileType _fileType)
         {
             this.saveName = saveName;
             this.sourcePath = sourcePath;
             this.targetPath = targetPath;
-            this.FileType = fileType;
+            this.fileType = _fileType;
         }
     }
 }

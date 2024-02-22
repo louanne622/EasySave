@@ -1,0 +1,65 @@
+using System;
+using System.Threading;
+using System.Diagnostics;
+
+class progressBar
+{
+    static void Main()
+    {
+        Console.WriteLine("Lancement de la barre de progression...");
+        using (ProgressBar progressBar = new ProgressBar())
+        {
+            for (int i = 0; i <= 100;)
+            {
+                if (IsCalcRunning())
+                {
+                    Console.WriteLine("\nLe processus calc.exe a été détecté. La barre de progression est en pause.");
+                    while (IsCalcRunning())
+                    {
+                        Thread.Sleep(1000); // Attendez 1 seconde avant de vérifier à nouveau
+                    }
+                    Console.WriteLine("Reprise de la barre de progression...");
+                }
+                else
+                {
+                    progressBar.Update(i);
+                    i++;
+                    Thread.Sleep(100);
+                }
+            }
+        }
+        Console.WriteLine("Appuyez sur n'importe quelle touche pour quitter");
+        Console.ReadKey();
+    }
+
+    static bool IsCalcRunning()
+    {
+        Process[] processes = Process.GetProcessesByName("CalculatorApp");
+        return processes.Length > 0;
+    }
+}
+
+class ProgressBar : IDisposable
+{
+    private const int ProgressBarLength = 70;
+    private const char ProgressBarChar = '■';
+
+    public ProgressBar()
+    {
+        Console.Write("[");
+    }
+
+    public void Update(int percent)
+    {
+        int progressLength = (int)Math.Ceiling((double)percent / 100 * ProgressBarLength);
+        Console.CursorLeft = 1;
+        Console.Write(new string(ProgressBarChar, progressLength).PadRight(ProgressBarLength));
+        Console.Write($"]{percent}%", new string(' ', 5));
+        Console.CursorLeft = 0;
+    }
+
+    public void Dispose()
+    {
+        Console.WriteLine();
+    }
+}

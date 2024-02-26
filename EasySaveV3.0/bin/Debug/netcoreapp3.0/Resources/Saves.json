@@ -5,12 +5,12 @@
     "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Target"
   },
   {
-    "Name": "test",
-    "FilesSource": "testPath",
-    "FilesTarget": "test path"
+    "Name": "jj",
+    "FilesSource": "bla",
+    "FilesTarget": "bla"
   },
   {
-    "Name": "bla",
+    "Name": "dg",
     "FilesSource": "bla",
     "FilesTarget": "bla"
   }

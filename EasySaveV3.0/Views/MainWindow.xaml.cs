@@ -32,11 +32,11 @@ namespace EasySaveV3._0.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Save[] savesList = Json.getSavesFromJson();
-            Save newSave = new Save("bla", "bla", "bla");
+            Save newSave = new Save("dg", "bla", "bla");
 
-            savesList = Json.getNewSaveList(savesList, newSave);
+            //savesList = Json.getNewSaveList(savesList, newSave);
+            savesList = Json.UpdateSaveList(savesList, savesList[1], "dg", "", "");
 
-            MessageBox.Show(savesList[savesList.Length - 1].Name);
         }
     }
 }

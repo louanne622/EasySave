@@ -38,7 +38,20 @@
                 <Grid Background="{StaticResource PrimaryBackground}">
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                        <Button Content="Button" Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Button_Click"/>
+                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Height" Value="30"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding FilesSource}" Width="200"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding FilesTarget}" Width="200"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
                     </ScrollViewer>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">

@@ -76,29 +76,30 @@ namespace EasySaveV3._0.ViewModels
         public SaveViewModel()
         {
             Saves = new ObservableCollection<Save>();
-
             DeleteSaveCommand = new RelayCommand(DeleteSave, CanDeleteSave);
-
             ShowAddSaveCommand = new RelayCommand(ShowWindow, CanShowWindow);
-
             AddSaveCommand = new RelayCommand(AddSave, CanAddSave);
-
             ShowEditSaveCommand = new RelayCommand(ShowEditsave, CanShowEditsave);
             UpdateSaveCommand = new RelayCommand(UpdateSave, CanUpdateSave);
 
-
-            Saves.Add(new Save("test", "test", "tfsdfezft"));
-            Saves.Add(new Save("test", "salut", "test"));
+            /*
+             * Ici on vient mettre nos saves dans le GRID
+             */
+            Saves.Clear();
+            Save[] listSaves = Json.getSavesFromJson();
+            for(int i = 0; i < listSaves.Length; i++)
+                Saves.Add(listSaves[i]);
         }
 
         private bool CanShowEditsave(object obj)
         {
-            return true;
+            return SelectedItem != null;
         }
-
         private void ShowEditsave(object obj)
         {
-            EditSaveView editSaveWin = new EditSaveView();
+            Save saveToUpdate = SelectedItem;
+            MessageBox.Show(saveToUpdate.Name);
+            EditSaveView editSaveWin = new EditSaveView(saveToUpdate);
             editSaveWin.Show();
         }
 
@@ -107,16 +108,18 @@ namespace EasySaveV3._0.ViewModels
             // Mettez ici la logique pour vérifier si la mise à jour est possible
             return SelectedItem != null;
         }
-
         private void UpdateSave(object parameter)
         {
-            // Mettez ici la logique pour récupérer les nouvelles valeurs depuis les champs du formulaire
-            // et mettre à jour la sauvegarde sélectionnée
+            /*
+             * 
+             */
+
+            MessageBox.Show("test");
 
             // Par exemple :
-            //SelectedItem.saveName = NewNameSave;
-            //SelectedItem.sourcePath = NewSourcePath;
-            //SelectedItem.targetPath = NewTargetPath;
+            SelectedItem.Name = NewNameSave;
+            SelectedItem.FilesSource = NewSourcePath;
+            SelectedItem.FilesTarget = NewTargetPath;
 
             // Assurez-vous que votre ObservableCollection se met à jour automatiquement dans l'interface utilisateur
         }
@@ -137,10 +140,12 @@ namespace EasySaveV3._0.ViewModels
         }
         private void DeleteSave(object parameter)
         {
+            Save[] listSave = Json.getSavesFromJson();
+            Save saveToDelete = SelectedItem;
+            
+            listSave = Json.DeleteSavesInList(listSave, saveToDelete);
             Saves.Remove(SelectedItem);
         }
-
-
 
         private void ShowWindow(object obj)
         {
@@ -153,33 +158,27 @@ namespace EasySaveV3._0.ViewModels
             return true;
         }
 
-
         private void AddSave(object obj)
         {
-            if (string.IsNullOrEmpty(NewNameSave) || string.IsNullOrEmpty(NewSourcePath) || string.IsNullOrEmpty(NewTargetPath) || NewTypeFile == FileType.None)
+            if (string.IsNullOrEmpty(NewNameSave) || string.IsNullOrEmpty(NewSourcePath) || string.IsNullOrEmpty(NewTargetPath))
             {
                 MessageBox.Show("Veuillez remplir tous les champs pour ajouter une sauvegarde.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            else
-            {
-                Saves.Add(new Save(NewNameSave, NewSourcePath, NewTargetPath));
+            Save[] savesList = Json.getSavesFromJson();
+            Save newSave = new Save(NewNameSave, NewSourcePath, NewTargetPath);
 
-                NewNameSave = string.Empty;
-                NewSourcePath = string.Empty;
-                NewTargetPath = string.Empty;
-            }
+            savesList = Json.getNewSaveList(savesList, newSave);
 
+            Saves.Add(newSave);
 
+            NewNameSave = string.Empty;
+            NewSourcePath = string.Empty;
+            NewTargetPath = string.Empty;
         }
-
         private bool CanAddSave(object obj)
         {
             return true;
         }
-
-
-
-
-
     }
 }

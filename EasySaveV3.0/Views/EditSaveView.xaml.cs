@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using EasySaveV3._0.Models;
 
 namespace EasySaveV3._0.Views
 {
@@ -17,9 +18,16 @@ namespace EasySaveV3._0.Views
     /// </summary>
     public partial class EditSaveView : Window
     {
-        public EditSaveView()
+        //public EditSaveView()
+        //{
+        //    InitializeComponent();
+        //}
+        public EditSaveView(Save saveToUpdate)
         {
             InitializeComponent();
+            this.txtBackupName.Text = saveToUpdate.Name;
+            this.txtSourceFile.Text = saveToUpdate.FilesSource;
+            this.txtDestinationFile.Text = saveToUpdate.FilesTarget;
         }
     }
 }

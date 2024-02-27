@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,33 @@ namespace EasySaveV2._0
         {
             InitializeComponent();
             DataContext = Application.Current.MainWindow.DataContext;
+        }
+
+        private void OnBrowseButtonClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                ValidateNames = false,
+                CheckFileExists = false,
+                CheckPathExists = true,
+                FileName = "Sélectionner ce dossier"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string folderPath = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
+
+                if (sender == browseButtonSource)
+                {
+                    (DataContext as SaveViewModel).NewSourcePath = folderPath;
+                    selectedPathSource.Content = folderPath;
+                }
+                else if (sender == browseButtonTarget)
+                {
+                    (DataContext as SaveViewModel).NewTargetPath = folderPath;
+                    selectedPathTarget.Content = folderPath;
+                }
+            }
         }
     }
 }

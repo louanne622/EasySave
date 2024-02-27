@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0"
+        xmlns:local="clr-namespace:EasySaveV2._0" d:DataContext="{d:DesignInstance Type=local:SaveViewModel}"
         mc:Ignorable="d"
         Title="AddSaveView" Height="450" Width="800">
     <Window.Resources>
@@ -40,23 +40,39 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
-        <TextBlock Grid.Row="0" FontSize="24" Text="Modifier une sauvegarde"/>
+
+
+
+
+
+        <TextBlock Grid.Row="0" FontSize="24" Text="Modifier la sauvegarde"/>
         <Label Grid.Row="1" Content="Nom de la sauvegarde:"/>
-        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding SelectedItem.saveName}"/>
+        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding SelectedItem.saveName, Mode=OneWay}"/>
 
-        <Label Grid.Row="3" Content="Fichier source:"/>
-        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5" Text="{Binding SelectedItem.sourcePath}"/>
+        <Label Grid.Row="3" Content="Sélectionner un fichier source"/>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="5" Content="Fichier destinataire:"/>
-        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5" Text="{Binding SelectedItem.targetPath}"/>
+            <Button x:Name="browseButtonSource" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="selectedPathSource" Grid.Column="1" Margin="25,0,-598,10" Content="{Binding SelectedItem.sourcePath, Mode=OneWay}" />
+        </Grid>
+        <Label Grid.Row="5" Content="Sélectionner un fichier destinataire"/>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="browseButtonTarget" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label x:Name="selectedPathTarget" Grid.Column="1" Margin="25,0,-590,10" Content="{Binding SelectedItem.targetPath, Mode=OneWay}" />
+        </Grid>
 
         <Label Grid.Row="7" Content="Type de sauvegarde:"/>
-        <ComboBox Grid.Row="8" Name="cmbTypeFile" Margin="5" SelectedItem="{Binding SelectedItem.fileType}">
-            <ComboBoxItem Content="Complet"/>
-            <ComboBoxItem Content="Différentiel"/>
-        </ComboBox>
+        <TextBox Grid.Row="8" Text="{Binding SelectedItem.fileType, Mode=OneWay}"/>
 
-        <Button Grid.Row="9" Content="Modifier" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateSaveCommand}"/>
+        <Button Grid.Row="9" Content="Modifier la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding UpdateSaveCommand}"/>
     </Grid>
 </Window>

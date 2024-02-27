@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:EasySaveV2._0"
+        xmlns:local="clr-namespace:EasySaveV2._0" d:DataContext="{d:DesignInstance Type=local:SaveViewModel}"
         mc:Ignorable="d"
         Title="AddSaveView" Height="450" Width="800">
     <Window.Resources>
@@ -57,7 +57,7 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="browseButtonSource" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-10,10" Grid.Column="0" Grid.ColumnSpan="2"/>
-            <Label x:Name="selectedPathSource" Grid.Column="1"/>
+            <Label x:Name="selectedPathSource" Grid.Column="1" Margin="25,0,-598,10" Content="{Binding NewSourcePath}" />
         </Grid>
         <Label Grid.Row="5" Content="Sélectionner un fichier destinataire"/>
         <Grid Grid.Row="6">
@@ -67,13 +67,13 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="browseButtonTarget" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-10,10" Grid.Column="0" Grid.ColumnSpan="2"/>
-            <Label x:Name="selectedPathTarget" Grid.Column="1" />
+            <Label x:Name="selectedPathTarget" Grid.Column="1" Margin="25,0,-590,10" Content="{Binding NewTargetPath}" />
         </Grid>
 
         <Label Grid.Row="7" Content="Type de sauvegarde:"/>
         <ComboBox Grid.Row="8" Name="cmbTypeFile" Margin="5" SelectedItem="{Binding NewTypeFile}">
             <ComboBoxItem Content="Complet"/>
-            <ComboBoxItem Content="Différentiel"/>
+            <ComboBoxItem Content="Séquentiel"/>
         </ComboBox>
 
         <Button Grid.Row="9" Content="Créer la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding AddSaveCommand}"/>

@@ -1,9 +1,7 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
+using System.IO;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Input;
 
@@ -11,6 +9,7 @@ namespace EasySaveV2._0
 {
     class SaveViewModel : VMWorkspace
     {
+
         private string _newNameSave;
         public string NewNameSave
         {
@@ -24,6 +23,7 @@ namespace EasySaveV2._0
                 }
             }
         }
+
         private string _newSourcePath;
         public string NewSourcePath
         {
@@ -37,6 +37,7 @@ namespace EasySaveV2._0
                 }
             }
         }
+
         private string _newTargetPath;
         public string NewTargetPath
         {
@@ -51,51 +52,43 @@ namespace EasySaveV2._0
             }
         }
 
-        private FileType _newTypeFile;
-        public FileType NewTypeFile
+        private string _newFileType;
+        public string NewTypeFile
         {
-            get => _newTypeFile;
+            get => _newFileType;
             set
             {
-                if (_newTypeFile != value)
+                if (_newFileType != value)
                 {
-                    _newTypeFile = value;
+                    _newFileType = value;
                     OnPropertyChanged(nameof(NewTypeFile));
                 }
             }
         }
 
-
-
         public ObservableCollection<Save> Saves { get; set; }
 
         public ICommand ShowAddSaveCommand { get; set; }
-
-        public ICommand DeleteSaveCommand { get; }
-        public ICommand AddSaveCommand { get; }
-
-        public ICommand UpdateSaveCommand { get; }
-        public ICommand ShowEditSaveCommand { get; }
+        public ICommand DeleteSaveCommand { get; set; }
+        public ICommand AddSaveCommand { get; set; }
+        public ICommand UpdateSaveCommand { get; set; }
+        public ICommand ShowEditSaveCommand { get; set; }
 
         public SaveViewModel()
         {
             Saves = new ObservableCollection<Save>();
-
-            DeleteSaveCommand = new RelayCommand(DeleteSave, CanDeleteSave);
-
             ShowAddSaveCommand = new RelayCommand(ShowWindow, CanShowWindow);
-
+            DeleteSaveCommand = new RelayCommand(DeleteSave, CanDeleteSave);
             AddSaveCommand = new RelayCommand(AddSave, CanAddSave);
-
             ShowEditSaveCommand = new RelayCommand(ShowEditsave, CanShowEditsave);
             UpdateSaveCommand = new RelayCommand(UpdateSave, CanUpdateSave);
 
-
-            Saves.Add(new Save("test", "test", "tfsdfezft", FileType.Complet));
-            Saves.Add(new Save("test", "salut", "test", FileType.Sequential));
+            Saves.Add(new Save("test", "test", "tfsdfezft", "complet"));
+            Saves.Add(new Save("test", "salut", "test", "sequential"));
         }
 
-        private bool CanShowEditsave(object obj)
+
+        private bool CanAddSave(object obj)
         {
             return true;
         }
@@ -105,6 +98,11 @@ namespace EasySaveV2._0
             EditSaveView editSaveWin = new EditSaveView();
             editSaveWin.Show();
         }
+        private bool CanShowEditsave(object obj)
+        {
+            return true;
+        }
+
 
         private bool CanUpdateSave(object parameter)
         {
@@ -116,7 +114,7 @@ namespace EasySaveV2._0
             SelectedItem.saveName = NewNameSave;
             SelectedItem.sourcePath = NewSourcePath;
             SelectedItem.targetPath = NewTargetPath;
-            SelectedItem.FileType = NewTypeFile;
+            SelectedItem.fileType = NewTypeFile;
 
         }
 
@@ -155,7 +153,7 @@ namespace EasySaveV2._0
 
         private void AddSave(object obj)
         {
-            if (string.IsNullOrEmpty(NewNameSave) || string.IsNullOrEmpty(NewSourcePath) || string.IsNullOrEmpty(NewTargetPath) || NewTypeFile == FileType.None)
+            if (string.IsNullOrEmpty(NewNameSave) || string.IsNullOrEmpty(NewSourcePath) || string.IsNullOrEmpty(NewTargetPath) || string.IsNullOrEmpty(NewTypeFile))
             {
                 MessageBox.Show("Veuillez remplir tous les champs pour ajouter une sauvegarde.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -166,49 +164,12 @@ namespace EasySaveV2._0
                 NewNameSave = string.Empty;
                 NewSourcePath = string.Empty;
                 NewTargetPath = string.Empty;
-                NewTypeFile = FileType.None;
+                NewTypeFile = string.Empty;
             }
 
 
         }
 
-        private bool CanAddSave(object obj)
-        {
-            return true;
-        }
-
-
-
-        public void OnBrowseButtonClick(object sender, RoutedEventArgs e)
-        {
-            // Utilisation d'OpenFileDialog à la place de FolderBrowserDialog
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ValidateNames = false;
-            openFileDialog.CheckFileExists = false;
-            openFileDialog.CheckPathExists = true;
-            // Permettre à l'utilisateur de sélectionner un dossier en définissant le nom de fichier sur un libellé spécifique
-            openFileDialog.FileName = "Sélectionner ce dossier";
-            if (openFileDialog.ShowDialog() == true)
-            {
-                // Extraire le chemin du dossier à partir du chemin du fichier sélectionné
-                string folderPath = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
-
-                // Vérifie si le sender est le bouton de sélection du chemin source ou du chemin cible
-                if (sender == browseButtonSource)
-                {
-                    NewSourcePath = folderPath;
-                    selectedPathSource.Content = $"Chemin sélectionné : {folderPath}";
-                }
-                else if (sender == browseButtonTarget)
-                {
-                    NewTargetPath = folderPath;
-                    selectedPathTarget.Content = $"Chemin sélectionné : {folderPath}";
-                }
-            }
-        }
-
-
-
-
+        
     }
 }

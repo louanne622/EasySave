@@ -1,0 +1,15 @@
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.exe
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.deps.json
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.runtimeconfig.json
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.runtimeconfig.dev.json
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.dll
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\ref\progressbar.dll
+C:\Users\romai\source\repos\progressbar\progressbar\bin\Debug\net5.0\progressbar.pdb
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.AssemblyInfo.cs
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.dll
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\ref\progressbar.dll
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.pdb
+C:\Users\romai\source\repos\progressbar\progressbar\obj\Debug\net5.0\progressbar.genruntimeconfig.cache

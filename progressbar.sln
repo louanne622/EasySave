@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34407.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "progressbar", "progressbar\progressbar.csproj", "{69185EE2-0C5B-48A9-8ECA-866807B0B5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "progressbarclient", "progressbarclient\progressbarclient.csproj", "{2703264F-0C66-47B5-B728-700B3D352CEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69185EE2-0C5B-48A9-8ECA-866807B0B5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69185EE2-0C5B-48A9-8ECA-866807B0B5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69185EE2-0C5B-48A9-8ECA-866807B0B5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69185EE2-0C5B-48A9-8ECA-866807B0B5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2703264F-0C66-47B5-B728-700B3D352CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2703264F-0C66-47B5-B728-700B3D352CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2703264F-0C66-47B5-B728-700B3D352CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2703264F-0C66-47B5-B728-700B3D352CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CD7977B-1537-48D4-B249-9FA975592AB4}
+	EndGlobalSection
+EndGlobal

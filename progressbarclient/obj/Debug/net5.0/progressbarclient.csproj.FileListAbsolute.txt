@@ -1,0 +1,16 @@
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.exe
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.deps.json
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.runtimeconfig.json
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.runtimeconfig.dev.json
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.dll
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\ref\progressbarclient.dll
+C:\Users\romai\source\repos\progressbar\progressbarclient\bin\Debug\net5.0\progressbarclient.pdb
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.csproj.AssemblyReference.cache
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.AssemblyInfo.cs
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.dll
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\ref\progressbarclient.dll
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.pdb
+C:\Users\romai\source\repos\progressbar\progressbarclient\obj\Debug\net5.0\progressbarclient.genruntimeconfig.cache

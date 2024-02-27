@@ -107,14 +107,22 @@ namespace TestRecupTab
                 var item = decorator.Item;
                 Directory.CreateDirectory(item.Cible);
 
-                var files = Directory.GetFiles(item.Source);
-                for (int i = 0; i < files.Length; i++)
+                var allFiles = Directory.GetFiles(item.Source);
+                string[] priorityExtensions = { ".txt", ".pdf", ".docx" }; // Extensions prioritaires en premier.
+                var orderedFiles = allFiles.OrderBy(file =>
+                {
+                    var extension = System.IO.Path.GetExtension(file).ToLower();
+                    var index = Array.IndexOf(priorityExtensions, extension);
+                    return index < 0 ? int.MaxValue : index; // Les fichiers non prioritaires sont mis à la fin.
+                });
+
+                for (int i = 0; i < orderedFiles.Count(); i++)
                 {
                     await CheckForBlockingAppsAsync();
                     _pauseEvent.Wait();
                     if (_cts.IsCancellationRequested) break;
 
-                    var file = files[i];
+                    var file = orderedFiles.ElementAt(i);
                     var fileInfo = new FileInfo(file);
 
                     if (fileInfo.Length / 1024 <= maxFileSizeInKb)
@@ -132,8 +140,8 @@ namespace TestRecupTab
                         }
 
                     }
-                    
-                    decorator.ProgressValue = (double)(i + 1) / files.Length * 100;
+
+                    decorator.ProgressValue = (double)(i + 1) / file.Length * 100;
                 }
             });
 

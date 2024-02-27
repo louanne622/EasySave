@@ -1,0 +1,16 @@
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.exe
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.deps.json
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.runtimeconfig.json
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.runtimeconfig.dev.json
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.dll
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ref\ws2102.dll
+C:\Users\romai\source\repos\ws2102\ws2102\bin\Debug\net5.0\ws2102.pdb
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.csproj.AssemblyReference.cache
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.AssemblyInfo.cs
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.dll
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ref\ws2102.dll
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.pdb
+C:\Users\romai\source\repos\ws2102\ws2102\obj\Debug\net5.0\ws2102.genruntimeconfig.cache

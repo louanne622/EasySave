@@ -1,0 +1,119 @@
+﻿<Window x:Class="EasySaveV3._0.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EasySaveV3._0.ViewModels" d:DataContext="{d:DesignInstance Type=local:SaveViewModel}"
+        mc:Ignorable="d"
+        Title="EasySave V3.0" Height="450" Width="830"
+        MinHeight="450" MinWidth="830"
+        SizeToContent="WidthAndHeight"
+        Icon="/Views/logo.png">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
+        <SolidColorBrush x:Key="ButtonBackground" Color="#007ACC"/>
+        <SolidColorBrush x:Key="ButtonForeground" Color="White"/>
+        <Style x:Key="TabItemBackgroundStyle" TargetType="TabItem">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource ButtonBackground}"/>
+            <Setter Property="Foreground" Value="{StaticResource ButtonForeground}"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="{Binding paramView.UI.HeaderItemSave}" FontSize="14" Width="110" Margin="-2,-2,2,0" Style="{StaticResource TabItemBackgroundStyle}">
+                <Grid Background="{StaticResource PrimaryBackground}">
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="Height" Value="30"/>
+                                </Style>
+                            </ListView.ItemContainerStyle>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding FilesSource}" Width="200"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding FilesTarget}" Width="200"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ScrollViewer>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
+                        <Button Content="{Binding paramView.UI.CreateButtonText}" Command="{Binding saveView.ShowAddSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
+                        <Button Content="{Binding paramView.UI.EditButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.ShowEditSaveCommand}"/>
+                        <Button Content="{Binding paramView.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}"/>
+                        <Button Content="{Binding paramView.UI.DeleteButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.DeleteSaveCommand}"/>
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Binding paramView.UI.HeaderItemLog}" FontSize="14" Width="110" Margin="-3,-2,3,0" Style="{StaticResource TabItemBackgroundStyle}">
+                <Grid Background="{StaticResource PrimaryBackground}">
+                    <ListBox x:Name="LogFilesList" ItemsSource="{Binding paramView.FileNames}" SelectedItem="{Binding paramView.SelectedFile}" Margin="10,10,10,45" Background="#E4E4E4"/>
+                    <Button Content="{Binding paramView.UI.OpenFileButtonText}" Command="{Binding paramView.OpenFileCommand}" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom" Height="30" Width="110" Style="{StaticResource ActionButtonStyle}"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Binding paramView.UI.HeaderItemParam}" FontSize="14" Width="110" Margin="-4,-2,4,0" Style="{StaticResource TabItemBackgroundStyle}">
+                <Grid Background="{StaticResource PrimaryBackground}" Margin="0" Width="800" Height="400">
+                    <GroupBox Header="{Binding paramView.UI.LabelChangeLang}" Margin="20,10,20,10">
+                        <StackPanel>
+                            <ComboBox x:Name="LangChoice" HorizontalAlignment="Stretch" Margin="10,0,10,4" SelectedValue="{Binding paramView.Language, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
+                                <ComboBoxItem Content="Français"/>
+                                <ComboBoxItem Content="English"/>
+                                <ComboBoxItem Content="Spanish"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="{Binding paramView.UI.LabelLogPath}" Margin="20,70,20,10">
+                        <StackPanel>
+                            <TextBox x:Name="LogFilePath" HorizontalAlignment="Stretch" Margin="10,0,10,4"
+                         Text="{Binding paramView.LogFilePath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="{Binding paramView.UI.LabelCryptExten}" Margin="20,130,20,10">
+                        <StackPanel>
+                            <TextBox x:Name="EncryptedExtensions" HorizontalAlignment="Stretch" Margin="10,0,10,4"
+                         Text="{Binding paramView.EncryptedExtensions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="{Binding paramView.UI.LabelFilesPriority}" Margin="20,190,20,10">
+                        <StackPanel>
+                            <TextBox x:Name="PriorityFiles" HorizontalAlignment="Stretch" Margin="10,0,10,4"
+                         Text="{Binding paramView.PriorityFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Saisissez les extensions de fichier prioritaires séparées par des virgules"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="{Binding paramView.UI.LabelFileFormat}" Margin="20,250,20,10">
+                        <StackPanel>
+                            <ComboBox x:Name="FileFormatChoice" HorizontalAlignment="Stretch" Margin="10,0,10,4" SelectedValue="{Binding paramView.LogExtension, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
+                                <ComboBoxItem Content=".Json"/>
+                                <ComboBoxItem Content=".Xml"/>
+                            </ComboBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="{Binding paramView.UI.LabelFileSizeMax}" Margin="20,310,20,10">
+                        <StackPanel>
+                            <TextBox x:Name="MaxSizeFile" HorizontalAlignment="Stretch" Margin="10,0,10,2"
+                         Text="{Binding paramView.MaxSizeFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Saisissez la taille maximale du fichier en Ko"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

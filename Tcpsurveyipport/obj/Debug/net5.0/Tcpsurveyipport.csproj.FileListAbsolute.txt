@@ -1,0 +1,16 @@
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.exe
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.deps.json
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.runtimeconfig.json
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.runtimeconfig.dev.json
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.dll
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\ref\Tcpsurveyipport.dll
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\bin\Debug\net5.0\Tcpsurveyipport.pdb
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.AssemblyInfoInputs.cache
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.AssemblyInfo.cs
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.csproj.CoreCompileInputs.cache
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.dll
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\ref\Tcpsurveyipport.dll
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.pdb
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.genruntimeconfig.cache
+C:\Users\romai\source\repos\Tcpsurveyipport\Tcpsurveyipport\obj\Debug\net5.0\Tcpsurveyipport.csproj.AssemblyReference.cache

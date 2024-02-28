@@ -9,5 +9,9 @@
     "FilesSource": "C:\\Users\\valen\\Downloads",
     "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\EasySaveConsol_2"
   },
-  null
+  {
+    "Name": "Seb",
+    "FilesSource": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Or",
+    "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Target"
+  }
 ]

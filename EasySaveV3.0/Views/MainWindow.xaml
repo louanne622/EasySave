@@ -38,7 +38,7 @@
                 <Grid Background="{StaticResource PrimaryBackground}">
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
+                        <ListView x:Name="SaveListL" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
                             <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
                                     <Setter Property="Height" Value="30"/>
@@ -57,7 +57,7 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
                         <Button Content="{Binding paramView.UI.CreateButtonText}" Command="{Binding saveView.ShowAddSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
                         <Button Content="{Binding paramView.UI.EditButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.ShowEditSaveCommand}"/>
-                        <Button Content="{Binding paramView.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}"/>
+                        <Button Content="{Binding paramView.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}" Click="Button_Click_1"/>
                         <Button Content="{Binding paramView.UI.DeleteButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.DeleteSaveCommand}"/>
                     </StackPanel>
 

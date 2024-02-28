@@ -54,3 +54,5 @@ C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp
 C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.dll
 C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.pdb
 C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.genruntimeconfig.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.g.cs

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0;
 C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\App.xaml
-367987685
+41338796508
 
-19910018362
+21-443756977
 192977453312
-Views\AddSaveView.xaml;Views\EditSaveView.xaml;Views\MainWindow.xaml;
+Views\AddSaveView.xaml;Views\EditSaveView.xaml;Views\ExecutionWindow.xaml;Views\MainWindow.xaml;
 
 False
 

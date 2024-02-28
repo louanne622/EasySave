@@ -107,6 +107,7 @@ namespace EasySaveV3._0.ViewModels
                 }
             }
         }
+        
 
         public ObservableCollection<Save> Saves { get; set; }
         private void UpdateObservableCollection(ObservableCollection<Save> saves)
@@ -122,6 +123,7 @@ namespace EasySaveV3._0.ViewModels
         public ICommand AddSaveCommand { get; }
         public ICommand UpdateSaveCommand { get; }
         public ICommand ShowEditSaveCommand { get; }
+        public ICommand ExecSaveCommand { get; }
 
         public SaveViewModel()
         {
@@ -131,6 +133,7 @@ namespace EasySaveV3._0.ViewModels
             AddSaveCommand = new RelayCommand(AddSave, CanAddSave);
             ShowEditSaveCommand = new RelayCommand(ShowEditsave, CanShowEditsave);
             UpdateSaveCommand = new RelayCommand(UpdateSave, CanUpdateSave);
+            //ExecSaveCommand = new RelayCommand(ExecSave, CanExecSave);
 
             /*
              * Ici on vient mettre nos saves dans le GRID
@@ -242,6 +245,15 @@ namespace EasySaveV3._0.ViewModels
         private bool CanAddSave(object obj)
         {
             return true;
+        }
+        private bool CanExecSave(object obj)
+        {
+            return SelectedItem != null;
+        }
+        private void ExecSave(MainWindow main)
+        {
+            
+            return;
         }
     }
 }

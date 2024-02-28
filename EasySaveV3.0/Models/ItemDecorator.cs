@@ -19,6 +19,7 @@ namespace EasySaveV3._0.Models
         public string Nom => _item.Name;
         public string Source => _item.FilesSource;
         public string Cible => _item.FilesTarget;
+        public string Type => _item.FilesType;
         public double ProgressValue
         {
             get => _progressValue;

@@ -51,16 +51,16 @@ namespace EasySaveV3._0.ViewModels
                 }
             }
         }
-        private FileType _newTypeFile;
-        public FileType NewTypeFile
+        private string _newTypeSave;
+        public string NewTypeSave
         {
-            get => _newTypeFile;
+            get => _newTypeSave;
             set
             {
-                if (_newTypeFile != value)
+                if (_newTypeSave != value)
                 {
-                    _newTypeFile = value;
-                    OnPropertyChanged(nameof(NewTypeFile));
+                    _newTypeSave = value;
+                    OnPropertyChanged(nameof(NewTypeSave));
                 }
             }
         }
@@ -107,7 +107,21 @@ namespace EasySaveV3._0.ViewModels
                 }
             }
         }
-        
+
+        private string _updateTypeSave;
+        public string updateTypeSave
+        {
+            get => _updateTypeSave;
+            set
+            {
+                if (_updateTypeSave != value)
+                {
+                    _updateTypeSave = value;
+                    OnPropertyChanged(nameof(updateTypeSave));
+                }
+            }
+        }
+
 
         public ObservableCollection<Save> Saves { get; set; }
         private void UpdateObservableCollection(ObservableCollection<Save> saves)
@@ -174,7 +188,7 @@ namespace EasySaveV3._0.ViewModels
             }
             else
             {
-                Save newSave = new Save(updateNameSave, updateSourcePath, updateTargetPath);
+                Save newSave = new Save(updateNameSave, updateSourcePath, updateTargetPath, updateTypeSave);
                 Save[] listSave = Json.UpdateSaveList(newSave);
 
                 Json.EditSavesInJson(listSave);
@@ -182,6 +196,7 @@ namespace EasySaveV3._0.ViewModels
                 NewNameSave = string.Empty;
                 NewSourcePath = string.Empty;
                 NewTargetPath = string.Empty;
+                NewTypeSave = string.Empty;
 
                 this.UpdateObservableCollection(Saves);
             }
@@ -229,7 +244,7 @@ namespace EasySaveV3._0.ViewModels
             }
             else
             {
-                Save newSave = new Save(NewNameSave, NewSourcePath, NewTargetPath);
+                Save newSave = new Save(NewNameSave, NewSourcePath, NewTargetPath, NewTypeSave);
                 Save[] listSaves = Json.getSavesFromJson();
                 listSaves = Json.getNewSaveList(listSaves, newSave);
                 Json.EditSavesInJson(listSaves);
@@ -237,6 +252,7 @@ namespace EasySaveV3._0.ViewModels
                 NewNameSave = string.Empty;
                 NewSourcePath = string.Empty;
                 NewTargetPath = string.Empty;
+                NewTypeSave = string.Empty;
 
                 this.UpdateObservableCollection(Saves);
             }

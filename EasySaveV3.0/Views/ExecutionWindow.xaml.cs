@@ -29,9 +29,9 @@ namespace EasySaveV3._0.Views
         {
             InitializeComponent();
             _selectedItems = selectedItems;
-            foreach(var item in _selectedItems)
+            foreach (var item in _selectedItems)
             {
-                if(item is Save)
+                if (item is Save)
                 {
                     var decorator = new ItemDecorator((Save)item);
                     lbResults.Items.Add(decorator);
@@ -40,53 +40,37 @@ namespace EasySaveV3._0.Views
         }
         private async void BtnCopyFiles_Click(object sender, RoutedEventArgs e)
         {
-            int maxFileSizeInKb = UserProperties.Default.MaxSizeFile; // en Mo
-            maxFileSizeInKb = maxFileSizeInKb * 1024;
+            int maxFileSizeInKb = UserProperties.Default.MaxSizeFile * 1024; // Convertir en Ko
             var decorators = lbResults.Items.Cast<ItemDecorator>().ToList();
+            string[] priorityExtensions = { ".txt", ".pdf", ".docx" }; // Extensions prioritaires
+            string[] cryptExtensions = { ".txt", ".json" }; // Extensions à chiffrer
 
-            var tasks = decorators.Select(async decorator =>
-            {
-                var item = decorator.Item;
-                Directory.CreateDirectory(item.FilesTarget);
-
-                var allFiles = Directory.GetFiles(item.FilesSource);
-                string[] priorityExtensions = { ".txt", ".pdf", ".docx" }; // Extensions prioritaires en premier.
-                string[] cryptExtensions = { ".txt", ".json" }; //Extensions à chiffrer 
-                var orderedFiles = allFiles.OrderBy(file =>
+            var tasks = decorators.SelectMany(decorator => Directory.GetFiles(decorator.Item.FilesSource)
+                .OrderBy(file =>
                 {
-                    var extension = System.IO.Path.GetExtension(file).ToLower();
+                    var extension = Path.GetExtension(file).ToLower();
                     var index = Array.IndexOf(priorityExtensions, extension);
-                    return index < 0 ? int.MaxValue : index; 
-                });
-
-                for (int i = 0; i < orderedFiles.Count(); i++)
+                    return index < 0 ? int.MaxValue : index;
+                })
+                .Where(file => new FileInfo(file).Length / 1024 <= maxFileSizeInKb)
+                .Select(async file =>
                 {
                     await CheckForBlockingAppsAsync();
                     _pauseEvent.Wait();
-                    if (_cts.IsCancellationRequested) break;
+                    if (_cts.IsCancellationRequested) return;
 
-                    var file = orderedFiles.ElementAt(i);
-                    var fileInfo = new FileInfo(file);
-
-                    if (fileInfo.Length / 1024 <= maxFileSizeInKb)
+                    var fileName = Path.GetFileName(file);
+                    var destFile = Path.Combine(decorator.Item.FilesTarget, fileName);
+                    if (cryptExtensions.Contains(Path.GetExtension(file).ToLower()))
                     {
-                        var fileName = System.IO.Path.GetFileName(file);
-                        var destFile = System.IO.Path.Combine(item.FilesTarget, fileName);
-
-                        if (System.IO.Path.GetExtension(file).Equals(".txt", StringComparison.OrdinalIgnoreCase))
-                        {
-                            await CopyAndEncryptFileAsync(file, destFile, 255);
-                        }
-                        else
-                        {
-                            await CopyFileAsync(file, destFile);
-                        }
-
+                        await CopyAndEncryptFileAsync(file, destFile, 255); // Utiliser la clé de cryptage spécifiée
+                    }
+                    else
+                    {
+                        await CopyFileAsync(file, destFile);
                     }
 
-                    decorator.ProgressValue = (double)(i + 1) / file.Length * 100;
-                }
-            });
+                })).ToList();
 
             await Task.WhenAll(tasks);
         }

@@ -10,15 +10,17 @@ namespace EasySaveV3._0.Models
         private static string Name;
         private static string SourceFolder;
         private static string TargetFolder;
-        public static void setDataSave(string _name, string _ori, string _targ)
+        private static string TypeFolder;
+        public static void setDataSave(string _name, string _ori, string _targ, string _type)
         {
             Name = _name;
             SourceFolder = _ori;
             TargetFolder = _targ;
+            TypeFolder = _type;
         }
         public static bool IsSameSave(Save _save)
         {
-            return (Name == _save.Name && SourceFolder == _save.FilesSource && TargetFolder == _save.FilesTarget);
+            return (Name == _save.Name && SourceFolder == _save.FilesSource && TargetFolder == _save.FilesTarget && TypeFolder == _save.FilesType);
         }
         static public Save[] getSavesFromJson()
         {
@@ -69,6 +71,10 @@ namespace EasySaveV3._0.Models
                     if (!string.IsNullOrEmpty(newSave.FilesTarget))
                     {
                         if (newSave.FilesTarget.Length > 0) _save.FilesTarget = newSave.FilesTarget;
+                    }
+                    if (!string.IsNullOrEmpty(newSave.FilesType))
+                    {
+                        if (newSave.FilesType.Length > 0) _save.FilesType = newSave.FilesType;
                     }
 
                     EditSavesInJson(originalSaves);

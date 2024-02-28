@@ -75,6 +75,9 @@
             <TextBox Name="txtDestinationFile" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.NewTargetPath}"/>
         </Grid>
 
+        <Label Grid.Row="7" Content="Type de sauvegarde:"/>
+        <TextBox Grid.Row="8" Name="txtBackupType" Margin="5" Text="{Binding saveView.NewTypeSave}"/>
+
         <Button Grid.Row="9" Content="{Binding paramView.UI.CreateSaveButtonText}" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.AddSaveCommand}"/>
     </Grid>
 </Window>

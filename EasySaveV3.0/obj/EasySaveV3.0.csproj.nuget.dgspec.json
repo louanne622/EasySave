@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CESI\\source\\repos\\EasySaveV3.0\\EasySaveV3.0.csproj": {}
+    "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CESI\\source\\repos\\EasySaveV3.0\\EasySaveV3.0.csproj": {
+    "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CESI\\source\\repos\\EasySaveV3.0\\EasySaveV3.0.csproj",
+        "projectUniqueName": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj",
         "projectName": "EasySaveV3.0",
-        "projectPath": "C:\\Users\\CESI\\source\\repos\\EasySaveV3.0\\EasySaveV3.0.csproj",
-        "packagesPath": "C:\\Users\\CESI\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CESI\\source\\repos\\EasySaveV3.0\\obj\\",
+        "projectPath": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj",
+        "packagesPath": "C:\\Users\\louan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\CESI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\louan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"

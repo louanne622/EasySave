@@ -65,7 +65,10 @@
             <Button x:Name="browseButtonTarget" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
             <TextBox x:Name="selectedPathTarget" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.updateTargetPath}" />
         </Grid>
-
-        <Button Grid.Row="9" Content="Modifier la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.UpdateSaveCommand}"/>
+        
+        <Label Grid.Row="7" Content="Type de sauvegarde:"/>
+        <TextBox Grid.Row="8" Name="txtBackupType" Margin="5" Text="{Binding saveView.updateTypeSave}"/>
+        
+        <Button Grid.Row="9" Content="Modifier" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.UpdateSaveCommand}"/>
     </Grid>
 </Window>

@@ -49,6 +49,7 @@
                                     <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding Name}" Width="150"/>
                                     <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding FilesSource}" Width="200"/>
                                     <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding FilesTarget}" Width="200"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewType}" DisplayMemberBinding="{Binding FilesType}" Width="200"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>

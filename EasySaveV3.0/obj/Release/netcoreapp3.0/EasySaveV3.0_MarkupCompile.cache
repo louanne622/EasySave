@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\CESI\Source\Repos\louanne622\EasySave\EasySaveV3.0\obj\Release\netcoreapp3.0\
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveV3.0\obj\Release\netcoreapp3.0\
 EasySaveV3._0
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_0;
-C:\Users\CESI\Source\Repos\louanne622\EasySave\EasySaveV3.0\App.xaml
-367987685
+C:\Users\louan\Source\Repos\louanne622\EasySave\EasySaveV3.0\App.xaml
+41338796508
 
-1892156304
+21-443756977
 192977453312
-Views\AddSaveView.xaml;Views\EditSaveView.xaml;Views\MainWindow.xaml;
+Views\AddSaveView.xaml;Views\EditSaveView.xaml;Views\ExecutionWindow.xaml;Views\MainWindow.xaml;
 
 True
 

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "Name": "test1",
+    "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
+    "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
+    "FilesType": "Diff\u00E9rentiel"
+  },
+  {
+    "Name": "test2",
+    "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
+    "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
+    "FilesType": "Diff\u00E9rentiel"
+  },
+  {
+    "Name": "test3",
+    "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
+    "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
+    "FilesType": "complet"
+  },
+  {
+    "Name": "test4",
+    "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
+    "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
+    "FilesType": "Complet"
+  }
+]

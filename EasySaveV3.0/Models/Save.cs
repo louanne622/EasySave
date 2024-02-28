@@ -11,12 +11,14 @@ namespace EasySaveV3._0.Models
         public string Name { get; set; }
         public string FilesSource { get; set; }
         public string FilesTarget { get; set; }
+        public string FilesType { get; set; }
         public Save() { }
-        public Save(string saveName, string sourcePath, string targetPath)
+        public Save(string saveName, string sourcePath, string targetPath, string saveType)
         {
             this.Name = saveName;
             this.FilesSource = sourcePath;
             this.FilesTarget = targetPath;
+            this.FilesType = saveType;
         }
     }
 }

@@ -26,7 +26,8 @@ namespace EasySaveV3._0.Views
             this.txtBackupName.Text = save.Name;
             this.selectedPathSource.Text = save.FilesSource;
             this.selectedPathTarget.Text = save.FilesTarget;
-            Json.setDataSave(save.Name, save.FilesSource, save.FilesTarget);
+            this.txtBackupType.Text = save.FilesType;
+            Json.setDataSave(save.Name, save.FilesSource, save.FilesTarget, save.FilesType);
         }
         private void OnBrowseButtonClick(object sender, RoutedEventArgs e)
         {

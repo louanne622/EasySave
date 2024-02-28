@@ -46,15 +46,16 @@ namespace ws
 
             return client;
         }
-        static void EcouterReseau(Socket client)
+       public static void EcouterReseau(Socket client)
         {
             byte[] data = new byte[1024];
-            int k = 5;
-            string couccou = "Salut a toi jeune entrepreneur";
-            int tailleRecv; string Inpt; 
-            data = Encoding.UTF8.GetBytes(couccou); 
-            client.Send(data, data.Length, SocketFlags.None);
-            while(true)
+            byte key = 255;
+            string coucou = "Connecté au serveur";
+            int tailleRecv; string Inpt;
+            data = Encoding.UTF8.GetBytes(coucou);
+            byte[] dataCh = CrytpoXOR(data, key);
+            client.Send(dataCh, dataCh.Length, SocketFlags.None);
+            while (true)
             {
                 tailleRecv = client.Receive(data);
                 if (Encoding.UTF8.GetString(data, 0, tailleRecv) == "start")
@@ -65,18 +66,23 @@ namespace ws
                 {
                     break;
                 }
-                if(tailleRecv < k)
-                {
-                    Console.WriteLine("Alerte le message fait " + tailleRecv + " alors qu'il devrait faire " + k + "octet au maximum");
-                }
-
-                Console.WriteLine("Client: " + Encoding.UTF8.GetString(data, 0, tailleRecv));
-                Inpt = Console.ReadLine() + " La charge reseau est de " + tailleRecv + " octet";
-                client.Send(Encoding.UTF8.GetBytes(Inpt));
-
+                byte[] dataDec = CrytpoXOR(data, key);
+                Console.WriteLine("Client: " + Encoding.UTF8.GetString(dataDec, 0, tailleRecv));
+                //client.Send(Encoding.UTF8.GetBytes(Inpt));
+                Inpt = Console.ReadLine(); 
+                byte[] inputBytes = Encoding.UTF8.GetBytes(Inpt);
+                client.Send(CrytpoXOR(inputBytes, key));
             }
         }
-        
+        public static byte[] CrytpoXOR(byte[] inputBytes, byte key)
+        {
+            byte[] encryptedBytes = new byte[inputBytes.Length];
+            for (int i = 0; i < inputBytes.Length; i++)
+            {
+                encryptedBytes[i] = (byte)(inputBytes[i] ^ key);
+            }
+            return encryptedBytes; 
+        }
         private static void Deconnecter(Socket socket)
         {
             Console.WriteLine("Déconnexion de {0}", clientie.Address);
@@ -122,7 +128,8 @@ namespace ws
                 Thread.Sleep(100);
                 client.Send(Encoding.UTF8.GetBytes(progressBar));
             }
+        }   
         }
-    } 
-}
+
+} 
 

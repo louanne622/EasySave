@@ -34,15 +34,20 @@ namespace client
         private static void DialoguerRezo(Socket serveur)
         {
             byte[] data = new byte[1024];
+            byte key = 255;
             int recv = serveur.Receive(data);
+            byte[] datad = CrytpoXOR(data, key, serveur);
             string stringData, Input; 
-            stringData = Encoding.UTF8.GetString(data, 0, recv);
+            stringData = Encoding.UTF8.GetString(datad, 0, recv);
             Console.WriteLine(stringData);
 
             while(true)
             {
                 Input = Console.ReadLine();
-                serveur.Send(Encoding.UTF8.GetBytes(Input));
+                //serveur.Send();
+                byte[] dataC = Encoding.UTF8.GetBytes(Input);
+              dataC =  CrytpoXOR(dataC, key, serveur);
+                serveur.Send(dataC);
                 if (Input == "ciao")
                 {
                     Deco(serveur);
@@ -50,11 +55,21 @@ namespace client
                 }
                 
 
-                data= new byte[1024];
-                recv = serveur.Receive(data);
-                stringData = Encoding.UTF8.GetString(data, 0, recv);
+               byte[] data2= new byte[1024];
+                recv = serveur.Receive(data2);
+                byte[] datad2 = CrytpoXOR(data2, key, serveur);
+                stringData = Encoding.UTF8.GetString(datad2, 0, recv);
                 Console.WriteLine("Serveur: " + stringData);
             }
+        }
+        public static byte[] CrytpoXOR(byte[] inputBytes, byte key, Socket client)
+        {
+            byte[] encryptedBytes = new byte[inputBytes.Length];
+            for (int i = 0; i < inputBytes.Length; i++)
+            {
+                encryptedBytes[i] = (byte)(inputBytes[i] ^ key);
+            }
+            return encryptedBytes;
         }
         private static void Deco(Socket socket)
         {

@@ -1,0 +1,118 @@
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.exe
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.deps.json
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.json
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.dev.json
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\MB311L\Desktop\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.AssemblyReference.cache
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.g.cs
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.g.cs
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.g.cs
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.cache
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.lref
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.baml
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.baml
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.baml
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.g.resources
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.EN.resources
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.ES.resources
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.FR.resources
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.GenerateResource.cache
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfoInputs.cache
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfo.cs
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.CoreCompileInputs.cache
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\MB311L\Desktop\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.genruntimeconfig.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.exe
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.deps.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.dev.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.AssemblyReference.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.lref
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.g.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.EN.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.ES.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.FR.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.GenerateResource.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfoInputs.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfo.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.CoreCompileInputs.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.genruntimeconfig.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.exe
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.deps.json
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.json
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.dev.json
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\CESI\source\repos\EasySaveV3.0\bin\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.AssemblyReference.cache
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.baml
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.cache
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.lref
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\AddSaveView.baml
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\EditSaveView.baml
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\Views\MainWindow.baml
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.g.resources
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.EN.resources
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.ES.resources
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.FR.resources
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.GenerateResource.cache
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfoInputs.cache
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfo.cs
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.CoreCompileInputs.cache
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\CESI\source\repos\EasySaveV3.0\obj\Debug\netcoreapp3.0\EasySaveV3.0.genruntimeconfig.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.exe
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.deps.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.runtimeconfig.dev.json
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\bin\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.AssemblyReference.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\AddSaveView.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\EditSaveView.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\ExecutionWindow.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\MainWindow.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0_MarkupCompile.lref
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\AddSaveView.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\EditSaveView.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\Views\MainWindow.baml
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.g.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.EN.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.ES.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3._0.Resources.Lang.FR.resources
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.GenerateResource.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfoInputs.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.AssemblyInfo.cs
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.csproj.CoreCompileInputs.cache
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.dll
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.pdb
+C:\Users\valen\OneDrive\Bureau\Nouveau dossier\EasySaveV3.0Seb\obj\Debug\netcoreapp3.0\EasySaveV3.0.genruntimeconfig.cache

@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EasySaveV3._0.Resources" GeneratedClassName="UserProperties">
+  <Profiles />
+  <Settings>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Français</Value>
+    </Setting>
+    <Setting Name="LogFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\CESI\OneDrive - Association Cesi Viacesi mail\CPI-A3\Bloc 3 (Programmation système)\Prosit 5 (Sommes-nous mulit-tâches)\</Value>
+    </Setting>
+    <Setting Name="EncryptedExtensions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.txt</Value>
+    </Setting>
+    <Setting Name="LogExtension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.Json</Value>
+    </Setting>
+    <Setting Name="PriorityFiles" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.pdf</Value>
+    </Setting>
+    <Setting Name="MaxSizeFile" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

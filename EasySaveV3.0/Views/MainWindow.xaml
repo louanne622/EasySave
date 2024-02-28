@@ -8,7 +8,7 @@
         Title="EasySave V3.0" Height="450" Width="830"
         MinHeight="450" MinWidth="830"
         SizeToContent="WidthAndHeight"
-        Icon="C:\Users\CESI\OneDrive - Association Cesi Viacesi mail\CPI-A3\Bloc 3 (Programmation système)\Projet\69539.png">
+        Icon="/Views/logo.png">
 
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
@@ -38,7 +38,7 @@
                 <Grid Background="{StaticResource PrimaryBackground}">
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto">
-                        <ListView x:Name="SaveList" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
+                        <ListView x:Name="SaveListL" Margin="10,10,10,32" Background="#E4E4E4" ItemsSource="{Binding saveView.Saves}" MaxHeight="300" SelectedItem="{Binding saveView.SelectedItem}">
                             <ListView.ItemContainerStyle>
                                 <Style TargetType="ListViewItem">
                                     <Setter Property="Height" Value="30"/>
@@ -46,10 +46,9 @@
                             </ListView.ItemContainerStyle>
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding saveName}" Width="150"/>
-                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding sourcePath}" Width="200"/>
-                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding targetPath}" Width="200"/>
-                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewType}" DisplayMemberBinding="{Binding fileType}" Width="100"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewName}" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewSource}" DisplayMemberBinding="{Binding FilesSource}" Width="200"/>
+                                    <GridViewColumn Header="{Binding paramView.UI.HeaderGridViewTarget}" DisplayMemberBinding="{Binding FilesTarget}" Width="200"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>
@@ -58,7 +57,7 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="1">
                         <Button Content="{Binding paramView.UI.CreateButtonText}" Command="{Binding saveView.ShowAddSaveCommand}" Style="{StaticResource ActionButtonStyle}" />
                         <Button Content="{Binding paramView.UI.EditButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.ShowEditSaveCommand}"/>
-                        <Button Content="{Binding paramView.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}"/>
+                        <Button Content="{Binding paramView.UI.ExecuteButtonText}" Style="{StaticResource ActionButtonStyle}" Click="Button_Click_1"/>
                         <Button Content="{Binding paramView.UI.DeleteButtonText}" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.DeleteSaveCommand}"/>
                     </StackPanel>
 

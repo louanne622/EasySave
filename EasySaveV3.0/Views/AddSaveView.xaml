@@ -41,21 +41,39 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        
         <TextBlock Grid.Row="0" FontSize="24" Text="{Binding paramView.UI.TextBoxCreateSave}"/>
         <Label Grid.Row="1" Content="{Binding paramView.UI.LabelNameSave}"/>
-        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding saveView.NewNameSave}"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
+            <TextBox Name="txtBackupName" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.NewNameSave}"/>
+        </Grid>
+        
         <Label Grid.Row="3" Content="{Binding paramView.UI.LabelSourceSave}"/>
-        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5" Text="{Binding saveView.NewSourcePath}"/>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="browseButtonSource" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <TextBox Name="txtSourceFile" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.NewSourcePath}"/>
+        </Grid>
 
         <Label Grid.Row="5" Content="{Binding paramView.UI.LabelSaveTarget}"/>
-        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5" Text="{Binding saveView.NewTargetPath}"/>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="7" Content="{Binding paramView.UI.LabelType}"/>
-        <ComboBox Grid.Row="8" Name="cmbTypeFile" Margin="5" SelectedItem="{Binding saveView.NewTypeFile}">
-            <ComboBoxItem Content="Complet"/>
-            <ComboBoxItem Content="Différentiel"/>
-        </ComboBox>
+            <Button Name="browseButtonTarget" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <TextBox Name="txtDestinationFile" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.NewTargetPath}"/>
+        </Grid>
 
         <Button Grid.Row="9" Content="{Binding paramView.UI.CreateSaveButtonText}" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.AddSaveCommand}"/>
     </Grid>

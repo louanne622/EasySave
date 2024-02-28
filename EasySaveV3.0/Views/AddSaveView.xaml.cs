@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace EasySaveV3._0.Views
 {
@@ -21,6 +13,29 @@ namespace EasySaveV3._0.Views
         {
             InitializeComponent();
             DataContext = Application.Current.MainWindow.DataContext;
+        }
+        private void OnBrowseButtonClick(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                ValidateNames = false,
+                CheckFileExists = false,
+                CheckPathExists = true,
+                FileName = "Sélectionner ce dossier"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string folderPath = System.IO.Path.GetDirectoryName(openFileDialog.FileName);
+                if (sender == browseButtonSource)
+                {
+                    this.txtSourceFile.Text = folderPath;
+                }
+                else if (sender == browseButtonTarget)
+                {
+                    this.txtDestinationFile.Text = folderPath;
+                }
+            }
         }
     }
 }

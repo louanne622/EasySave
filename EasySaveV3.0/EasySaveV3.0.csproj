@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Views\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\Lang\EN.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

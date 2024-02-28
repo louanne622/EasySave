@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasySaveV3._0"
         mc:Ignorable="d"
-        Title="AddSaveView" Height="450" Width="800">
+        Title="EditSaveView" Height="450" Width="800">
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryBackground" Color="#F7F7FF"/>
         <SolidColorBrush x:Key="ButtonBackground" Color="#FF007ACC"/>
@@ -41,22 +41,31 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="24" Text="{Binding paramView.UI.TextBoxEditSave}"/>
-        <Label Grid.Row="1" Content="{Binding paramView.UI.LabelNameSave}"/>
-        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding saveView.SelectedItem.saveName}"/>
+        <TextBlock Grid.Row="0" FontSize="24" Text="Modifier la sauvegarde"/>
+        <Label Grid.Row="1" Content="Nom de la sauvegarde:"/>
+        <TextBox Grid.Row="2" Name="txtBackupName" Margin="5" Text="{Binding saveView.updateNameSave}"/>
 
-        <Label Grid.Row="3" Content="{Binding paramView.UI.LabelSourceSave}"/>
-        <TextBox Grid.Row="4" Name="txtSourceFile" Margin="5" Text="{Binding saveView.SelectedItem.sourcePath}"/>
+        <Label Grid.Row="3" Content="Sélectionner un fichier source"/>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="5" Content="{Binding paramView.UI.LabelSaveTarget}"/>
-        <TextBox Grid.Row="6" Name="txtDestinationFile" Margin="5" Text="{Binding saveView.SelectedItem.targetPath}"/>
+            <Button x:Name="browseButtonSource" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="selectedPathSource" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.updateSourcePath}"/>
+        </Grid>
+        <Label Grid.Row="5" Content="Sélectionner un fichier destinataire"/>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="browseButtonTarget" Content="..." Click="OnBrowseButtonClick" Margin="0,0,-19,10" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="selectedPathTarget" Grid.Column="1" Margin="25,0,-598,10" Text="{Binding saveView.updateTargetPath}" />
+        </Grid>
 
-        <Label Grid.Row="7" Content="{Binding paramView.UI.LabelType}"/>
-        <ComboBox Grid.Row="8" Name="cmbTypeFile" Margin="5" SelectedItem="{Binding saveView.SelectedItem.fileType}">
-            <ComboBoxItem Content="Complet"/>
-            <ComboBoxItem Content="Différentiel"/>
-        </ComboBox>
-
-        <Button Grid.Row="9" Content="{Binding paramView.UI.EditSaveButtonText}" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.UpdateSaveCommand}"/>
+        <Button Grid.Row="9" Content="Modifier la sauvegarde" Margin="5" Style="{StaticResource ActionButtonStyle}" Command="{Binding saveView.UpdateSaveCommand}"/>
     </Grid>
 </Window>

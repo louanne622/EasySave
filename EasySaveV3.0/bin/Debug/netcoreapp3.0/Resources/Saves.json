@@ -5,28 +5,9 @@
     "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\testMove\\Target"
   },
   {
-    "Name": "zdefrghj,k;:",
-    "FilesSource": "qzdqzd",
-    "FilesTarget": "qzdqzdqzdqdqz"
-  },
-  {
     "Name": "Test2",
-    "FilesSource": "C:\\Users\\valen\\OneDrive\\Documents",
+    "FilesSource": "C:\\Users\\valen\\Downloads",
     "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\EasySaveConsol_2"
   },
-  {
-    "Name": "SQZDSEFGH",
-    "FilesSource": "SQZDFGH",
-    "FilesTarget": "QZEDSFGHJ"
-  },
-  {
-    "Name": "aZQESRDFGH",
-    "FilesSource": "",
-    "FilesTarget": ""
-  },
-  {
-    "Name": "",
-    "FilesSource": "C:\\Users\\valen\\OneDrive\\Bureau\\EasySaveConsol_2\\EasySaveConsol_2\\bin\\Debug\\netcoreapp3.0\\Config",
-    "FilesTarget": "C:\\Users\\valen\\OneDrive\\Bureau\\EasySaveConsol_2\\EasySaveConsol_2\\bin\\Debug\\netcoreapp3.0\\Saves"
-  }
+  null
 ]

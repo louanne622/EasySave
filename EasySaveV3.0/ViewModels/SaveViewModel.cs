@@ -118,10 +118,8 @@ namespace EasySaveV3._0.ViewModels
         }
 
         public ICommand ShowAddSaveCommand { get; set; }
-
         public ICommand DeleteSaveCommand { get; }
         public ICommand AddSaveCommand { get; }
-
         public ICommand UpdateSaveCommand { get; }
         public ICommand ShowEditSaveCommand { get; }
 

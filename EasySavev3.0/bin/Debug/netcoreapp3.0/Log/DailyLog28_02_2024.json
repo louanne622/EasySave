@@ -1,0 +1,83 @@
+[
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "5952",
+    "Time": "28/02/2024 18:36:06",
+    "CryptoTime": "23"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "143",
+    "Time": "28/02/2024 22:37:19",
+    "CryptoTime": "25"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "121",
+    "Time": "28/02/2024 22:38:55",
+    "CryptoTime": "28"
+  },
+  {
+    "Name": "Sauvegarde testSauvegarde 2",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1C:\\Users\\CESI\\Desktop\\Test\\Source",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1C:\\Users\\CESI\\Desktop\\Test\\Cible",
+    "FileSize": "1593345",
+    "FileTransferTim": "171",
+    "Time": "28/02/2024 22:40:05",
+    "CryptoTime": "44"
+  },
+  {
+    "Name": "Sauvegarde testSauvegarde 2",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1C:\\Users\\CESI\\Desktop\\Test\\Source",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1C:\\Users\\CESI\\Desktop\\Test\\Cible",
+    "FileSize": "1593345",
+    "FileTransferTim": "4344",
+    "Time": "28/02/2024 22:40:11",
+    "CryptoTime": "4215"
+  },
+  {
+    "Name": "Sauvegarde 2Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\SourceC:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\CibleC:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "1593345",
+    "FileTransferTim": "7937",
+    "Time": "28/02/2024 22:41:27",
+    "CryptoTime": "3203"
+  },
+  {
+    "Name": "Sauvegarde 2Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\SourceC:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\CibleC:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "1593345",
+    "FileTransferTim": "14785",
+    "Time": "28/02/2024 22:41:39",
+    "CryptoTime": "12"
+  },
+  {
+    "Name": "Sauvegarde testSauvegarde 2",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1C:\\Users\\CESI\\Desktop\\Test\\Source",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1C:\\Users\\CESI\\Desktop\\Test\\Cible",
+    "FileSize": "1593345",
+    "FileTransferTim": "4503",
+    "Time": "28/02/2024 22:46:23",
+    "CryptoTime": "173"
+  },
+  {
+    "Name": "Sauvegarde testSauvegarde 2",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1C:\\Users\\CESI\\Desktop\\Test\\Source",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1C:\\Users\\CESI\\Desktop\\Test\\Cible",
+    "FileSize": "1593345",
+    "FileTransferTim": "1937",
+    "Time": "28/02/2024 22:46:31",
+    "CryptoTime": "20"
+  }
+]

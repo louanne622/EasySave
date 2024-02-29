@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "5113",
+    "Time": "29/02/2024 7:58:57",
+    "CryptoTime": "82"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "4532",
+    "Time": "29/02/2024 7:59:23",
+    "CryptoTime": "283"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "46",
+    "Time": "29/02/2024 8:9:17",
+    "CryptoTime": "0"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "43",
+    "Time": "29/02/2024 8:9:42",
+    "CryptoTime": "0"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "47",
+    "Time": "29/02/2024 8:14:29",
+    "CryptoTime": "0"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "69",
+    "Time": "29/02/2024 8:19:24",
+    "CryptoTime": "0"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "5025",
+    "Time": "29/02/2024 8:27:37",
+    "CryptoTime": "21"
+  },
+  {
+    "Name": "Sauvegarde test",
+    "FileSource": "C:\\Users\\CESI\\Desktop\\Test\\Source1",
+    "FileTarget": "C:\\Users\\CESI\\Desktop\\Test\\Cible1",
+    "FileSize": "-335871",
+    "FileTransferTim": "5203",
+    "Time": "29/02/2024 9:46:27",
+    "CryptoTime": "293"
+  }
+]

@@ -40,38 +40,74 @@ namespace EasySaveV3._0.Views
         }
         private async void BtnCopyFiles_Click(object sender, RoutedEventArgs e)
         {
-            int maxFileSizeInKb = UserProperties.Default.MaxSizeFile * 1024; // Convertir en Ko
+            int maxFileSizeInKb = UserProperties.Default.MaxSizeFile; // en Mo
+            maxFileSizeInKb = maxFileSizeInKb * 1024;
             var decorators = lbResults.Items.Cast<ItemDecorator>().ToList();
-            string[] priorityExtensions = { ".txt", ".pdf", ".docx" }; // Extensions prioritaires
-            string[] cryptExtensions = { ".txt", ".json" }; // Extensions à chiffrer
 
-            var tasks = decorators.SelectMany(decorator => Directory.GetFiles(decorator.Item.FilesSource)
-                .OrderBy(file =>
+            Save[] listSaves = new Save[decorators.Count];
+            for (int i = 0; i < decorators.Count; i++)
+            {
+                listSaves[i] = decorators[i].Item;
+            }
+
+            var tasks = decorators.Select(async decorator =>
+            {
+                var item = decorator.Item;
+                Directory.CreateDirectory(item.FilesTarget);
+
+                var allFiles = Directory.GetFiles(item.FilesSource);
+                string[] priorityExtensions = { ".txt", ".pdf", ".docx" }; // Extensions prioritaires en premier.
+                string[] cryptExtensions = { ".txt", ".json" }; //Extensions à chiffrer 
+                var orderedFiles = allFiles.OrderBy(file =>
                 {
-                    var extension = Path.GetExtension(file).ToLower();
+                    var extension = System.IO.Path.GetExtension(file).ToLower();
                     var index = Array.IndexOf(priorityExtensions, extension);
                     return index < 0 ? int.MaxValue : index;
-                })
-                .Where(file => new FileInfo(file).Length / 1024 <= maxFileSizeInKb)
-                .Select(async file =>
+                });
+
+                /*
+                 * Création des timer et DailyLog
+                 */
+                Stopwatch _stopWatch = new Stopwatch();
+                _stopWatch.Start();
+                long cryptedTimeStart;
+                long cryptedTime = 0;
+                for (int i = 0; i < orderedFiles.Count(); i++)
                 {
                     await CheckForBlockingAppsAsync();
                     _pauseEvent.Wait();
-                    if (_cts.IsCancellationRequested) return;
+                    if (_cts.IsCancellationRequested) break;
 
-                    var fileName = Path.GetFileName(file);
-                    var destFile = Path.Combine(decorator.Item.FilesTarget, fileName);
-                    if (cryptExtensions.Contains(Path.GetExtension(file).ToLower()))
+                    var file = orderedFiles.ElementAt(i);
+                    var fileInfo = new FileInfo(file);
+
+                    if (fileInfo.Length / 1024 <= maxFileSizeInKb)
                     {
-                        await CopyAndEncryptFileAsync(file, destFile, 255); // Utiliser la clé de cryptage spécifiée
-                    }
-                    else
-                    {
-                        await CopyFileAsync(file, destFile);
-                    }
+                        var fileName = System.IO.Path.GetFileName(file);
+                        var destFile = System.IO.Path.Combine(item.FilesTarget, fileName);
 
-                })).ToList();
+                        if (System.IO.Path.GetExtension(file).Equals(".txt", StringComparison.OrdinalIgnoreCase))
+                        {
+                            cryptedTimeStart = _stopWatch.ElapsedMilliseconds;
+                            await CopyAndEncryptFileAsync(file, destFile, 255);
+                            cryptedTime += (_stopWatch.ElapsedMilliseconds - cryptedTimeStart);
+                        }
+                        else
+                        {
+                            await CopyFileAsync(file, destFile);
+                        }
+                    }
+                    decorator.ProgressValue = (double)(i + 1) / file.Length * 100;
+                }
+                _stopWatch.Stop();
+                long totTime = _stopWatch.ElapsedMilliseconds;
+                DailyLog dailyLog = new DailyLog();
+                dailyLog.SetDailyLogDataInJson(listSaves, totTime.ToString(),
+                    cryptedTime.ToString());
+                decorator.ProgressValue = 100;
 
+
+            });
             await Task.WhenAll(tasks);
         }
         private async Task CopyAndEncryptFileAsync(string sourceFile, string destFile, byte key)

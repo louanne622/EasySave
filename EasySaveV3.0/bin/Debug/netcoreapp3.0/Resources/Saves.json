@@ -1,9 +1,9 @@
 [
   {
-    "Name": "test1",
+    "Name": "test1qd",
     "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
     "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
-    "FilesType": "Diff\u00E9rentiel"
+    "FilesType": "Complet"
   },
   {
     "Name": "test2",
@@ -22,5 +22,11 @@
     "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Source",
     "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\Cible",
     "FilesType": "Complet"
+  },
+  {
+    "Name": "SeqTest",
+    "FilesSource": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\SeqSource",
+    "FilesTarget": "C:\\Users\\louan\\OneDrive\\PC MAISON\\Bureau\\SeqCible",
+    "FilesType": "S\u00E9quentiel"
   }
 ]

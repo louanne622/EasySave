@@ -37,8 +37,7 @@ namespace EasySaveV3._0.Resources {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\CESI\\OneDrive - Association Cesi Viacesi mail\\CPI-A3\\Bloc 3 (Programmati" +
-            "on système)\\Prosit 5 (Sommes-nous mulit-tâches)")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string LogFilePath {
             get {
                 return ((string)(this["LogFilePath"]));

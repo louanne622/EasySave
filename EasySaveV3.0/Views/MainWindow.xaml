@@ -93,24 +93,12 @@
                          Text="{Binding paramView.EncryptedExtensions, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="{Binding paramView.UI.LabelFilesPriority}" Margin="20,190,20,10">
-                        <StackPanel>
-                            <TextBox x:Name="PriorityFiles" HorizontalAlignment="Stretch" Margin="10,0,10,4"
-                         Text="{Binding paramView.PriorityFiles, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Saisissez les extensions de fichier prioritaires séparées par des virgules"/>
-                        </StackPanel>
-                    </GroupBox>
                     <GroupBox Header="{Binding paramView.UI.LabelFileFormat}" Margin="20,250,20,10">
                         <StackPanel>
                             <ComboBox x:Name="FileFormatChoice" HorizontalAlignment="Stretch" Margin="10,0,10,4" SelectedValue="{Binding paramView.LogExtension, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Content">
                                 <ComboBoxItem Content=".Json"/>
                                 <ComboBoxItem Content=".Xml"/>
                             </ComboBox>
-                        </StackPanel>
-                    </GroupBox>
-                    <GroupBox Header="{Binding paramView.UI.LabelFileSizeMax}" Margin="20,310,20,10">
-                        <StackPanel>
-                            <TextBox x:Name="MaxSizeFile" HorizontalAlignment="Stretch" Margin="10,0,10,2"
-                         Text="{Binding paramView.MaxSizeFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ToolTip="Saisissez la taille maximale du fichier en Ko"/>
                         </StackPanel>
                     </GroupBox>
                 </Grid>

@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Français</Value>
     </Setting>
     <Setting Name="LogFilePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\CESI\OneDrive - Association Cesi Viacesi mail\CPI-A3\Bloc 3 (Programmation système)\Prosit 5 (Sommes-nous mulit-tâches)</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="EncryptedExtensions" Type="System.String" Scope="User">
       <Value Profile="(Default)">.txt</Value>

@@ -84,10 +84,8 @@
         </Grid.RowDefinitions>
 
         <ListView Grid.Row="0" Name="lbResults" ItemTemplate="{StaticResource ItemTemplate}" Margin="5,5,5,10"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" Margin="400,10,0,10">
-            <Button Name="btnPause" Style="{StaticResource ActionButtonStyle}" Content="Mettre en Pause" Click="BtnPause_Click" Margin="5,0" Width="120"/>
-            <Button Name="btnStop" Style="{StaticResource ActionButtonStyle}" Content="Arrêter" Click="BtnStop_Click" Margin="5,0" Width="120"/>
-            <Button Name="btnCopyFiles" Style="{StaticResource ActionButtonStyle}" Content="Copier les fichiers" Click="BtnCopyFiles_Click" Margin="5,0" Width="120"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left" Margin="325,10,0,10">
+            <Button Name="btnCopyFiles" Style="{StaticResource ActionButtonStyle}" Content="Copier les fichiers" Click="BtnCopyFiles_Click" Margin="5" Width="120"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj",
-      "projectName": "EasySaveV3.0",
-      "projectPath": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV3.0.csproj",
+      "projectUniqueName": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV2.0.csproj",
+      "projectName": "EasySaveV2.0",
+      "projectPath": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\EasySaveV2.0.csproj",
       "packagesPath": "C:\\Users\\louan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\louan\\Source\\Repos\\louanne622\\EasySave\\EasySaveV3.0\\obj\\",
       "projectStyle": "PackageReference",

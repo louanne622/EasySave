@@ -68,7 +68,7 @@ namespace EasySaveV3._0.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EasySaveV3.0;component/views/executionwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EasySaveV2.0;component/views/executionwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ExecutionWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
